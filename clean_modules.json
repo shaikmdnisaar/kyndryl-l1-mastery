@@ -1,0 +1,1263 @@
+[
+  {
+    "title": "Course Overview & Orientation",
+    "lessons": [
+      {
+        "name": "Diving into the course",
+        "duration": "4m 34s",
+        "slug": "diving-into-the-course",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980"
+      },
+      {
+        "name": "Performing lab exercises",
+        "duration": "4m 20s",
+        "slug": "performing-lab-exercises",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/performing-lab-exercises?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 1: Foundational networking technologies",
+    "lessons": [
+      {
+        "name": "Lesson 1: Common network components",
+        "duration": "2m 25s",
+        "slug": "lesson-1-common-network-components",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-common-network-components?u=76281980"
+      },
+      {
+        "name": "Routers",
+        "duration": "2m 54s",
+        "slug": "routers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routers?u=76281980"
+      },
+      {
+        "name": "Switches",
+        "duration": "4m 55s",
+        "slug": "switches",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switches?u=76281980"
+      },
+      {
+        "name": "Security appliances",
+        "duration": "7m 41s",
+        "slug": "security-appliances",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/security-appliances?u=76281980"
+      },
+      {
+        "name": "Wireless access points",
+        "duration": "5m 40s",
+        "slug": "wireless-access-points",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-access-points?u=76281980"
+      },
+      {
+        "name": "Endpoints and servers",
+        "duration": "2m 40s",
+        "slug": "endpoints-and-servers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/endpoints-and-servers?u=76281980"
+      },
+      {
+        "name": "Cisco Catalyst Center",
+        "duration": "5m 40s",
+        "slug": "cisco-catalyst-center",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-catalyst-center?u=76281980"
+      },
+      {
+        "name": "Virtualized devices",
+        "duration": "4m 25s",
+        "slug": "virtualized-devices",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtualized-devices?u=76281980"
+      },
+      {
+        "name": "TCP vs. UDP",
+        "duration": "7m 57s",
+        "slug": "tcp-vs-udp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/tcp-vs-udp?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Common network architectures and designs",
+        "duration": "2m",
+        "slug": "lesson-2-common-network-architectures-and-designs",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-common-network-architectures-and-designs?u=76281980"
+      },
+      {
+        "name": "Three-tier vs. collapsed core architectures",
+        "duration": "5m 1s",
+        "slug": "three-tier-vs-collapsed-core-architectures",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/three-tier-vs-collapsed-core-architectures?u=76281980"
+      },
+      {
+        "name": "Spine-leaf design for data centers",
+        "duration": "3m 22s",
+        "slug": "spine-leaf-design-for-data-centers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/spine-leaf-design-for-data-centers?u=76281980"
+      },
+      {
+        "name": "Wide area network (WAN) topologies",
+        "duration": "10m 45s",
+        "slug": "wide-area-network-wan-topologies",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wide-area-network-wan-topologies?u=76281980"
+      },
+      {
+        "name": "Small office and home office (SOHO) architecture",
+        "duration": "2m 18s",
+        "slug": "small-office-home-office-soho-architecture",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/small-office-home-office-soho-architecture?u=76281980"
+      },
+      {
+        "name": "Cloud deployment models",
+        "duration": "4m 21s",
+        "slug": "cloud-deployment-models",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cloud-deployment-models?u=76281980"
+      },
+      {
+        "name": "Lesson 3: Network cabling",
+        "duration": "2m 29s",
+        "slug": "lesson-3-network-cabling",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-network-cabling?u=76281980"
+      },
+      {
+        "name": "Coax cables and connectors",
+        "duration": "4m 17s",
+        "slug": "coax-cables-and-connectors",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/coax-cables-and-connectors?u=76281980"
+      },
+      {
+        "name": "Twisted pair cables and connectors",
+        "duration": "6m 29s",
+        "slug": "twisted-pair-cables-and-connectors",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/twisted-pair-cables-and-connectors?u=76281980"
+      },
+      {
+        "name": "Ethernet standards for twisted pair cables",
+        "duration": "3m 49s",
+        "slug": "ethernet-standards-for-twisted-pair-cables",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ethernet-standards-for-twisted-pair-cables?u=76281980"
+      },
+      {
+        "name": "Straight through vs. crossover cables",
+        "duration": "5m 15s",
+        "slug": "straight-through-vs-crossover-cables",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/straight-through-vs-crossover-cables?u=76281980"
+      },
+      {
+        "name": "Fiber optic cables",
+        "duration": "4m 1s",
+        "slug": "fiber-optic-cables",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fiber-optic-cables?u=76281980"
+      },
+      {
+        "name": "Fiber optic connectors",
+        "duration": "2m 51s",
+        "slug": "fiber-optic-connectors",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fiber-optic-connectors?u=76281980"
+      },
+      {
+        "name": "Ethernet standards for fiber optic cables",
+        "duration": "4m 4s",
+        "slug": "ethernet-standards-for-fiber-optic-cables",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ethernet-standards-for-fiber-optic-cables?u=76281980"
+      },
+      {
+        "name": "Power over Ethernet (PoE)",
+        "duration": "5m 35s",
+        "slug": "power-over-ethernet-poe",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/power-over-ethernet-poe?u=76281980"
+      },
+      {
+        "name": "Troubleshooting common cabling issues",
+        "duration": "6m 24s",
+        "slug": "troubleshooting-common-cabling-issues",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/troubleshooting-common-cabling-issues?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 2: IPv4 addressing",
+    "lessons": [
+      {
+        "name": "Lesson 1: Binary numbering",
+        "duration": "55s",
+        "slug": "lesson-1-binary-numbering",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-binary-numbering?u=76281980"
+      },
+      {
+        "name": "Binary numbering",
+        "duration": "6m 4s",
+        "slug": "binary-numbering",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-numbering?u=76281980"
+      },
+      {
+        "name": "Binary practice exercise #1",
+        "duration": "1m 23s",
+        "slug": "binary-practice-exercise-1",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-practice-exercise-1?u=76281980"
+      },
+      {
+        "name": "Binary practice exercise #2",
+        "duration": "2m 37s",
+        "slug": "binary-practice-exercise-2",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-practice-exercise-2?u=76281980"
+      },
+      {
+        "name": "Lesson 2: IPv4 address characteristics",
+        "duration": "2m 48s",
+        "slug": "lesson-2-ipv4-address-characteristics",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-ipv4-address-characteristics?u=76281980"
+      },
+      {
+        "name": "IPv4 address format",
+        "duration": "8m 36s",
+        "slug": "ipv4-address-format",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv4-address-format?u=76281980"
+      },
+      {
+        "name": "Public vs. private IPv4 addresses",
+        "duration": "4m 57s",
+        "slug": "public-vs-private-ipv4-addresses",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/public-vs-private-ipv4-addresses?u=76281980"
+      },
+      {
+        "name": "Network address translation",
+        "duration": "12m 20s",
+        "slug": "network-address-translation",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/network-address-translation?u=76281980"
+      },
+      {
+        "name": "IPv4 traffic flows",
+        "duration": "4m 19s",
+        "slug": "ipv4-traffic-flows",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv4-traffic-flows?u=76281980"
+      },
+      {
+        "name": "Lesson 3: IPv4 address assignment, verification, and name resolution",
+        "duration": "1m 29s",
+        "slug": "lesson-3-ipv4-address-assignment-verification-and-name-resolution",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-ipv4-address-assignment-verification-and-name-resolution?u=76281980"
+      },
+      {
+        "name": "Manual IPv4 address assignment",
+        "duration": "6m 8s",
+        "slug": "manual-ipv4-address-assignment",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/manual-ipv4-address-assignment?u=76281980"
+      },
+      {
+        "name": "Dynamic IPv4 address assignment",
+        "duration": "4m 38s",
+        "slug": "dynamic-ipv4-address-assignment",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-ipv4-address-assignment?u=76281980"
+      },
+      {
+        "name": "Domain Name System (DNS)",
+        "duration": "9m 37s",
+        "slug": "domain-name-system-dns",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/domain-name-system-dns?u=76281980"
+      },
+      {
+        "name": "Lesson 4: Subnetting",
+        "duration": "2m 24s",
+        "slug": "lesson-4-subnetting",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-subnetting?u=76281980"
+      },
+      {
+        "name": "The need for subnetting",
+        "duration": "6m 33s",
+        "slug": "the-need-for-subnetting",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/the-need-for-subnetting?u=76281980"
+      },
+      {
+        "name": "Calculating available subnets",
+        "duration": "3m 44s",
+        "slug": "calculating-available-subnets",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-subnets?u=76281980"
+      },
+      {
+        "name": "Calculating available hosts",
+        "duration": "3m 56s",
+        "slug": "calculating-available-hosts",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-hosts?u=76281980"
+      },
+      {
+        "name": "Subnetting practice exercise #1",
+        "duration": "4m 8s",
+        "slug": "subnetting-practice-exercise-1",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-1?u=76281980"
+      },
+      {
+        "name": "Subnetting practice exercise #2",
+        "duration": "3m 31s",
+        "slug": "subnetting-practice-exercise-2",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-2?u=76281980"
+      },
+      {
+        "name": "Calculating usable ranges of IPv4 addresses",
+        "duration": "5m 52s",
+        "slug": "calculating-usable-ranges-of-ipv4-addresses",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-usable-ranges-of-ipv4-addresses?u=76281980"
+      },
+      {
+        "name": "Subnetting practice exercise #3",
+        "duration": "4m 12s",
+        "slug": "subnetting-practice-exercise-3",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-3?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 3: IPv6 addressing",
+    "lessons": [
+      {
+        "name": "Lesson 1: IPv6 address format and communication",
+        "duration": "2m 16s",
+        "slug": "lesson-1-ipv6-address-format-and-communication",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-ipv6-address-format-and-communication?u=76281980"
+      },
+      {
+        "name": "Hexadecimal numbering",
+        "duration": "7m 31s",
+        "slug": "hexadecimal-numbering",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/hexadecimal-numbering?u=76281980"
+      },
+      {
+        "name": "IPv6 address format",
+        "duration": "3m 57s",
+        "slug": "ipv6-address-format",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-address-format?u=76281980"
+      },
+      {
+        "name": "Shortening an IPv6 address",
+        "duration": "3m 6s",
+        "slug": "shortening-an-ipv6-address",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/shortening-an-ipv6-address?u=76281980"
+      },
+      {
+        "name": "IPv6 address shortening exercise",
+        "duration": "2m",
+        "slug": "ipv6-address-shortening-exercise",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-address-shortening-exercise?u=76281980"
+      },
+      {
+        "name": "IPv6 traffic flows",
+        "duration": "2m 39s",
+        "slug": "ipv6-traffic-flows",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-traffic-flows?u=76281980"
+      },
+      {
+        "name": "Lesson 2: IPv6 address types",
+        "duration": "2m 47s",
+        "slug": "lesson-2-ipv6-address-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-ipv6-address-types?u=76281980"
+      },
+      {
+        "name": "IPv6 global unicast",
+        "duration": "2m 51s",
+        "slug": "ipv6-global-unicast",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-global-unicast?u=76281980"
+      },
+      {
+        "name": "IPv6 multicast",
+        "duration": "4m",
+        "slug": "ipv6-multicast",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-multicast?u=76281980"
+      },
+      {
+        "name": "IPv6 link-local",
+        "duration": "2m 54s",
+        "slug": "ipv6-link-local",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-link-local?u=76281980"
+      },
+      {
+        "name": "IPv6 unique local",
+        "duration": "2m 10s",
+        "slug": "ipv6-unique-local",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-unique-local?u=76281980"
+      },
+      {
+        "name": "IPv6 loopback",
+        "duration": "1m 33s",
+        "slug": "ipv6-loopback",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-loopback?u=76281980"
+      },
+      {
+        "name": "IPv6 unspecified",
+        "duration": "2m 40s",
+        "slug": "ipv6-unspecified",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-unspecified?u=76281980"
+      },
+      {
+        "name": "IPv6 solicited-node multicast",
+        "duration": "3m 34s",
+        "slug": "ipv6-solicited-node-multicast",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-solicited-node-multicast?u=76281980"
+      },
+      {
+        "name": "Manual IPv6 address assignment",
+        "duration": "6m 42s",
+        "slug": "manual-ipv6-address-assignment",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/manual-ipv6-address-assignment?u=76281980"
+      },
+      {
+        "name": "EUI-64",
+        "duration": "2m 56s",
+        "slug": "eui-64",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/eui-64?u=76281980"
+      },
+      {
+        "name": "Dynamic IPv6 address assignment",
+        "duration": "10m 55s",
+        "slug": "dynamic-ipv6-address-assignment",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-ipv6-address-assignment?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 4: Ethernet switching",
+    "lessons": [
+      {
+        "name": "Lesson 1: Ethernet switch fundamentals",
+        "duration": "44s",
+        "slug": "lesson-1-ethernet-switch-fundamentals",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-ethernet-switch-fundamentals?u=76281980"
+      },
+      {
+        "name": "Layer 2 vs. multilayer switches",
+        "duration": "12m 25s",
+        "slug": "layer-2-vs-multilayer-switches",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-2-vs-multilayer-switches?u=76281980"
+      },
+      {
+        "name": "Examining the MAC address table",
+        "duration": "5m 29s",
+        "slug": "examining-the-mac-address-table",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/examining-the-mac-address-table?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Neighbor discovery",
+        "duration": "1m 49s",
+        "slug": "lesson-2-neighbor-discovery",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-neighbor-discovery?u=76281980"
+      },
+      {
+        "name": "Cisco Discovery Protocol (CDP)",
+        "duration": "5m 32s",
+        "slug": "cisco-discovery-protocol-cdp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-discovery-protocol-cdp?u=76281980"
+      },
+      {
+        "name": "CDP configuration",
+        "duration": "4m 3s",
+        "slug": "cdp-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cdp-configuration?u=76281980"
+      },
+      {
+        "name": "Link Layer Discovery Protocol (LLDP)",
+        "duration": "1m 31s",
+        "slug": "link-layer-discovery-protocol-lldp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/link-layer-discovery-protocol-lldp?u=76281980"
+      },
+      {
+        "name": "LLDP configuration",
+        "duration": "5m 44s",
+        "slug": "lldp-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lldp-configuration?u=76281980"
+      },
+      {
+        "name": "Lesson 3: Virtual LANs (VLANs)",
+        "duration": "2m 7s",
+        "slug": "lesson-3-virtual-lans-vlans",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-virtual-lans-vlans?u=76281980"
+      },
+      {
+        "name": "VLAN theory",
+        "duration": "3m 31s",
+        "slug": "vlan-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-theory?u=76281980"
+      },
+      {
+        "name": "VLAN configuration",
+        "duration": "7m 59s",
+        "slug": "vlan-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-configuration?u=76281980"
+      },
+      {
+        "name": "Router-on-a-stick",
+        "duration": "10m 29s",
+        "slug": "router-on-a-stick",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/router-on-a-stick?u=76281980"
+      },
+      {
+        "name": "Switch virtual interface (SVI)",
+        "duration": "6m 17s",
+        "slug": "switch-virtual-interface-svi",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switch-virtual-interface-svi?u=76281980"
+      },
+      {
+        "name": "Routed switch port",
+        "duration": "3m 47s",
+        "slug": "routed-switch-port",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routed-switch-port?u=76281980"
+      },
+      {
+        "name": "Lesson 4: Trunking",
+        "duration": "1m 58s",
+        "slug": "lesson-4-trunking",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-trunking?u=76281980"
+      },
+      {
+        "name": "Trunking theory",
+        "duration": "4m 28s",
+        "slug": "trunking-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-theory?u=76281980"
+      },
+      {
+        "name": "Trunking modes",
+        "duration": "4m 39s",
+        "slug": "trunking-modes",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-modes?u=76281980"
+      },
+      {
+        "name": "Trunking configuration",
+        "duration": "13m 33s",
+        "slug": "trunking-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-configuration?u=76281980"
+      },
+      {
+        "name": "Voice VLAN theory",
+        "duration": "6m 3s",
+        "slug": "voice-vlan-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/voice-vlan-theory?u=76281980"
+      },
+      {
+        "name": "Voice VLAN configuration",
+        "duration": "4m 48s",
+        "slug": "voice-vlan-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/voice-vlan-configuration?u=76281980"
+      },
+      {
+        "name": "Lesson 5: Spanning Tree Protocol (STP)",
+        "duration": "3m 30s",
+        "slug": "lesson-5-spanning-tree-protocol-stp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-5-spanning-tree-protocol-stp?u=76281980"
+      },
+      {
+        "name": "STP port states",
+        "duration": "9m 5s",
+        "slug": "stp-port-states",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-port-states?u=76281980"
+      },
+      {
+        "name": "STP exercise",
+        "duration": "7m 24s",
+        "slug": "stp-exercise",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-exercise?u=76281980"
+      },
+      {
+        "name": "STP convergence times",
+        "duration": "2m 59s",
+        "slug": "stp-convergence-times",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-convergence-times?u=76281980"
+      },
+      {
+        "name": "PVST+ theory and configuration",
+        "duration": "13m 36s",
+        "slug": "pvst-plus-theory-and-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/pvst-plus-theory-and-configuration?u=76281980"
+      },
+      {
+        "name": "Portfast",
+        "duration": "4m 14s",
+        "slug": "portfast",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/portfast?u=76281980"
+      },
+      {
+        "name": "Root guard",
+        "duration": "6m 14s",
+        "slug": "root-guard",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/root-guard?u=76281980"
+      },
+      {
+        "name": "Loop guard",
+        "duration": "6m 56s",
+        "slug": "loop-guard",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/loop-guard?u=76281980"
+      },
+      {
+        "name": "BPDU filter",
+        "duration": "6m 53s",
+        "slug": "bpdu-filter",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/bpdu-filter?u=76281980"
+      },
+      {
+        "name": "BPDU guard",
+        "duration": "7m 32s",
+        "slug": "bpdu-guard",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/bpdu-guard?u=76281980"
+      },
+      {
+        "name": "MSTP theory",
+        "duration": "2m 43s",
+        "slug": "mstp-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/mstp-theory?u=76281980"
+      },
+      {
+        "name": "Rapid PVST+ theory",
+        "duration": "9m 10s",
+        "slug": "rapid-pvst-plus-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rapid-pvst-plus-theory?u=76281980"
+      },
+      {
+        "name": "Rapid PVST+ configuration",
+        "duration": "6m 58s",
+        "slug": "rapid-pvst-plus-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rapid-pvst-plus-configuration?u=76281980"
+      },
+      {
+        "name": "Lesson 6: EtherChannel",
+        "duration": "1m 57s",
+        "slug": "lesson-6-etherchannel",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-6-etherchannel?u=76281980"
+      },
+      {
+        "name": "EtherChannel port options",
+        "duration": "3m 47s",
+        "slug": "etherchannel-port-options",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/etherchannel-port-options?u=76281980"
+      },
+      {
+        "name": "EtherChannel load balancing",
+        "duration": "4m 51s",
+        "slug": "etherchannel-load-balancing",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/etherchannel-load-balancing?u=76281980"
+      },
+      {
+        "name": "Layer 2 EtherChannel configuration",
+        "duration": "7m 57s",
+        "slug": "layer-2-etherchannel-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-2-etherchannel-configuration?u=76281980"
+      },
+      {
+        "name": "Layer 3 EtherChannel configuration",
+        "duration": "7m 52s",
+        "slug": "layer-3-etherchannel-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-3-etherchannel-configuration?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 5: Routing",
+    "lessons": [
+      {
+        "name": "Lesson 1: Routing fundamentals",
+        "duration": "1m 23s",
+        "slug": "lesson-1-routing-fundamentals",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-routing-fundamentals?u=76281980"
+      },
+      {
+        "name": "Review of the routing process",
+        "duration": "6m 59s",
+        "slug": "review-of-the-routing-process",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/review-of-the-routing-process?u=76281980"
+      },
+      {
+        "name": "Administrative distance",
+        "duration": "4m 47s",
+        "slug": "administrative-distance",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/administrative-distance?u=76281980"
+      },
+      {
+        "name": "Routing protocol comparison",
+        "duration": "8m 11s",
+        "slug": "routing-protocol-comparison",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routing-protocol-comparison?u=76281980"
+      },
+      {
+        "name": "Routing table examination",
+        "duration": "5m 23s",
+        "slug": "routing-table-examination",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routing-table-examination?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Static routing",
+        "duration": "2m 32s",
+        "slug": "lesson-2-static-routing",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-static-routing?u=76281980"
+      },
+      {
+        "name": "Static default route configuration",
+        "duration": "4m 50s",
+        "slug": "static-default-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-default-route-configuration?u=76281980"
+      },
+      {
+        "name": "Static network route configuration",
+        "duration": "4m 30s",
+        "slug": "static-network-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-network-route-configuration?u=76281980"
+      },
+      {
+        "name": "Static host route configuration",
+        "duration": "4m 14s",
+        "slug": "static-host-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-host-route-configuration?u=76281980"
+      },
+      {
+        "name": "Floating static route configuration",
+        "duration": "4m 1s",
+        "slug": "floating-static-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/floating-static-route-configuration?u=76281980"
+      },
+      {
+        "name": "Lesson 3: OSPFv2 routing",
+        "duration": "2m 21s",
+        "slug": "lesson-3-ospfv2-routing",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-ospfv2-routing?u=76281980"
+      },
+      {
+        "name": "OSPF neighbor formation",
+        "duration": "7m 32s",
+        "slug": "ospf-neighbor-formation",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-neighbor-formation?u=76281980"
+      },
+      {
+        "name": "DR and BDR election",
+        "duration": "5m 3s",
+        "slug": "dr-and-bdr-election",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dr-and-bdr-election?u=76281980"
+      },
+      {
+        "name": "OSPF network types",
+        "duration": "2m 24s",
+        "slug": "ospf-network-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-network-types?u=76281980"
+      },
+      {
+        "name": "OSPF areas",
+        "duration": "6m 10s",
+        "slug": "ospf-areas",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-areas?u=76281980"
+      },
+      {
+        "name": "LSA types",
+        "duration": "5m 15s",
+        "slug": "lsa-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lsa-types?u=76281980"
+      },
+      {
+        "name": "OSPFv2 configuration",
+        "duration": "10m 45s",
+        "slug": "ospfv2-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-configuration?u=76281980"
+      },
+      {
+        "name": "OSPFv2 verification",
+        "duration": "7m 44s",
+        "slug": "ospfv2-verification",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-verification?u=76281980"
+      },
+      {
+        "name": "Lesson 4: First hop redundancy protocols (FHRPs)",
+        "duration": "1m 33s",
+        "slug": "lesson-4-first-hop-redundancy-protocols-fhrps",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-first-hop-redundancy-protocols-fhrps?u=76281980"
+      },
+      {
+        "name": "Hot Standby Router Protocol (HSRP)",
+        "duration": "8m 41s",
+        "slug": "hot-standby-router-protocol-hsrp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/hot-standby-router-protocol-hsrp?u=76281980"
+      },
+      {
+        "name": "Virtual Router Redundancy Protocol (VRRP)",
+        "duration": "4m 23s",
+        "slug": "virtual-router-redundancy-protocol-vrrp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtual-router-redundancy-protocol-vrrp?u=76281980"
+      },
+      {
+        "name": "Gateway Load Balancing Protocol (GLBP)",
+        "duration": "4m 5s",
+        "slug": "gateway-load-balancing-protocol-glbp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/gateway-load-balancing-protocol-glbp?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 6: Wireless networks",
+    "lessons": [
+      {
+        "name": "Lesson 1: Overview of wireless networks",
+        "duration": "1m 49s",
+        "slug": "lesson-1-overview-of-wireless-networks",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-overview-of-wireless-networks?u=76281980"
+      },
+      {
+        "name": "Wireless access points",
+        "duration": "5m 41s",
+        "slug": "wireless-access-points-24790938",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-access-points-24790938?u=76281980"
+      },
+      {
+        "name": "Wireless LAN (WLAN) designs",
+        "duration": "2m 48s",
+        "slug": "wireless-lan-wlan-designs",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-lan-wlan-designs?u=76281980"
+      },
+      {
+        "name": "Access point modes",
+        "duration": "7m",
+        "slug": "access-point-modes",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/access-point-modes?u=76281980"
+      },
+      {
+        "name": "Service set terminology",
+        "duration": "3m 47s",
+        "slug": "service-set-terminology",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/service-set-terminology?u=76281980"
+      },
+      {
+        "name": "Radio frequency (RF) basics",
+        "duration": "10m 10s",
+        "slug": "radio-frequency-rf-basics",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/radio-frequency-rf-basics?u=76281980"
+      },
+      {
+        "name": "Wireless interference",
+        "duration": "2m 2s",
+        "slug": "wireless-interference",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-interference?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Wireless network configuration",
+        "duration": "2m 28s",
+        "slug": "lesson-2-wireless-network-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-wireless-network-configuration?u=76281980"
+      },
+      {
+        "name": "Selecting a Wi-Fi standard",
+        "duration": "4m 36s",
+        "slug": "selecting-a-wi-fi-standard",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/selecting-a-wi-fi-standard?u=76281980"
+      },
+      {
+        "name": "Transmission methods",
+        "duration": "7m 53s",
+        "slug": "transmission-methods",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/transmission-methods?u=76281980"
+      },
+      {
+        "name": "Spatial streams",
+        "duration": "1m 28s",
+        "slug": "spatial-streams",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/spatial-streams?u=76281980"
+      },
+      {
+        "name": "Channel bonding",
+        "duration": "3m 43s",
+        "slug": "channel-bonding",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/channel-bonding?u=76281980"
+      },
+      {
+        "name": "WLC configuration via a graphical interface",
+        "duration": "6m 33s",
+        "slug": "wlc-configuration-via-a-graphical-interface",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wlc-configuration-via-a-graphical-interface?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 7: Network services",
+    "lessons": [
+      {
+        "name": "Lesson 1: Network address translation (NAT)",
+        "duration": "7m 26s",
+        "slug": "lesson-1-network-address-translation-nat",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-network-address-translation-nat?u=76281980"
+      },
+      {
+        "name": "Static NAT configuration",
+        "duration": "5m 10s",
+        "slug": "static-nat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-nat-configuration?u=76281980"
+      },
+      {
+        "name": "Dynamic NAT configuration",
+        "duration": "5m 51s",
+        "slug": "dynamic-nat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-nat-configuration?u=76281980"
+      },
+      {
+        "name": "Port address translation (PAT) configuration",
+        "duration": "6m 39s",
+        "slug": "port-address-translation-pat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-address-translation-pat-configuration?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Network Time Protocol (NTP)",
+        "duration": "1m 5s",
+        "slug": "lesson-2-network-time-protocol-ntp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-network-time-protocol-ntp?u=76281980"
+      },
+      {
+        "name": "NTP theory",
+        "duration": "4m 27s",
+        "slug": "ntp-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-theory?u=76281980"
+      },
+      {
+        "name": "NTP configuration and verification",
+        "duration": "7m 42s",
+        "slug": "ntp-configuration-and-verification",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-configuration-and-verification?u=76281980"
+      },
+      {
+        "name": "Lesson 3: Dynamic Host Configuration Protocol (DHCP)",
+        "duration": "4m 20s",
+        "slug": "lesson-3-dynamic-host-configuration-protocol-dhcp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-dynamic-host-configuration-protocol-dhcp?u=76281980"
+      },
+      {
+        "name": "Configuring routers as DHCP clients and servers",
+        "duration": "7m 22s",
+        "slug": "configuring-routers-as-dhcp-clients-and-servers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-routers-as-dhcp-clients-and-servers?u=76281980"
+      },
+      {
+        "name": "Lesson 4: Network management services",
+        "duration": "1m 35s",
+        "slug": "lesson-4-network-management-services",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-network-management-services?u=76281980"
+      },
+      {
+        "name": "Options for network management access",
+        "duration": "6m 40s",
+        "slug": "options-for-network-management-access",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/options-for-network-management-access?u=76281980"
+      },
+      {
+        "name": "Artificial intelligence (AI) for network management",
+        "duration": "12m 9s",
+        "slug": "artificial-intelligence-ai-for-network-management",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/artificial-intelligence-ai-for-network-management?u=76281980"
+      },
+      {
+        "name": "Simple Network Management Protocol (SNMP) theory",
+        "duration": "4m 46s",
+        "slug": "simple-network-management-protocol-snmp-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/simple-network-management-protocol-snmp-theory?u=76281980"
+      },
+      {
+        "name": "SNMP configuration",
+        "duration": "7m 53s",
+        "slug": "snmp-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/snmp-configuration?u=76281980"
+      },
+      {
+        "name": "Syslog",
+        "duration": "5m 52s",
+        "slug": "syslog",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/syslog?u=76281980"
+      },
+      {
+        "name": "Configuring remote access with secure shell (SSH)",
+        "duration": "3m 34s",
+        "slug": "configuring-remote-access-with-secure-shell-ssh",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-remote-access-with-secure-shell-ssh?u=76281980"
+      },
+      {
+        "name": "FTP and TFTP",
+        "duration": "6m 58s",
+        "slug": "ftp-and-tftp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ftp-and-tftp?u=76281980"
+      },
+      {
+        "name": "Lesson 5: Quality of service (QoS)",
+        "duration": "1m 35s",
+        "slug": "lesson-5-quality-of-service-qos",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-5-quality-of-service-qos?u=76281980"
+      },
+      {
+        "name": "Fundamentals of QoS",
+        "duration": "14m 47s",
+        "slug": "fundamentals-of-qos",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fundamentals-of-qos?u=76281980"
+      },
+      {
+        "name": "Traffic markings",
+        "duration": "13m 37s",
+        "slug": "traffic-markings",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/traffic-markings?u=76281980"
+      },
+      {
+        "name": "Prioritizing traffic types",
+        "duration": "8m 28s",
+        "slug": "prioritizing-traffic-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/prioritizing-traffic-types?u=76281980"
+      },
+      {
+        "name": "Shaping, policing, and the token bucket",
+        "duration": "7m 29s",
+        "slug": "shaping-policing-and-the-token-bucket",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/shaping-policing-and-the-token-bucket?u=76281980"
+      },
+      {
+        "name": "Configuring QoS",
+        "duration": "14m 16s",
+        "slug": "configuring-qos",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-qos?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 8: Network security",
+    "lessons": [
+      {
+        "name": "Lesson 1: Threats and defense",
+        "duration": "3m 55s",
+        "slug": "lesson-1-threats-and-defense",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-threats-and-defense?u=76281980"
+      },
+      {
+        "name": "CIA triad",
+        "duration": "4m 16s",
+        "slug": "cia-triad",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cia-triad?u=76281980"
+      },
+      {
+        "name": "Threats vs. vulnerabilities",
+        "duration": "2m 14s",
+        "slug": "threats-vs-vulnerabilities",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/threats-vs-vulnerabilities?u=76281980"
+      },
+      {
+        "name": "Social engineering attacks",
+        "duration": "7m 43s",
+        "slug": "social-engineering-attacks",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/social-engineering-attacks?u=76281980"
+      },
+      {
+        "name": "Denial-of-service attacks",
+        "duration": "5m 42s",
+        "slug": "denial-of-service-attacks",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/denial-of-service-attacks?u=76281980"
+      },
+      {
+        "name": "Other common attacks",
+        "duration": "9m 10s",
+        "slug": "other-common-attacks",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/other-common-attacks?u=76281980"
+      },
+      {
+        "name": "Password protection of Cisco devices",
+        "duration": "11m 19s",
+        "slug": "password-protection-of-cisco-devices",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/password-protection-of-cisco-devices?u=76281980"
+      },
+      {
+        "name": "Authentication, authorization, and accounting (AAA)",
+        "duration": "8m 42s",
+        "slug": "authentication-authorization-and-acounting-aaa",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/authentication-authorization-and-acounting-aaa?u=76281980"
+      },
+      {
+        "name": "Multifactor authentication",
+        "duration": "2m 12s",
+        "slug": "multi-factor-authentication",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/multi-factor-authentication?u=76281980"
+      },
+      {
+        "name": "Encryption",
+        "duration": "9m 23s",
+        "slug": "encryption",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/encryption?u=76281980"
+      },
+      {
+        "name": "Virtual private networks (VPNs)",
+        "duration": "10m 14s",
+        "slug": "virtual-private-networks-vpns",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtual-private-networks-vpns?u=76281980"
+      },
+      {
+        "name": "Password best practices",
+        "duration": "3m 58s",
+        "slug": "password-best-practices",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/password-best-practices?u=76281980"
+      },
+      {
+        "name": "Wireless security protocols",
+        "duration": "10m 9s",
+        "slug": "wireless-security-protocols",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-security-protocols?u=76281980"
+      },
+      {
+        "name": "Configuring a wireless LAN for WPA2 with a pre-shared key",
+        "duration": "2m 3s",
+        "slug": "configuring-a-wireless-lan-for-wpa2-with-a-pre-shared-key",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-a-wireless-lan-for-wpa2-with-a-pre-shared-key?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Access control lists (ACLs)",
+        "duration": "51s",
+        "slug": "lesson-2-access-control-lists-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-access-control-lists-acls?u=76281980"
+      },
+      {
+        "name": "ACL overview",
+        "duration": "4m 31s",
+        "slug": "acl-overview",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/acl-overview?u=76281980"
+      },
+      {
+        "name": "Numbered standard ACLs",
+        "duration": "7m 50s",
+        "slug": "numbered-standard-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-standard-acls?u=76281980"
+      },
+      {
+        "name": "Numbered extended ACLs",
+        "duration": "10m 19s",
+        "slug": "numbered-extended-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-extended-acls?u=76281980"
+      },
+      {
+        "name": "Named ACLs",
+        "duration": "14m 17s",
+        "slug": "named-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/named-acls?u=76281980"
+      },
+      {
+        "name": "ACL considerations",
+        "duration": "9m 33s",
+        "slug": "acl-considerations",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/acl-considerations?u=76281980"
+      },
+      {
+        "name": "Lesson 3: Layer 2 security features",
+        "duration": "1m 17s",
+        "slug": "lesson-3-layer-2-security-features",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-layer-2-security-features?u=76281980"
+      },
+      {
+        "name": "DHCP snooping theory",
+        "duration": "4m 4s",
+        "slug": "dhcp-snooping-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-theory?u=76281980"
+      },
+      {
+        "name": "DHCP snooping configuration",
+        "duration": "3m 46s",
+        "slug": "dhcp-snooping-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-configuration?u=76281980"
+      },
+      {
+        "name": "Dynamic ARP Inspection (DAI) theory",
+        "duration": "4m 9s",
+        "slug": "dynamic-arp-inspection-dai-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-theory?u=76281980"
+      },
+      {
+        "name": "Dynamic ARP Inspection (DAI) configuration",
+        "duration": "15m 33s",
+        "slug": "dynamic-arp-inspection-dai-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-configuration?u=76281980"
+      },
+      {
+        "name": "Port security theory",
+        "duration": "5m 16s",
+        "slug": "port-security-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-theory?u=76281980"
+      },
+      {
+        "name": "Port security configuration",
+        "duration": "7m 34s",
+        "slug": "port-security-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-configuration?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 9: Network programmability",
+    "lessons": [
+      {
+        "name": "Lesson 1: Software-defined networking (SDN)",
+        "duration": "2m 2s",
+        "slug": "lesson-1-software-defined-networking-sdn",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-software-defined-networking-sdn?u=76281980"
+      },
+      {
+        "name": "Overview of SDN",
+        "duration": "7m 16s",
+        "slug": "overview-of-sdn",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/overview-of-sdn?u=76281980"
+      },
+      {
+        "name": "REST APIs",
+        "duration": "4m 39s",
+        "slug": "rest-apis",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rest-apis?u=76281980"
+      },
+      {
+        "name": "JSON formatting",
+        "duration": "5m 46s",
+        "slug": "json-formatting",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/json-formatting?u=76281980"
+      },
+      {
+        "name": "Cisco SDN controllers",
+        "duration": "3m 30s",
+        "slug": "cisco-sdn-controllers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-sdn-controllers?u=76281980"
+      },
+      {
+        "name": "Software-defined architectures",
+        "duration": "4m 41s",
+        "slug": "software-defined-architectures",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/software-defined-architectures?u=76281980"
+      },
+      {
+        "name": "Lesson 2: Configuration management",
+        "duration": "1m 22s",
+        "slug": "lesson-2-configuration-management",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-configuration-management?u=76281980"
+      },
+      {
+        "name": "The DevOps lifecycle",
+        "duration": "4m 24s",
+        "slug": "the-devops-lifecycle",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/the-devops-lifecycle?u=76281980"
+      },
+      {
+        "name": "Configuration management with Ansible",
+        "duration": "2m 10s",
+        "slug": "configuration-management-with-ansible",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuration-management-with-ansible?u=76281980"
+      },
+      {
+        "name": "Configuration management with Terraform",
+        "duration": "3m 2s",
+        "slug": "configuration-mmnagement-with-terraform",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuration-mmnagement-with-terraform?u=76281980"
+      }
+    ]
+  },
+  {
+    "title": "Module 10: Exam preparation",
+    "lessons": [
+      {
+        "name": "How to register for the exam",
+        "duration": "3m 17s",
+        "slug": "how-to-register-for-the-exam",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/how-to-register-for-the-exam?u=76281980"
+      },
+      {
+        "name": "Study strategies",
+        "duration": "7m 18s",
+        "slug": "study-strategies",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/study-strategies?u=76281980"
+      },
+      {
+        "name": "What to do on exam day",
+        "duration": "3m 38s",
+        "slug": "what-to-do-on-exam-day",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/what-to-do-on-exam-day?u=76281980"
+      }
+    ]
+  }
+]
