@@ -30,11 +30,7 @@
       --radius-lg: 20px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -48,9 +44,7 @@
       background-attachment: fixed;
     }
 
-    code, pre, .mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
+    code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
 
     .container {
       max-width: 1320px;
@@ -108,7 +102,7 @@
       color: var(--text-muted);
     }
 
-    /* Portal Access Quick Strip */
+    /* Saved Credentials Strip */
     .portal-quick-strip {
       background: linear-gradient(90deg, rgba(244, 63, 94, 0.12), rgba(56, 189, 248, 0.08));
       border: 1px solid rgba(244, 63, 94, 0.3);
@@ -163,6 +157,10 @@
       cursor: pointer;
       font-family: inherit;
       transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .btn-sm:hover {
@@ -180,6 +178,21 @@
 
     .btn-sm.primary:hover {
       background: #7dd3fc;
+    }
+
+    .watch-btn {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--cyan);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .watch-btn:hover {
+      background: var(--cyan);
+      color: #070b14;
     }
 
     /* KPI Metric Cards */
@@ -260,7 +273,7 @@
       transition: width 0.4s ease;
     }
 
-    /* Tab Navigation */
+    /* Nav Tabs */
     .nav-tabs {
       display: flex;
       gap: 8px;
@@ -320,7 +333,208 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* TAB: TERMINAL SIMULATOR */
+    /* COURSE TRACKER ACCORDION & LESSONS */
+    .tracker-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 280px;
+      padding: 12px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      color: white;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .module-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .module-header {
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .module-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .module-badge {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      white-space: nowrap;
+    }
+
+    .module-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .module-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .module-counter {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .module-arrow {
+      font-size: 0.85rem;
+      color: var(--cyan);
+      transition: transform 0.2s;
+    }
+
+    .lessons-container {
+      padding: 14px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lesson-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
+    }
+
+    .lesson-row:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+
+    .lesson-row.completed {
+      background: rgba(16, 185, 129, 0.04);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .lesson-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .lesson-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--text-dim);
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .lesson-checkbox:checked {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald-glow);
+    }
+
+    .lesson-checkbox:checked::before {
+      content: '✔';
+      font-size: 12px;
+      color: white;
+      font-weight: 800;
+    }
+
+    .lesson-link {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .lesson-link:hover {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
+
+    .lesson-row.completed .lesson-link {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .lesson-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .lesson-duration {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--cyan);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* CLI SIMULATOR */
     .terminal-window {
       background: #040711;
       border: 1px solid #1e293d;
@@ -337,19 +551,12 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1e293d;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .terminal-dots {
-      display: flex;
-      gap: 8px;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
+    .terminal-dots { display: flex; gap: 8px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
     .dot.red { background: #ef4444; }
     .dot.yellow { background: #f59e0b; }
     .dot.green { background: #10b981; }
@@ -361,11 +568,7 @@
       font-family: 'JetBrains Mono', monospace;
     }
 
-    .terminal-presets {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .terminal-presets { display: flex; gap: 8px; flex-wrap: wrap; }
 
     .terminal-body {
       padding: 20px;
@@ -410,7 +613,7 @@
       font-size: 0.95rem;
     }
 
-    /* TAB: SUBNETTING SPEED TRAINER */
+    /* SUBNET DRILL */
     .subnet-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -447,19 +650,8 @@
       margin-bottom: 20px;
     }
 
-    .subnet-field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .subnet-field label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
+    .subnet-field { display: flex; flex-direction: column; gap: 6px; }
+    .subnet-field label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }
     .subnet-field input {
       padding: 12px 16px;
       background: rgba(0, 0, 0, 0.3);
@@ -469,18 +661,8 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.95rem;
       outline: none;
-      transition: border-color 0.2s;
     }
-
-    .subnet-field input:focus {
-      border-color: var(--cyan);
-    }
-
-    .subnet-controls {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
+    .subnet-field input:focus { border-color: var(--cyan); }
 
     .result-banner {
       margin-top: 20px;
@@ -490,225 +672,10 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.9rem;
     }
+    .result-banner.correct { background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald); color: #34d399; display: block; }
+    .result-banner.wrong { background: rgba(244, 63, 94, 0.15); border: 1px solid var(--rose); color: #fb7185; display: block; }
 
-    .result-banner.correct {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid var(--emerald);
-      color: #34d399;
-      display: block;
-    }
-
-    .result-banner.wrong {
-      background: rgba(244, 63, 94, 0.15);
-      border: 1px solid var(--rose);
-      color: #fb7185;
-      display: block;
-    }
-
-    /* COURSE ROADMAP */
-    .week-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      margin-bottom: 24px;
-      overflow: hidden;
-    }
-
-    .week-header {
-      padding: 20px 24px;
-      background: rgba(255, 255, 255, 0.02);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      cursor: pointer;
-    }
-
-    .week-title-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .week-badge {
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--cyan);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-    }
-
-    .week-title h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .week-title p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .lessons-list {
-      padding: 16px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .lesson-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 14px 18px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      border-radius: var(--radius-md);
-      transition: all 0.2s;
-    }
-
-    .lesson-item:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(56, 189, 248, 0.2);
-    }
-
-    .lesson-item.completed {
-      background: rgba(16, 185, 129, 0.04);
-      border-color: rgba(16, 185, 129, 0.2);
-    }
-
-    .lesson-checkbox {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 22px;
-      height: 22px;
-      border: 2px solid var(--text-dim);
-      border-radius: 6px;
-      background: transparent;
-      cursor: pointer;
-      display: grid;
-      place-content: center;
-      margin-top: 2px;
-      flex-shrink: 0;
-      transition: all 0.2s;
-    }
-
-    .lesson-checkbox:checked {
-      background: var(--emerald);
-      border-color: var(--emerald);
-      box-shadow: 0 0 10px var(--emerald-glow);
-    }
-
-    .lesson-checkbox:checked::before {
-      content: '✔';
-      font-size: 13px;
-      color: white;
-      font-weight: 800;
-    }
-
-    .lesson-info { flex: 1; }
-
-    .lesson-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 4px;
-    }
-
-    .lesson-name {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .lesson-item.completed .lesson-name {
-      color: var(--text-muted);
-      text-decoration: line-through;
-    }
-
-    .lesson-duration {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--cyan);
-      background: rgba(56, 189, 248, 0.08);
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-
-    .lesson-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--text-dim);
-    }
-
-    .tag.kyndryl {
-      background: rgba(244, 63, 94, 0.12);
-      color: #fb7185;
-      border: 1px solid rgba(244, 63, 94, 0.3);
-    }
-
-    /* COMMAND CHEAT SHEET */
-    .cli-search-input {
-      width: 100%;
-      padding: 14px 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      color: white;
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
-      margin-bottom: 20px;
-    }
-
-    .cli-search-input:focus {
-      border-color: var(--cyan);
-    }
-
-    .cmd-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 16px;
-    }
-
-    .cmd-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 16px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.2s;
-    }
-
-    .cmd-card:hover {
-      border-color: var(--indigo);
-      transform: translateY(-2px);
-    }
-
-    .cmd-syntax {
-      font-size: 0.88rem;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 8px 12px;
-      border-radius: 6px;
-      color: #38bdf8;
-      margin: 8px 0;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* NOC INCIDENT WAR ROOM */
+    /* INCIDENT WAR ROOM */
     .incident-ticket {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -742,7 +709,37 @@
       white-space: pre-wrap;
     }
 
-    /* INTERVIEW FLASHCARDS */
+    /* CLI GRID */
+    .cmd-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+
+    .cmd-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+
+    .cmd-card:hover { border-color: var(--indigo); transform: translateY(-2px); }
+
+    .cmd-syntax {
+      font-size: 0.88rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #38bdf8;
+      margin: 8px 0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Q&A FLASHCARDS */
     .qa-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -783,8 +780,8 @@
       <div class="brand-group">
         <span class="badge-kyndryl">Kyndryl</span>
         <div class="header-title">
-          <h1>L1 Network Engineer Operations & CCNA Mastery Center</h1>
-          <p>Interactive Cisco Simulator • Subnetting Drills • Incident Playbooks • Persistent Study Tracker</p>
+          <h1>L1 Network Operations & CCNA v1.1 Mastery Platform</h1>
+          <p>Kevin Wallace 18h 22m Course Tracker with Direct Lesson Links • Terminal Simulator • Subnet Drills</p>
         </div>
       </div>
       <div>
@@ -801,11 +798,12 @@
         <span class="portal-tag">🔑 Saved Library Access</span>
         <span class="portal-val">Card: 29100701939436</span>
         <span class="portal-val">PIN: 1234</span>
-        <span class="portal-val">Partner: Toronto Public Library (TPL)</span>
+        <span class="portal-val">Toronto Public Library (TPL)</span>
       </div>
       <div class="portal-actions">
         <button class="btn-sm" onclick="copyCardAndPin()">📋 Copy Card & PIN</button>
-        <button class="btn-sm primary" onclick="openDirectLogin()">🚀 Open LinkedIn Course</button>
+        <a class="btn-sm primary" href="https://www.linkedin.com/checkpoint/enterprise/login/76281980?pathWildcard=76281980&application=learning" target="_blank">🚀 Open LinkedIn Login</a>
+        <a class="btn-sm" href="https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980" target="_blank">🎬 CCNA Main Course</a>
       </div>
     </section>
 
@@ -820,13 +818,13 @@
       </div>
       <div class="metric-card emerald">
         <div class="metric-label">Lessons Completed</div>
-        <div class="metric-val" id="lessonsCounter">0 <span>/ 36</span></div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 8px;">Saved locally in your browser</p>
+        <div class="metric-val" id="lessonsCounter">0 <span>/ 201</span></div>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 8px;">Direct clickable lesson links saved in browser</p>
       </div>
       <div class="metric-card indigo">
         <div class="metric-label">Subnetting Score</div>
         <div class="metric-val" id="subnetStreak">0 <span>Streak</span></div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 8px;">Mental math speed drill accuracy</p>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 8px;">Mental speed calculation accuracy</p>
       </div>
       <div class="metric-card amber">
         <div class="metric-label">Kyndryl L1 Readiness</div>
@@ -837,16 +835,31 @@
 
     <!-- Navigation Tabs -->
     <nav class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('terminalTab')">💻 Interactive Cisco Terminal</button>
+      <button class="tab-btn active" onclick="switchTab('trackerTab')">🎬 CCNA Course & Lesson Tracker (Direct Links)</button>
+      <button class="tab-btn" onclick="switchTab('terminalTab')">💻 Interactive Cisco Terminal</button>
       <button class="tab-btn" onclick="switchTab('subnetTab')">⚡ Subnetting Speed Trainer</button>
       <button class="tab-btn" onclick="switchTab('warRoomTab')">🚨 Kyndryl Incident War Room</button>
-      <button class="tab-btn" onclick="switchTab('roadmapTab')">📅 4-Week CCNA Course Tracker</button>
       <button class="tab-btn" onclick="switchTab('cliTab')">📖 Top 25 Cisco CLI Reference</button>
       <button class="tab-btn" onclick="switchTab('interviewTab')">🎯 Interview & Technical Q&A</button>
     </nav>
 
-    <!-- TAB 1: INTERACTIVE CISCO CLI TERMINAL SIMULATOR -->
-    <div id="terminalTab" class="tab-pane active">
+    <!-- TAB 1: CCNA COURSE & LESSON TRACKER WITH DIRECT LINKS -->
+    <div id="trackerTab" class="tab-pane active">
+      <div class="tracker-toolbar">
+        <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search across all 201 lessons (e.g. OSPF, VLAN, Subnetting, EtherChannel, ACL, HSRP)..." oninput="filterLessons()">
+        <div style="display:flex; gap:10px;">
+          <button class="btn-sm" onclick="expandAllModules()">Expand All</button>
+          <button class="btn-sm" onclick="collapseAllModules()">Collapse All</button>
+        </div>
+      </div>
+
+      <div id="modulesContainer">
+        <!-- Rendered dynamically by JavaScript with all 201 lesson links -->
+      </div>
+    </div>
+
+    <!-- TAB 2: INTERACTIVE CISCO CLI TERMINAL SIMULATOR -->
+    <div id="terminalTab" class="tab-pane">
       <div class="terminal-window">
         <div class="terminal-bar">
           <div class="terminal-dots">
@@ -879,7 +892,7 @@ Type 'help' to see available commands or click the quick presets above.
       </div>
     </div>
 
-    <!-- TAB 2: SUBNETTING SPEED TRAINER -->
+    <!-- TAB 3: SUBNETTING SPEED TRAINER -->
     <div id="subnetTab" class="tab-pane">
       <div class="subnet-card">
         <div class="subnet-header">
@@ -913,7 +926,7 @@ Type 'help' to see available commands or click the quick presets above.
           </div>
         </div>
 
-        <div class="subnet-controls">
+        <div style="display:flex; gap:12px; align-items:center;">
           <button class="btn-sm primary" onclick="checkSubnetAnswer()">Verify Answer</button>
           <button class="btn-sm" onclick="generateNewSubnetQuestion()">Next Random IP</button>
         </div>
@@ -922,7 +935,7 @@ Type 'help' to see available commands or click the quick presets above.
       </div>
     </div>
 
-    <!-- TAB 3: KYNDRYL INCIDENT WAR ROOM -->
+    <!-- TAB 4: KYNDRYL INCIDENT WAR ROOM -->
     <div id="warRoomTab" class="tab-pane">
 
       <div class="incident-ticket">
@@ -1005,114 +1018,9 @@ Status: Resolved. Link up at 1000Mbps Full Duplex.
 
     </div>
 
-    <!-- TAB 4: 4-WEEK CCNA COURSE TRACKER -->
-    <div id="roadmapTab" class="tab-pane">
-      
-      <!-- Week 1 -->
-      <div class="week-card">
-        <div class="week-header" onclick="toggleWeekCollapse('week1List')">
-          <div class="week-title-group">
-            <span class="week-badge">Week 1</span>
-            <div class="week-title">
-              <h3>Foundations, Physical Layer & Cisco IOS CLI Navigation</h3>
-              <p>Common Network Components, Subnetting, Cabling, TCP/UDP & Switch CLI Basics</p>
-            </div>
-          </div>
-          <span class="tag" id="w1Count">0/9 Lessons</span>
-        </div>
-        <div class="lessons-list" id="week1List">
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l1" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">1. Course Intro & Exercise File Downloads</span><span class="lesson-duration">4m 34s</span></div><p class="lesson-desc">Download 600+ slides PDF, lab topologies, and 3 practice exam PDFs (88 questions each).</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l2" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">2. Performing Lab Exercises in Packet Tracer / CML</span><span class="lesson-duration">4m 20s</span></div><p class="lesson-desc">Setting up base Cisco Packet Tracer topologies and practicing non-disruptive verify commands.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l3" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">3. Common Network Components (Routers, Switches, Firewalls)</span><span class="lesson-duration">28m 30s</span></div><p class="lesson-desc">Layer 2/3 hardware, WLCs, endpoints, and Cisco Catalyst Center (DNA Center).</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l4" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">4. Network Topologies & Virtualization Technologies</span><span class="lesson-duration">32m 10s</span></div><p class="lesson-desc">Two-tier, three-tier, spine-leaf, hypervisors, and virtual switches.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l5" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">5. Physical Layer: Cabling, Fiber Optics & Interface Issues</span><span class="lesson-duration">35m 45s</span></div><p class="lesson-desc">Cat6, Single-mode vs. Multi-mode fiber, SFP modules, and resolving CRC error counters.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l6" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">6. IPv4 Subnetting & Addressing Mastery</span><span class="lesson-duration">55m 20s</span></div><p class="lesson-desc">Calculating network IDs, broadcast IPs, and usable host ranges from /24 to /30.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l7" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">7. IPv6 Address Types & Global Unicast Subnetting</span><span class="lesson-duration">30m 10s</span></div><p class="lesson-desc">Global Unicast (2000::/3), Link-Local (FE80::/10), and EUI-64 generation.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l8" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">8. Transport Layer Protocols: TCP vs. UDP & Ports</span><span class="lesson-duration">24m 50s</span></div><p class="lesson-desc">TCP 3-way handshake, windowing, and common port numbers (22, 53, 67, 80, 443).</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l9" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">9. Cisco IOS Command Line Navigation & Initial Config</span><span class="lesson-duration">42m 00s</span></div><p class="lesson-desc">User EXEC vs. Privileged EXEC modes, SSH setup, banners, and saving running-config.</p></div></div>
-        </div>
-      </div>
-
-      <!-- Week 2 -->
-      <div class="week-card">
-        <div class="week-header" onclick="toggleWeekCollapse('week2List')">
-          <div class="week-title-group">
-            <span class="week-badge">Week 2</span>
-            <div class="week-title">
-              <h3>Enterprise Switching, VLANs, Trunking & Spanning Tree</h3>
-              <p>802.1Q Trunks, Native VLANs, Rapid PVST+, EtherChannel, and WLC Basics</p>
-            </div>
-          </div>
-          <span class="tag" id="w2Count">0/9 Lessons</span>
-        </div>
-        <div class="lessons-list" id="week2List">
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l10" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">10. Ethernet Switching & MAC Table Forwarding</span><span class="lesson-duration">32m 00s</span></div><p class="lesson-desc">Frame switching, MAC address learning, aging timers, and unicast flooding.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l11" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">11. VLAN Segmentation & Access Port Configuration</span><span class="lesson-duration">38m 15s</span></div><p class="lesson-desc">Creating VLANs, assigning switch ports, and voice VLAN tag segregation.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l12" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">12. 802.1Q Trunking & Native VLAN Mismatch Fixes</span><span class="lesson-duration">44m 30s</span></div><p class="lesson-desc">Dynamic and static trunks, allowed VLAN pruning, and native VLAN matching.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l13" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">13. Spanning Tree Protocol (STP 802.1D) Fundamentals</span><span class="lesson-duration">50m 00s</span></div><p class="lesson-desc">Root Bridge election, Root Ports, Designated Ports, and loop prevention.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l14" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">14. Rapid PVST+ & PortFast / BPDU Guard Hardening</span><span class="lesson-duration">36m 10s</span></div><p class="lesson-desc">RSTP convergence and shutting down unauthorized rogue switches via BPDU Guard.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l15" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">15. EtherChannel / Link Aggregation (LACP & PAgP)</span><span class="lesson-duration">40m 25s</span></div><p class="lesson-desc">Bundling links into Port-Channels, checking channel-group status and load sharing.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l16" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">16. Cisco Discovery Protocol (CDP) & LLDP</span><span class="lesson-duration">26m 40s</span></div><p class="lesson-desc">Neighbor discovery, remote port IDs, device capabilities, and cable tracking.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l17" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">17. Wireless Architecture & Centralized WLC Models</span><span class="lesson-duration">34m 15s</span></div><p class="lesson-desc">Autonomous vs Lightweight APs, CAPWAP tunnels, and WLAN settings.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l18" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">18. Lab Challenge: Switching, Trunks & Spanning Tree</span><span class="lesson-duration">45m 00s</span></div><p class="lesson-desc">Building a 4-switch topology with redundant links and testing STP root bridge election.</p></div></div>
-        </div>
-      </div>
-
-      <!-- Week 3 -->
-      <div class="week-card">
-        <div class="week-header" onclick="toggleWeekCollapse('week3List')">
-          <div class="week-title-group">
-            <span class="week-badge">Week 3</span>
-            <div class="week-title">
-              <h3>IP Routing, OSPF Dynamic Routing & Gateway Redundancy</h3>
-              <p>Routing Logic, Administrative Distance, Single-Area OSPFv2, and HSRP</p>
-            </div>
-          </div>
-          <span class="tag" id="w3Count">0/9 Lessons</span>
-        </div>
-        <div class="lessons-list" id="week3List">
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l19" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">19. Routing Table Anatomy & Packet Forwarding</span><span class="lesson-duration">35m 10s</span></div><p class="lesson-desc">Longest Prefix Match, Administrative Distance, and routing metrics.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l20" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">20. Static Routing, Default Routes & Floating Backups</span><span class="lesson-duration">40m 30s</span></div><p class="lesson-desc">Static route configuration, 0.0.0.0/0 default route, and floating static failover.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l21" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">21. Inter-VLAN Routing (Router-on-a-Stick & SVIs)</span><span class="lesson-duration">36m 00s</span></div><p class="lesson-desc">Configuring 802.1Q subinterfaces and Multilayer Switch Switched Virtual Interfaces.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l22" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">22. OSPFv2 Fundamentals & Neighbor Adjacency</span><span class="lesson-duration">50m 45s</span></div><p class="lesson-desc">Link-State database, Router IDs, Hello/Dead timers, and adjacency states.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l23" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">23. Single-Area OSPFv2 Configuration & Verification</span><span class="lesson-duration">45m 15s</span></div><p class="lesson-desc">Wildcard masks, DR/BDR elections on broadcast networks, passive-interface.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l24" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">24. Troubleshooting OSPF Neighbor Failures</span><span class="lesson-duration">38m 20s</span></div><p class="lesson-desc">Resolving neighbors stuck in Init, 2-Way, or ExStart (MTU mismatches, area IDs).</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l25" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">25. First Hop Redundancy Protocols (HSRP Operation)</span><span class="lesson-duration">34m 50s</span></div><p class="lesson-desc">Active vs. Standby routers, Virtual MAC 0000.0c07.acXX, and priority preemption.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l26" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">26. IPv6 Routing & Static Implementations</span><span class="lesson-duration">28m 30s</span></div><p class="lesson-desc">Enabling ipv6 unicast-routing and configuring IPv6 static next-hops.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l27" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">27. Lab Challenge: 3-Router OSPF & HSRP Failover</span><span class="lesson-duration">48m 00s</span></div><p class="lesson-desc">Hands-on Packet Tracer lab configuring OSPF routing and testing gateway failovers.</p></div></div>
-        </div>
-      </div>
-
-      <!-- Week 4 -->
-      <div class="week-card">
-        <div class="week-header" onclick="toggleWeekCollapse('week4List')">
-          <div class="week-title-group">
-            <span class="week-badge">Week 4</span>
-            <div class="week-title">
-              <h3>IP Services, Infrastructure Security & Practice Exams</h3>
-              <p>DHCP Relay, NAT/PAT, ACL Filtering, Port Security, Automation & 3 Full Exams</p>
-            </div>
-          </div>
-          <span class="tag" id="w4Count">0/9 Lessons</span>
-        </div>
-        <div class="lessons-list" id="week4List">
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l28" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">28. DHCP Server, Client & Relay Agent (ip helper)</span><span class="lesson-duration">40m 10s</span></div><p class="lesson-desc">DORA exchange, local pools, and ip helper-address relay forwarding.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l29" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">29. Network Address Translation (Static, Dynamic & PAT)</span><span class="lesson-duration">42m 00s</span></div><p class="lesson-desc">Inside Local/Global, NAT Overload (PAT), and translation table checks.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l30" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">30. Network Management: NTP, DNS, Syslog & SNMP</span><span class="lesson-duration">32m 45s</span></div><p class="lesson-desc">Clock synchronization, DNS resolution, Syslog severity levels (0-7), SNMP.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l31" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">31. IPv4 Access Control Lists (Standard & Extended)</span><span class="lesson-duration">52m 15s</span></div><p class="lesson-desc">Packet filtering, wildcard masks, placement guidelines, and hit counter checks.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l32" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">32. Layer 2 Security: Port Security, Snooping & DAI</span><span class="lesson-duration">41m 20s</span></div><p class="lesson-desc">Sticky MAC addresses, err-disable recovery, DHCP Snooping, Dynamic ARP Inspection.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l33" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">33. Automation, REST APIs & JSON Data Models</span><span class="lesson-duration">36m 00s</span></div><p class="lesson-desc">Software-Defined Networking, Catalyst Center APIs, CRUD verbs, and JSON structures.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l34" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">34. Practice Exam 1 (88 Questions with Explanations)</span><span class="lesson-duration">60m 00s</span></div><p class="lesson-desc">Take Practice Exam 1 from the course exercise files. Review question rationales.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l35" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">35. Practice Exam 2 (88 Questions with Explanations)</span><span class="lesson-duration">60m 00s</span></div><p class="lesson-desc">Take Practice Exam 2 focusing on rapid subnetting and routing table scenarios.</p></div></div>
-          <div class="lesson-item"><input type="checkbox" class="lesson-checkbox" id="l36" onchange="updateProgress()"><div class="lesson-info"><div class="lesson-top-row"><span class="lesson-name">36. Practice Exam 3 & Kyndryl L1 Mock Interview</span><span class="lesson-duration">60m 00s</span></div><p class="lesson-desc">Complete Practice Exam 3. Rehearse technical answers to Kyndryl interview questions.</p></div></div>
-        </div>
-      </div>
-
-    </div>
-
     <!-- TAB 5: TOP 25 CISCO CLI REFERENCE -->
     <div id="cliTab" class="tab-pane">
-      <input type="text" id="cliSearch" class="cli-search-input" placeholder="🔍 Search commands by keyword (e.g. trunk, ospf, mac, err-disabled, nat)..." oninput="filterCommands()">
+      <input type="text" id="cliSearch" class="search-input" placeholder="🔍 Search commands by keyword (e.g. trunk, ospf, mac, err-disabled, nat)..." oninput="filterCommands()" style="width:100%; margin-bottom:20px;">
       <div class="cmd-grid" id="cmdGridContainer"></div>
     </div>
 
@@ -1124,6 +1032,9 @@ Status: Resolved. Link up at 1000Mbps Full Duplex.
   </main>
 
   <script>
+    // Full 201-Lesson Curriculum Database with Direct Links
+    const courseModules = [{"title": "Course Overview & Orientation", "lessons": [{"name": "Diving into the course", "duration": "4m 34s", "slug": "diving-into-the-course", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980"}, {"name": "Performing lab exercises", "duration": "4m 20s", "slug": "performing-lab-exercises", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/performing-lab-exercises?u=76281980"}]}, {"title": "Module 1: Foundational networking technologies", "lessons": [{"name": "Lesson 1: Common network components", "duration": "2m 25s", "slug": "lesson-1-common-network-components", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-common-network-components?u=76281980"}, {"name": "Routers", "duration": "2m 54s", "slug": "routers", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routers?u=76281980"}, {"name": "Switches", "duration": "4m 55s", "slug": "switches", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switches?u=76281980"}, {"name": "Security appliances", "duration": "7m 41s", "slug": "security-appliances", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/security-appliances?u=76281980"}, {"name": "Wireless access points", "duration": "5m 40s", "slug": "wireless-access-points", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-access-points?u=76281980"}, {"name": "Endpoints and servers", "duration": "2m 40s", "slug": "endpoints-and-servers", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/endpoints-and-servers?u=76281980"}, {"name": "Cisco Catalyst Center", "duration": "5m 40s", "slug": "cisco-catalyst-center", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-catalyst-center?u=76281980"}, {"name": "Virtualized devices", "duration": "4m 25s", "slug": "virtualized-devices", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtualized-devices?u=76281980"}, {"name": "TCP vs. UDP", "duration": "7m 57s", "slug": "tcp-vs-udp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/tcp-vs-udp?u=76281980"}, {"name": "Lesson 2: Common network architectures and designs", "duration": "2m", "slug": "lesson-2-common-network-architectures-and-designs", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-common-network-architectures-and-designs?u=76281980"}, {"name": "Three-tier vs. collapsed core architectures", "duration": "5m 1s", "slug": "three-tier-vs-collapsed-core-architectures", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/three-tier-vs-collapsed-core-architectures?u=76281980"}, {"name": "Spine-leaf design for data centers", "duration": "3m 22s", "slug": "spine-leaf-design-for-data-centers", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/spine-leaf-design-for-data-centers?u=76281980"}, {"name": "Wide area network (WAN) topologies", "duration": "10m 45s", "slug": "wide-area-network-wan-topologies", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wide-area-network-wan-topologies?u=76281980"}, {"name": "Small office and home office (SOHO) architecture", "duration": "2m 18s", "slug": "small-office-home-office-soho-architecture", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/small-office-home-office-soho-architecture?u=76281980"}, {"name": "Cloud deployment models", "duration": "4m 21s", "slug": "cloud-deployment-models", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cloud-deployment-models?u=76281980"}, {"name": "Lesson 3: Network cabling", "duration": "2m 29s", "slug": "lesson-3-network-cabling", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-network-cabling?u=76281980"}, {"name": "Coax cables and connectors", "duration": "4m 17s", "slug": "coax-cables-and-connectors", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/coax-cables-and-connectors?u=76281980"}, {"name": "Twisted pair cables and connectors", "duration": "6m 29s", "slug": "twisted-pair-cables-and-connectors", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/twisted-pair-cables-and-connectors?u=76281980"}, {"name": "Ethernet standards for twisted pair cables", "duration": "3m 49s", "slug": "ethernet-standards-for-twisted-pair-cables", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ethernet-standards-for-twisted-pair-cables?u=76281980"}, {"name": "Straight through vs. crossover cables", "duration": "5m 15s", "slug": "straight-through-vs-crossover-cables", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/straight-through-vs-crossover-cables?u=76281980"}, {"name": "Fiber optic cables", "duration": "4m 1s", "slug": "fiber-optic-cables", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fiber-optic-cables?u=76281980"}, {"name": "Fiber optic connectors", "duration": "2m 51s", "slug": "fiber-optic-connectors", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fiber-optic-connectors?u=76281980"}, {"name": "Ethernet standards for fiber optic cables", "duration": "4m 4s", "slug": "ethernet-standards-for-fiber-optic-cables", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ethernet-standards-for-fiber-optic-cables?u=76281980"}, {"name": "Power over Ethernet (PoE)", "duration": "5m 35s", "slug": "power-over-ethernet-poe", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/power-over-ethernet-poe?u=76281980"}, {"name": "Troubleshooting common cabling issues", "duration": "6m 24s", "slug": "troubleshooting-common-cabling-issues", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/troubleshooting-common-cabling-issues?u=76281980"}]}, {"title": "Module 2: IPv4 addressing", "lessons": [{"name": "Lesson 1: Binary numbering", "duration": "55s", "slug": "lesson-1-binary-numbering", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-binary-numbering?u=76281980"}, {"name": "Binary numbering", "duration": "6m 4s", "slug": "binary-numbering", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-numbering?u=76281980"}, {"name": "Binary practice exercise #1", "duration": "1m 23s", "slug": "binary-practice-exercise-1", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-practice-exercise-1?u=76281980"}, {"name": "Binary practice exercise #2", "duration": "2m 37s", "slug": "binary-practice-exercise-2", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/binary-practice-exercise-2?u=76281980"}, {"name": "Lesson 2: IPv4 address characteristics", "duration": "2m 48s", "slug": "lesson-2-ipv4-address-characteristics", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-ipv4-address-characteristics?u=76281980"}, {"name": "IPv4 address format", "duration": "8m 36s", "slug": "ipv4-address-format", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv4-address-format?u=76281980"}, {"name": "Public vs. private IPv4 addresses", "duration": "4m 57s", "slug": "public-vs-private-ipv4-addresses", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/public-vs-private-ipv4-addresses?u=76281980"}, {"name": "Network address translation", "duration": "12m 20s", "slug": "network-address-translation", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/network-address-translation?u=76281980"}, {"name": "IPv4 traffic flows", "duration": "4m 19s", "slug": "ipv4-traffic-flows", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv4-traffic-flows?u=76281980"}, {"name": "Lesson 3: IPv4 address assignment, verification, and name resolution", "duration": "1m 29s", "slug": "lesson-3-ipv4-address-assignment-verification-and-name-resolution", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-ipv4-address-assignment-verification-and-name-resolution?u=76281980"}, {"name": "Manual IPv4 address assignment", "duration": "6m 8s", "slug": "manual-ipv4-address-assignment", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/manual-ipv4-address-assignment?u=76281980"}, {"name": "Dynamic IPv4 address assignment", "duration": "4m 38s", "slug": "dynamic-ipv4-address-assignment", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-ipv4-address-assignment?u=76281980"}, {"name": "Domain Name System (DNS)", "duration": "9m 37s", "slug": "domain-name-system-dns", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/domain-name-system-dns?u=76281980"}, {"name": "Lesson 4: Subnetting", "duration": "2m 24s", "slug": "lesson-4-subnetting", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-subnetting?u=76281980"}, {"name": "The need for subnetting", "duration": "6m 33s", "slug": "the-need-for-subnetting", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/the-need-for-subnetting?u=76281980"}, {"name": "Calculating available subnets", "duration": "3m 44s", "slug": "calculating-available-subnets", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-subnets?u=76281980"}, {"name": "Calculating available hosts", "duration": "3m 56s", "slug": "calculating-available-hosts", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-hosts?u=76281980"}, {"name": "Subnetting practice exercise #1", "duration": "4m 8s", "slug": "subnetting-practice-exercise-1", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-1?u=76281980"}, {"name": "Subnetting practice exercise #2", "duration": "3m 31s", "slug": "subnetting-practice-exercise-2", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-2?u=76281980"}, {"name": "Calculating usable ranges of IPv4 addresses", "duration": "5m 52s", "slug": "calculating-usable-ranges-of-ipv4-addresses", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-usable-ranges-of-ipv4-addresses?u=76281980"}, {"name": "Subnetting practice exercise #3", "duration": "4m 12s", "slug": "subnetting-practice-exercise-3", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-3?u=76281980"}]}, {"title": "Module 3: IPv6 addressing", "lessons": [{"name": "Lesson 1: IPv6 address format and communication", "duration": "2m 16s", "slug": "lesson-1-ipv6-address-format-and-communication", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-ipv6-address-format-and-communication?u=76281980"}, {"name": "Hexadecimal numbering", "duration": "7m 31s", "slug": "hexadecimal-numbering", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/hexadecimal-numbering?u=76281980"}, {"name": "IPv6 address format", "duration": "3m 57s", "slug": "ipv6-address-format", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-address-format?u=76281980"}, {"name": "Shortening an IPv6 address", "duration": "3m 6s", "slug": "shortening-an-ipv6-address", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/shortening-an-ipv6-address?u=76281980"}, {"name": "IPv6 address shortening exercise", "duration": "2m", "slug": "ipv6-address-shortening-exercise", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-address-shortening-exercise?u=76281980"}, {"name": "IPv6 traffic flows", "duration": "2m 39s", "slug": "ipv6-traffic-flows", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-traffic-flows?u=76281980"}, {"name": "Lesson 2: IPv6 address types", "duration": "2m 47s", "slug": "lesson-2-ipv6-address-types", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-ipv6-address-types?u=76281980"}, {"name": "IPv6 global unicast", "duration": "2m 51s", "slug": "ipv6-global-unicast", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-global-unicast?u=76281980"}, {"name": "IPv6 multicast", "duration": "4m", "slug": "ipv6-multicast", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-multicast?u=76281980"}, {"name": "IPv6 link-local", "duration": "2m 54s", "slug": "ipv6-link-local", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-link-local?u=76281980"}, {"name": "IPv6 unique local", "duration": "2m 10s", "slug": "ipv6-unique-local", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-unique-local?u=76281980"}, {"name": "IPv6 loopback", "duration": "1m 33s", "slug": "ipv6-loopback", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-loopback?u=76281980"}, {"name": "IPv6 unspecified", "duration": "2m 40s", "slug": "ipv6-unspecified", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-unspecified?u=76281980"}, {"name": "IPv6 solicited-node multicast", "duration": "3m 34s", "slug": "ipv6-solicited-node-multicast", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ipv6-solicited-node-multicast?u=76281980"}, {"name": "Manual IPv6 address assignment", "duration": "6m 42s", "slug": "manual-ipv6-address-assignment", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/manual-ipv6-address-assignment?u=76281980"}, {"name": "EUI-64", "duration": "2m 56s", "slug": "eui-64", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/eui-64?u=76281980"}, {"name": "Dynamic IPv6 address assignment", "duration": "10m 55s", "slug": "dynamic-ipv6-address-assignment", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-ipv6-address-assignment?u=76281980"}]}, {"title": "Module 4: Ethernet switching", "lessons": [{"name": "Lesson 1: Ethernet switch fundamentals", "duration": "44s", "slug": "lesson-1-ethernet-switch-fundamentals", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-ethernet-switch-fundamentals?u=76281980"}, {"name": "Layer 2 vs. multilayer switches", "duration": "12m 25s", "slug": "layer-2-vs-multilayer-switches", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-2-vs-multilayer-switches?u=76281980"}, {"name": "Examining the MAC address table", "duration": "5m 29s", "slug": "examining-the-mac-address-table", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/examining-the-mac-address-table?u=76281980"}, {"name": "Lesson 2: Neighbor discovery", "duration": "1m 49s", "slug": "lesson-2-neighbor-discovery", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-neighbor-discovery?u=76281980"}, {"name": "Cisco Discovery Protocol (CDP)", "duration": "5m 32s", "slug": "cisco-discovery-protocol-cdp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-discovery-protocol-cdp?u=76281980"}, {"name": "CDP configuration", "duration": "4m 3s", "slug": "cdp-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cdp-configuration?u=76281980"}, {"name": "Link Layer Discovery Protocol (LLDP)", "duration": "1m 31s", "slug": "link-layer-discovery-protocol-lldp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/link-layer-discovery-protocol-lldp?u=76281980"}, {"name": "LLDP configuration", "duration": "5m 44s", "slug": "lldp-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lldp-configuration?u=76281980"}, {"name": "Lesson 3: Virtual LANs (VLANs)", "duration": "2m 7s", "slug": "lesson-3-virtual-lans-vlans", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-virtual-lans-vlans?u=76281980"}, {"name": "VLAN theory", "duration": "3m 31s", "slug": "vlan-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-theory?u=76281980"}, {"name": "VLAN configuration", "duration": "7m 59s", "slug": "vlan-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-configuration?u=76281980"}, {"name": "Router-on-a-stick", "duration": "10m 29s", "slug": "router-on-a-stick", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/router-on-a-stick?u=76281980"}, {"name": "Switch virtual interface (SVI)", "duration": "6m 17s", "slug": "switch-virtual-interface-svi", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switch-virtual-interface-svi?u=76281980"}, {"name": "Routed switch port", "duration": "3m 47s", "slug": "routed-switch-port", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routed-switch-port?u=76281980"}, {"name": "Lesson 4: Trunking", "duration": "1m 58s", "slug": "lesson-4-trunking", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-trunking?u=76281980"}, {"name": "Trunking theory", "duration": "4m 28s", "slug": "trunking-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-theory?u=76281980"}, {"name": "Trunking modes", "duration": "4m 39s", "slug": "trunking-modes", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-modes?u=76281980"}, {"name": "Trunking configuration", "duration": "13m 33s", "slug": "trunking-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-configuration?u=76281980"}, {"name": "Voice VLAN theory", "duration": "6m 3s", "slug": "voice-vlan-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/voice-vlan-theory?u=76281980"}, {"name": "Voice VLAN configuration", "duration": "4m 48s", "slug": "voice-vlan-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/voice-vlan-configuration?u=76281980"}, {"name": "Lesson 5: Spanning Tree Protocol (STP)", "duration": "3m 30s", "slug": "lesson-5-spanning-tree-protocol-stp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-5-spanning-tree-protocol-stp?u=76281980"}, {"name": "STP port states", "duration": "9m 5s", "slug": "stp-port-states", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-port-states?u=76281980"}, {"name": "STP exercise", "duration": "7m 24s", "slug": "stp-exercise", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-exercise?u=76281980"}, {"name": "STP convergence times", "duration": "2m 59s", "slug": "stp-convergence-times", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-convergence-times?u=76281980"}, {"name": "PVST+ theory and configuration", "duration": "13m 36s", "slug": "pvst-plus-theory-and-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/pvst-plus-theory-and-configuration?u=76281980"}, {"name": "Portfast", "duration": "4m 14s", "slug": "portfast", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/portfast?u=76281980"}, {"name": "Root guard", "duration": "6m 14s", "slug": "root-guard", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/root-guard?u=76281980"}, {"name": "Loop guard", "duration": "6m 56s", "slug": "loop-guard", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/loop-guard?u=76281980"}, {"name": "BPDU filter", "duration": "6m 53s", "slug": "bpdu-filter", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/bpdu-filter?u=76281980"}, {"name": "BPDU guard", "duration": "7m 32s", "slug": "bpdu-guard", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/bpdu-guard?u=76281980"}, {"name": "MSTP theory", "duration": "2m 43s", "slug": "mstp-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/mstp-theory?u=76281980"}, {"name": "Rapid PVST+ theory", "duration": "9m 10s", "slug": "rapid-pvst-plus-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rapid-pvst-plus-theory?u=76281980"}, {"name": "Rapid PVST+ configuration", "duration": "6m 58s", "slug": "rapid-pvst-plus-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rapid-pvst-plus-configuration?u=76281980"}, {"name": "Lesson 6: EtherChannel", "duration": "1m 57s", "slug": "lesson-6-etherchannel", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-6-etherchannel?u=76281980"}, {"name": "EtherChannel port options", "duration": "3m 47s", "slug": "etherchannel-port-options", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/etherchannel-port-options?u=76281980"}, {"name": "EtherChannel load balancing", "duration": "4m 51s", "slug": "etherchannel-load-balancing", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/etherchannel-load-balancing?u=76281980"}, {"name": "Layer 2 EtherChannel configuration", "duration": "7m 57s", "slug": "layer-2-etherchannel-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-2-etherchannel-configuration?u=76281980"}, {"name": "Layer 3 EtherChannel configuration", "duration": "7m 52s", "slug": "layer-3-etherchannel-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-3-etherchannel-configuration?u=76281980"}]}, {"title": "Module 5: Routing", "lessons": [{"name": "Lesson 1: Routing fundamentals", "duration": "1m 23s", "slug": "lesson-1-routing-fundamentals", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-routing-fundamentals?u=76281980"}, {"name": "Review of the routing process", "duration": "6m 59s", "slug": "review-of-the-routing-process", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/review-of-the-routing-process?u=76281980"}, {"name": "Administrative distance", "duration": "4m 47s", "slug": "administrative-distance", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/administrative-distance?u=76281980"}, {"name": "Routing protocol comparison", "duration": "8m 11s", "slug": "routing-protocol-comparison", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routing-protocol-comparison?u=76281980"}, {"name": "Routing table examination", "duration": "5m 23s", "slug": "routing-table-examination", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routing-table-examination?u=76281980"}, {"name": "Lesson 2: Static routing", "duration": "2m 32s", "slug": "lesson-2-static-routing", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-static-routing?u=76281980"}, {"name": "Static default route configuration", "duration": "4m 50s", "slug": "static-default-route-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-default-route-configuration?u=76281980"}, {"name": "Static network route configuration", "duration": "4m 30s", "slug": "static-network-route-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-network-route-configuration?u=76281980"}, {"name": "Static host route configuration", "duration": "4m 14s", "slug": "static-host-route-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-host-route-configuration?u=76281980"}, {"name": "Floating static route configuration", "duration": "4m 1s", "slug": "floating-static-route-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/floating-static-route-configuration?u=76281980"}, {"name": "Lesson 3: OSPFv2 routing", "duration": "2m 21s", "slug": "lesson-3-ospfv2-routing", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-ospfv2-routing?u=76281980"}, {"name": "OSPF neighbor formation", "duration": "7m 32s", "slug": "ospf-neighbor-formation", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-neighbor-formation?u=76281980"}, {"name": "DR and BDR election", "duration": "5m 3s", "slug": "dr-and-bdr-election", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dr-and-bdr-election?u=76281980"}, {"name": "OSPF network types", "duration": "2m 24s", "slug": "ospf-network-types", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-network-types?u=76281980"}, {"name": "OSPF areas", "duration": "6m 10s", "slug": "ospf-areas", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-areas?u=76281980"}, {"name": "LSA types", "duration": "5m 15s", "slug": "lsa-types", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lsa-types?u=76281980"}, {"name": "OSPFv2 configuration", "duration": "10m 45s", "slug": "ospfv2-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-configuration?u=76281980"}, {"name": "OSPFv2 verification", "duration": "7m 44s", "slug": "ospfv2-verification", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-verification?u=76281980"}, {"name": "Lesson 4: First hop redundancy protocols (FHRPs)", "duration": "1m 33s", "slug": "lesson-4-first-hop-redundancy-protocols-fhrps", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-first-hop-redundancy-protocols-fhrps?u=76281980"}, {"name": "Hot Standby Router Protocol (HSRP)", "duration": "8m 41s", "slug": "hot-standby-router-protocol-hsrp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/hot-standby-router-protocol-hsrp?u=76281980"}, {"name": "Virtual Router Redundancy Protocol (VRRP)", "duration": "4m 23s", "slug": "virtual-router-redundancy-protocol-vrrp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtual-router-redundancy-protocol-vrrp?u=76281980"}, {"name": "Gateway Load Balancing Protocol (GLBP)", "duration": "4m 5s", "slug": "gateway-load-balancing-protocol-glbp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/gateway-load-balancing-protocol-glbp?u=76281980"}]}, {"title": "Module 6: Wireless networks", "lessons": [{"name": "Lesson 1: Overview of wireless networks", "duration": "1m 49s", "slug": "lesson-1-overview-of-wireless-networks", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-overview-of-wireless-networks?u=76281980"}, {"name": "Wireless access points", "duration": "5m 41s", "slug": "wireless-access-points-24790938", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-access-points-24790938?u=76281980"}, {"name": "Wireless LAN (WLAN) designs", "duration": "2m 48s", "slug": "wireless-lan-wlan-designs", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-lan-wlan-designs?u=76281980"}, {"name": "Access point modes", "duration": "7m", "slug": "access-point-modes", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/access-point-modes?u=76281980"}, {"name": "Service set terminology", "duration": "3m 47s", "slug": "service-set-terminology", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/service-set-terminology?u=76281980"}, {"name": "Radio frequency (RF) basics", "duration": "10m 10s", "slug": "radio-frequency-rf-basics", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/radio-frequency-rf-basics?u=76281980"}, {"name": "Wireless interference", "duration": "2m 2s", "slug": "wireless-interference", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-interference?u=76281980"}, {"name": "Lesson 2: Wireless network configuration", "duration": "2m 28s", "slug": "lesson-2-wireless-network-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-wireless-network-configuration?u=76281980"}, {"name": "Selecting a Wi-Fi standard", "duration": "4m 36s", "slug": "selecting-a-wi-fi-standard", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/selecting-a-wi-fi-standard?u=76281980"}, {"name": "Transmission methods", "duration": "7m 53s", "slug": "transmission-methods", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/transmission-methods?u=76281980"}, {"name": "Spatial streams", "duration": "1m 28s", "slug": "spatial-streams", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/spatial-streams?u=76281980"}, {"name": "Channel bonding", "duration": "3m 43s", "slug": "channel-bonding", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/channel-bonding?u=76281980"}, {"name": "WLC configuration via a graphical interface", "duration": "6m 33s", "slug": "wlc-configuration-via-a-graphical-interface", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wlc-configuration-via-a-graphical-interface?u=76281980"}]}, {"title": "Module 7: Network services", "lessons": [{"name": "Lesson 1: Network address translation (NAT)", "duration": "7m 26s", "slug": "lesson-1-network-address-translation-nat", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-network-address-translation-nat?u=76281980"}, {"name": "Static NAT configuration", "duration": "5m 10s", "slug": "static-nat-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-nat-configuration?u=76281980"}, {"name": "Dynamic NAT configuration", "duration": "5m 51s", "slug": "dynamic-nat-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-nat-configuration?u=76281980"}, {"name": "Port address translation (PAT) configuration", "duration": "6m 39s", "slug": "port-address-translation-pat-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-address-translation-pat-configuration?u=76281980"}, {"name": "Lesson 2: Network Time Protocol (NTP)", "duration": "1m 5s", "slug": "lesson-2-network-time-protocol-ntp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-network-time-protocol-ntp?u=76281980"}, {"name": "NTP theory", "duration": "4m 27s", "slug": "ntp-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-theory?u=76281980"}, {"name": "NTP configuration and verification", "duration": "7m 42s", "slug": "ntp-configuration-and-verification", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-configuration-and-verification?u=76281980"}, {"name": "Lesson 3: Dynamic Host Configuration Protocol (DHCP)", "duration": "4m 20s", "slug": "lesson-3-dynamic-host-configuration-protocol-dhcp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-dynamic-host-configuration-protocol-dhcp?u=76281980"}, {"name": "Configuring routers as DHCP clients and servers", "duration": "7m 22s", "slug": "configuring-routers-as-dhcp-clients-and-servers", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-routers-as-dhcp-clients-and-servers?u=76281980"}, {"name": "Lesson 4: Network management services", "duration": "1m 35s", "slug": "lesson-4-network-management-services", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-4-network-management-services?u=76281980"}, {"name": "Options for network management access", "duration": "6m 40s", "slug": "options-for-network-management-access", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/options-for-network-management-access?u=76281980"}, {"name": "Artificial intelligence (AI) for network management", "duration": "12m 9s", "slug": "artificial-intelligence-ai-for-network-management", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/artificial-intelligence-ai-for-network-management?u=76281980"}, {"name": "Simple Network Management Protocol (SNMP) theory", "duration": "4m 46s", "slug": "simple-network-management-protocol-snmp-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/simple-network-management-protocol-snmp-theory?u=76281980"}, {"name": "SNMP configuration", "duration": "7m 53s", "slug": "snmp-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/snmp-configuration?u=76281980"}, {"name": "Syslog", "duration": "5m 52s", "slug": "syslog", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/syslog?u=76281980"}, {"name": "Configuring remote access with secure shell (SSH)", "duration": "3m 34s", "slug": "configuring-remote-access-with-secure-shell-ssh", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-remote-access-with-secure-shell-ssh?u=76281980"}, {"name": "FTP and TFTP", "duration": "6m 58s", "slug": "ftp-and-tftp", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ftp-and-tftp?u=76281980"}, {"name": "Lesson 5: Quality of service (QoS)", "duration": "1m 35s", "slug": "lesson-5-quality-of-service-qos", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-5-quality-of-service-qos?u=76281980"}, {"name": "Fundamentals of QoS", "duration": "14m 47s", "slug": "fundamentals-of-qos", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/fundamentals-of-qos?u=76281980"}, {"name": "Traffic markings", "duration": "13m 37s", "slug": "traffic-markings", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/traffic-markings?u=76281980"}, {"name": "Prioritizing traffic types", "duration": "8m 28s", "slug": "prioritizing-traffic-types", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/prioritizing-traffic-types?u=76281980"}, {"name": "Shaping, policing, and the token bucket", "duration": "7m 29s", "slug": "shaping-policing-and-the-token-bucket", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/shaping-policing-and-the-token-bucket?u=76281980"}, {"name": "Configuring QoS", "duration": "14m 16s", "slug": "configuring-qos", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-qos?u=76281980"}]}, {"title": "Module 8: Network security", "lessons": [{"name": "Lesson 1: Threats and defense", "duration": "3m 55s", "slug": "lesson-1-threats-and-defense", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-threats-and-defense?u=76281980"}, {"name": "CIA triad", "duration": "4m 16s", "slug": "cia-triad", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cia-triad?u=76281980"}, {"name": "Threats vs. vulnerabilities", "duration": "2m 14s", "slug": "threats-vs-vulnerabilities", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/threats-vs-vulnerabilities?u=76281980"}, {"name": "Social engineering attacks", "duration": "7m 43s", "slug": "social-engineering-attacks", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/social-engineering-attacks?u=76281980"}, {"name": "Denial-of-service attacks", "duration": "5m 42s", "slug": "denial-of-service-attacks", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/denial-of-service-attacks?u=76281980"}, {"name": "Other common attacks", "duration": "9m 10s", "slug": "other-common-attacks", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/other-common-attacks?u=76281980"}, {"name": "Password protection of Cisco devices", "duration": "11m 19s", "slug": "password-protection-of-cisco-devices", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/password-protection-of-cisco-devices?u=76281980"}, {"name": "Authentication, authorization, and accounting (AAA)", "duration": "8m 42s", "slug": "authentication-authorization-and-acounting-aaa", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/authentication-authorization-and-acounting-aaa?u=76281980"}, {"name": "Multifactor authentication", "duration": "2m 12s", "slug": "multi-factor-authentication", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/multi-factor-authentication?u=76281980"}, {"name": "Encryption", "duration": "9m 23s", "slug": "encryption", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/encryption?u=76281980"}, {"name": "Virtual private networks (VPNs)", "duration": "10m 14s", "slug": "virtual-private-networks-vpns", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtual-private-networks-vpns?u=76281980"}, {"name": "Password best practices", "duration": "3m 58s", "slug": "password-best-practices", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/password-best-practices?u=76281980"}, {"name": "Wireless security protocols", "duration": "10m 9s", "slug": "wireless-security-protocols", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/wireless-security-protocols?u=76281980"}, {"name": "Configuring a wireless LAN for WPA2 with a pre-shared key", "duration": "2m 3s", "slug": "configuring-a-wireless-lan-for-wpa2-with-a-pre-shared-key", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-a-wireless-lan-for-wpa2-with-a-pre-shared-key?u=76281980"}, {"name": "Lesson 2: Access control lists (ACLs)", "duration": "51s", "slug": "lesson-2-access-control-lists-acls", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-access-control-lists-acls?u=76281980"}, {"name": "ACL overview", "duration": "4m 31s", "slug": "acl-overview", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/acl-overview?u=76281980"}, {"name": "Numbered standard ACLs", "duration": "7m 50s", "slug": "numbered-standard-acls", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-standard-acls?u=76281980"}, {"name": "Numbered extended ACLs", "duration": "10m 19s", "slug": "numbered-extended-acls", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-extended-acls?u=76281980"}, {"name": "Named ACLs", "duration": "14m 17s", "slug": "named-acls", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/named-acls?u=76281980"}, {"name": "ACL considerations", "duration": "9m 33s", "slug": "acl-considerations", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/acl-considerations?u=76281980"}, {"name": "Lesson 3: Layer 2 security features", "duration": "1m 17s", "slug": "lesson-3-layer-2-security-features", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-layer-2-security-features?u=76281980"}, {"name": "DHCP snooping theory", "duration": "4m 4s", "slug": "dhcp-snooping-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-theory?u=76281980"}, {"name": "DHCP snooping configuration", "duration": "3m 46s", "slug": "dhcp-snooping-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-configuration?u=76281980"}, {"name": "Dynamic ARP Inspection (DAI) theory", "duration": "4m 9s", "slug": "dynamic-arp-inspection-dai-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-theory?u=76281980"}, {"name": "Dynamic ARP Inspection (DAI) configuration", "duration": "15m 33s", "slug": "dynamic-arp-inspection-dai-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-configuration?u=76281980"}, {"name": "Port security theory", "duration": "5m 16s", "slug": "port-security-theory", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-theory?u=76281980"}, {"name": "Port security configuration", "duration": "7m 34s", "slug": "port-security-configuration", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-configuration?u=76281980"}]}, {"title": "Module 9: Network programmability", "lessons": [{"name": "Lesson 1: Software-defined networking (SDN)", "duration": "2m 2s", "slug": "lesson-1-software-defined-networking-sdn", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-software-defined-networking-sdn?u=76281980"}, {"name": "Overview of SDN", "duration": "7m 16s", "slug": "overview-of-sdn", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/overview-of-sdn?u=76281980"}, {"name": "REST APIs", "duration": "4m 39s", "slug": "rest-apis", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rest-apis?u=76281980"}, {"name": "JSON formatting", "duration": "5m 46s", "slug": "json-formatting", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/json-formatting?u=76281980"}, {"name": "Cisco SDN controllers", "duration": "3m 30s", "slug": "cisco-sdn-controllers", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-sdn-controllers?u=76281980"}, {"name": "Software-defined architectures", "duration": "4m 41s", "slug": "software-defined-architectures", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/software-defined-architectures?u=76281980"}, {"name": "Lesson 2: Configuration management", "duration": "1m 22s", "slug": "lesson-2-configuration-management", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-2-configuration-management?u=76281980"}, {"name": "The DevOps lifecycle", "duration": "4m 24s", "slug": "the-devops-lifecycle", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/the-devops-lifecycle?u=76281980"}, {"name": "Configuration management with Ansible", "duration": "2m 10s", "slug": "configuration-management-with-ansible", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuration-management-with-ansible?u=76281980"}, {"name": "Configuration management with Terraform", "duration": "3m 2s", "slug": "configuration-mmnagement-with-terraform", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuration-mmnagement-with-terraform?u=76281980"}]}, {"title": "Module 10: Exam preparation", "lessons": [{"name": "How to register for the exam", "duration": "3m 17s", "slug": "how-to-register-for-the-exam", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/how-to-register-for-the-exam?u=76281980"}, {"name": "Study strategies", "duration": "7m 18s", "slug": "study-strategies", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/study-strategies?u=76281980"}, {"name": "What to do on exam day", "duration": "3m 38s", "slug": "what-to-do-on-exam-day", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/what-to-do-on-exam-day?u=76281980"}]}];
+
     // Cisco CLI Terminal Outputs Database
     const terminalDatabase = {
       "help": `Available commands:
@@ -1202,10 +1113,7 @@ Te1/1/1             Root FWD 4         128.53   P2p
 Te1/1/2             Altn BLK 4         128.54   P2p 
 Gi1/0/8             Desg FWD 19        128.8    P2p Edge `,
 
-      "show ip route": `Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
-       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
-
-Gateway of last resort is 10.10.1.1 to network 0.0.0.0
+      "show ip route": `Gateway of last resort is 10.10.1.1 to network 0.0.0.0
 
 S*    0.0.0.0/0 [1/0] via 10.10.1.1, GigabitEthernet1/0/24
 C     10.10.10.0/24 is directly connected, Vlan10
@@ -1219,9 +1127,7 @@ O     192.168.100.0/24 [110/20] via 10.10.1.1, 04:12:33, GigabitEthernet1/0/24`,
 192.168.1.1       1   FULL/BDR        00:00:36    10.10.1.1       GigabitEthernet1/0/24
 192.168.1.2       1   FULL/DR         00:00:33    10.10.1.3       GigabitEthernet1/0/24`,
 
-      "show standby brief": `                     P indicates configured to preempt.
-                     |
-Interface   Grp  Pri P State   Active          Standby         Virtual IP
+      "show standby brief": `Interface   Grp  Pri P State   Active          Standby         Virtual IP
 Vl10        10   110 P Active  local           10.10.10.2      10.10.10.254
 Vl20        20   90    Standby 10.10.20.2      local           10.10.20.254`,
 
@@ -1247,14 +1153,10 @@ Configuration register is 0x102
     }
 
     function handleTerminalKey(e) {
-      if (e.key === 'Enter') {
-        executeCurrentInput();
-      }
+      if (e.key === 'Enter') executeCurrentInput();
     }
 
-    function runPreset(cmd) {
-      printTerminalCommand(cmd);
-    }
+    function runPreset(cmd) { printTerminalCommand(cmd); }
 
     function printTerminalCommand(cmd) {
       const term = document.getElementById('termBody');
@@ -1267,7 +1169,6 @@ Configuration register is 0x102
 
       let response = terminalDatabase[lower];
       if (!response) {
-        // Fallback search
         for (let key in terminalDatabase) {
           if (key.includes(lower) || lower.includes(key)) {
             response = terminalDatabase[key];
@@ -1289,17 +1190,11 @@ Configuration register is 0x102
       term.scrollTop = term.scrollHeight;
     }
 
-    // Subnetting Drill Engine
+    // Subnetting Drill
     let currentDrill = {
-      ip: "192.168.10.74",
-      cidr: 27,
-      netId: "192.168.10.64",
-      firstHost: "192.168.10.65",
-      lastHost: "192.168.10.94",
-      bcast: "192.168.10.95",
-      hosts: 30
+      ip: "192.168.10.74", cidr: 27,
+      netId: "192.168.10.64", firstHost: "192.168.10.65", lastHost: "192.168.10.94", bcast: "192.168.10.95", hosts: 30
     };
-
     let streak = 0;
 
     function generateNewSubnetQuestion() {
@@ -1308,7 +1203,6 @@ Configuration register is 0x102
       const octet3 = Math.floor(Math.random() * 254) + 1;
       const octet4 = Math.floor(Math.random() * 254) + 1;
       const cidr = [25, 26, 27, 28, 29, 30][Math.floor(Math.random() * 6)];
-
       const blockSize = Math.pow(2, 32 - cidr);
       const netOctet4 = Math.floor(octet4 / blockSize) * blockSize;
       const bcastOctet4 = netOctet4 + blockSize - 1;
@@ -1339,7 +1233,6 @@ Configuration register is 0x102
       const last = document.getElementById('ansLastHost').value.trim();
       const bcast = document.getElementById('ansBcast').value.trim();
       const hosts = parseInt(document.getElementById('ansHosts').value.trim());
-
       const banner = document.getElementById('subnetResultBanner');
 
       if (netId === currentDrill.netId && first === currentDrill.firstHost && last === currentDrill.lastHost && bcast === currentDrill.bcast && hosts === currentDrill.hosts) {
@@ -1360,15 +1253,12 @@ Total Usable Hosts: ${currentDrill.hosts}`;
       }
     }
 
-    // Portal Actions
     function copyCardAndPin() {
       navigator.clipboard.writeText("Card: 29100701939436 | PIN: 1234").then(() => {
-        alert("Copied to clipboard!\nCard Number: 29100701939436\nPIN: 1234");
+        alert("Copied to clipboard!
+Card Number: 29100701939436
+PIN: 1234");
       });
-    }
-
-    function openDirectLogin() {
-      window.open("https://www.linkedin.com/checkpoint/enterprise/login/76281980?pathWildcard=76281980&application=learning", "_blank");
     }
 
     // Top 25 Commands & Q&A
@@ -1417,12 +1307,7 @@ Total Usable Hosts: ${currentDrill.hosts}`;
       if (saved) {
         try { appState = JSON.parse(saved); } catch (e) {}
       }
-      document.querySelectorAll('.lesson-checkbox').forEach(box => {
-        if (appState.completedLessons.includes(box.id)) {
-          box.checked = true;
-          box.closest('.lesson-item').classList.add('completed');
-        }
-      });
+      renderModules();
       updateProgressUI();
     }
 
@@ -1435,10 +1320,11 @@ Total Usable Hosts: ${currentDrill.hosts}`;
 
     function updateProgress() {
       document.querySelectorAll('.lesson-checkbox').forEach(box => {
+        const row = box.closest('.lesson-row');
         if (box.checked) {
-          box.closest('.lesson-item').classList.add('completed');
+          row.classList.add('completed');
         } else {
-          box.closest('.lesson-item').classList.remove('completed');
+          row.classList.remove('completed');
         }
       });
       saveState();
@@ -1446,7 +1332,8 @@ Total Usable Hosts: ${currentDrill.hosts}`;
     }
 
     function updateProgressUI() {
-      const totalLessons = 36;
+      const allCheckboxes = document.querySelectorAll('.lesson-checkbox');
+      const totalLessons = allCheckboxes.length || 201;
       const count = appState.completedLessons ? appState.completedLessons.length : 0;
       const pct = Math.round((count / totalLessons) * 100);
 
@@ -1455,18 +1342,101 @@ Total Usable Hosts: ${currentDrill.hosts}`;
       document.getElementById('lessonsCounter').innerHTML = `${count} <span>/ ${totalLessons}</span>`;
       document.getElementById('readinessScore').innerHTML = `${pct} <span>/ 100</span>`;
 
-      updateWeekCount('week1List', 'w1Count');
-      updateWeekCount('week2List', 'w2Count');
-      updateWeekCount('week3List', 'w3Count');
-      updateWeekCount('week4List', 'w4Count');
+      // Update module badge counts
+      courseModules.forEach((mod, idx) => {
+        const modEl = document.getElementById(`module-${idx}`);
+        if (!modEl) return;
+        const total = mod.lessons.length;
+        const checked = modEl.querySelectorAll('.lesson-checkbox:checked').length;
+        const pill = document.getElementById(`mod-pill-${idx}`);
+        if (pill) pill.innerText = `${checked}/${total} Done`;
+      });
     }
 
-    function updateWeekCount(listId, badgeId) {
-      const list = document.getElementById(listId);
-      if (!list) return;
-      const boxes = list.querySelectorAll('.lesson-checkbox');
-      const checked = list.querySelectorAll('.lesson-checkbox:checked');
-      document.getElementById(badgeId).innerText = `${checked.length}/${boxes.length} Lessons`;
+    // Render Modules and Lessons with Direct Links
+    function renderModules(filter = "") {
+      const container = document.getElementById('modulesContainer');
+      container.innerHTML = "";
+      const lowerFilter = filter.toLowerCase().trim();
+
+      courseModules.forEach((mod, modIdx) => {
+        const filteredLessons = mod.lessons.filter(l => 
+          !lowerFilter || l.name.toLowerCase().includes(lowerFilter) || mod.title.toLowerCase().includes(lowerFilter)
+        );
+
+        if (lowerFilter && filteredLessons.length === 0) return;
+
+        const card = document.createElement('div');
+        card.className = "module-card";
+        card.id = `module-${modIdx}`;
+
+        card.innerHTML = `
+          <div class="module-header" onclick="toggleModule(${modIdx})">
+            <div class="module-title-wrap">
+              <span class="module-badge">Module ${modIdx}</span>
+              <span class="module-title">${mod.title}</span>
+            </div>
+            <div class="module-stats">
+              <span class="module-counter" id="mod-pill-${modIdx}">0/${mod.lessons.length} Done</span>
+              <span class="module-arrow" id="mod-arrow-${modIdx}">▼</span>
+            </div>
+          </div>
+          <div class="lessons-container" id="lessons-${modIdx}" style="${lowerFilter ? 'display:flex;' : (modIdx <= 1 ? 'display:flex;' : 'display:none;')}">
+            ${filteredLessons.map(l => {
+              const isDone = appState.completedLessons.includes(l.slug);
+              return `
+                <div class="lesson-row ${isDone ? 'completed' : ''}">
+                  <div class="lesson-left">
+                    <input type="checkbox" class="lesson-checkbox" id="${l.slug}" ${isDone ? 'checked' : ''} onchange="updateProgress()">
+                    <a href="${l.url}" target="_blank" class="lesson-link" title="Click to open lesson on LinkedIn Learning">${l.name}</a>
+                  </div>
+                  <div class="lesson-right">
+                    ${l.duration ? `<span class="lesson-duration">${l.duration}</span>` : ''}
+                    <a href="${l.url}" target="_blank" class="btn-sm watch-btn" title="Open lesson in new tab">▶ Watch</a>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function toggleModule(idx) {
+      const list = document.getElementById(`lessons-${idx}`);
+      const arrow = document.getElementById(`mod-arrow-${idx}`);
+      if (list.style.display === "none") {
+        list.style.display = "flex";
+        arrow.innerText = "▲";
+      } else {
+        list.style.display = "none";
+        arrow.innerText = "▼";
+      }
+    }
+
+    function expandAllModules() {
+      courseModules.forEach((_, idx) => {
+        const list = document.getElementById(`lessons-${idx}`);
+        const arrow = document.getElementById(`mod-arrow-${idx}`);
+        if (list) list.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+      });
+    }
+
+    function collapseAllModules() {
+      courseModules.forEach((_, idx) => {
+        const list = document.getElementById(`lessons-${idx}`);
+        const arrow = document.getElementById(`mod-arrow-${idx}`);
+        if (list) list.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+      });
+    }
+
+    function filterLessons() {
+      const query = document.getElementById('lessonSearchInput').value;
+      renderModules(query);
+      updateProgressUI();
     }
 
     function switchTab(tabId) {
@@ -1474,11 +1444,6 @@ Total Usable Hosts: ${currentDrill.hosts}`;
       document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
       event.target.classList.add('active');
       document.getElementById(tabId).classList.add('active');
-    }
-
-    function toggleWeekCollapse(listId) {
-      const list = document.getElementById(listId);
-      list.style.display = (list.style.display === "none") ? "flex" : "none";
     }
 
     function renderCommands(filter = "") {
