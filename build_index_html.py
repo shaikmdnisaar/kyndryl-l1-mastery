@@ -1,6 +1,6 @@
 import json
 
-with open('clean_modules.json', encoding='utf-8') as f:
+with open('clean_modules_with_priority.json', encoding='utf-8') as f:
     modules = json.load(f)
 
 modules_js = json.dumps(modules)
@@ -30,6 +30,7 @@ html_template = """<!DOCTYPE html>
       --emerald: #10b981;
       --emerald-glow: rgba(16, 185, 129, 0.25);
       --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.25);
       --rose: #f43f5e;
       --rose-glow: rgba(244, 63, 94, 0.3);
       --radius-sm: 8px;
@@ -148,10 +149,7 @@ html_template = """<!DOCTYPE html>
       color: var(--cyan);
     }
 
-    .portal-actions {
-      display: flex;
-      gap: 10px;
-    }
+    .portal-actions { display: flex; gap: 10px; }
 
     .btn-sm {
       background: rgba(255, 255, 255, 0.06);
@@ -183,8 +181,19 @@ html_template = """<!DOCTYPE html>
       font-weight: 700;
     }
 
-    .btn-sm.primary:hover {
-      background: #7dd3fc;
+    .btn-sm.primary:hover { background: #7dd3fc; }
+
+    .btn-sm.priority-toggle {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: var(--amber);
+      color: #fbbf24;
+      font-weight: 700;
+    }
+
+    .btn-sm.priority-toggle.active {
+      background: var(--amber);
+      color: #070b14;
+      box-shadow: 0 0 15px var(--amber-glow);
     }
 
     .watch-btn {
@@ -326,14 +335,8 @@ html_template = """<!DOCTYPE html>
       box-shadow: 0 0 12px var(--cyan);
     }
 
-    .tab-pane {
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .tab-pane.active {
-      display: block;
-    }
+    .tab-pane { display: none; animation: fadeIn 0.3s ease; }
+    .tab-pane.active { display: block; }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
@@ -368,6 +371,12 @@ html_template = """<!DOCTYPE html>
       box-shadow: 0 0 12px var(--cyan-glow);
     }
 
+    .filter-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     .module-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -377,9 +386,7 @@ html_template = """<!DOCTYPE html>
       transition: border-color 0.2s;
     }
 
-    .module-card:hover {
-      border-color: rgba(56, 189, 248, 0.3);
-    }
+    .module-card:hover { border-color: rgba(56, 189, 248, 0.3); }
 
     .module-header {
       padding: 18px 24px;
@@ -432,11 +439,7 @@ html_template = """<!DOCTYPE html>
       color: var(--text-muted);
     }
 
-    .module-arrow {
-      font-size: 0.85rem;
-      color: var(--cyan);
-      transition: transform 0.2s;
-    }
+    .module-arrow { font-size: 0.85rem; color: var(--cyan); transition: transform 0.2s; }
 
     .lessons-container {
       padding: 14px 20px;
@@ -522,6 +525,17 @@ html_template = """<!DOCTYPE html>
     .lesson-row.completed .lesson-link {
       color: var(--text-muted);
       text-decoration: line-through;
+    }
+
+    .badge-priority {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
     }
 
     .lesson-right {
@@ -788,7 +802,7 @@ html_template = """<!DOCTYPE html>
         <span class="badge-kyndryl">Kyndryl</span>
         <div class="header-title">
           <h1>L1 Network Operations & CCNA v1.1 Mastery Platform</h1>
-          <p>Kevin Wallace 18h 22m Course Tracker with Direct Lesson Links • Terminal Simulator • Subnet Drills</p>
+          <p>Curated Kyndryl L1 Priority Path • 201 Direct Lesson Links • Terminal Simulator • Subnet Drills</p>
         </div>
       </div>
       <div>
@@ -810,7 +824,7 @@ html_template = """<!DOCTYPE html>
       <div class="portal-actions">
         <button class="btn-sm" onclick="copyCardAndPin()">📋 Copy Card & PIN</button>
         <a class="btn-sm primary" href="https://www.linkedin.com/checkpoint/enterprise/login/76281980?pathWildcard=76281980&application=learning" target="_blank">🚀 Open LinkedIn Login</a>
-        <a class="btn-sm" href="https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980" target="_blank">🎬 CCNA Main Course</a>
+        <a class="btn-sm" href="https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980" target="_blank">🎬 Main CCNA Page</a>
       </div>
     </section>
 
@@ -842,7 +856,7 @@ html_template = """<!DOCTYPE html>
 
     <!-- Navigation Tabs -->
     <nav class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('trackerTab')">🎬 CCNA Course & Lesson Tracker (Direct Links)</button>
+      <button class="tab-btn active" onclick="switchTab('trackerTab')">🎬 Course Tracker & Priority Path</button>
       <button class="tab-btn" onclick="switchTab('terminalTab')">💻 Interactive Cisco Terminal</button>
       <button class="tab-btn" onclick="switchTab('subnetTab')">⚡ Subnetting Speed Trainer</button>
       <button class="tab-btn" onclick="switchTab('warRoomTab')">🚨 Kyndryl Incident War Room</button>
@@ -853,8 +867,9 @@ html_template = """<!DOCTYPE html>
     <!-- TAB 1: CCNA COURSE & LESSON TRACKER WITH DIRECT LINKS -->
     <div id="trackerTab" class="tab-pane active">
       <div class="tracker-toolbar">
-        <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search across all 201 lessons (e.g. OSPF, VLAN, Subnetting, EtherChannel, ACL, HSRP)..." oninput="filterLessons()">
-        <div style="display:flex; gap:10px;">
+        <input type="text" id="lessonSearchInput" class="search-input" placeholder="🔍 Search across lessons (e.g. OSPF, VLAN, Subnetting, EtherChannel, ACL, HSRP)..." oninput="filterLessons()">
+        <div class="filter-actions">
+          <button class="btn-sm priority-toggle active" id="priorityToggleBtn" onclick="togglePriorityFilter()">⭐ Kyndryl L1 Priority Only (66 Lessons)</button>
           <button class="btn-sm" onclick="expandAllModules()">Expand All</button>
           <button class="btn-sm" onclick="collapseAllModules()">Collapse All</button>
         </div>
@@ -1039,8 +1054,10 @@ Status: Resolved. Link up at 1000Mbps Full Duplex.
   </main>
 
   <script>
-    // Full 201-Lesson Curriculum Database with Direct Links
+    // Full 201-Lesson Curriculum Database with Direct Links and Priority Flagging
     const courseModules = MODULES_PLACEHOLDER;
+
+    let priorityOnlyFilter = true; // Default to Kyndryl Priority track
 
     // Cisco CLI Terminal Outputs Database
     const terminalDatabase = {
@@ -1251,12 +1268,7 @@ Configuration register is 0x102
         streak = 0;
         document.getElementById('subnetStreak').innerHTML = `0 <span>Streak</span>`;
         banner.className = "result-banner wrong";
-        banner.innerText = `❌ Incorrect. Correct Answers:
-Network ID: ${currentDrill.netId}
-First Usable Host: ${currentDrill.firstHost}
-Last Usable Host: ${currentDrill.lastHost}
-Broadcast Address: ${currentDrill.bcast}
-Total Usable Hosts: ${currentDrill.hosts}`;
+        banner.innerText = `❌ Incorrect. Correct Answers:\\nNetwork ID: ${currentDrill.netId}\\nFirst Usable Host: ${currentDrill.firstHost}\\nLast Usable Host: ${currentDrill.lastHost}\\nBroadcast Address: ${currentDrill.bcast}\\nTotal Usable Hosts: ${currentDrill.hosts}`;
       }
     }
 
@@ -1358,18 +1370,36 @@ Total Usable Hosts: ${currentDrill.hosts}`;
       });
     }
 
-    // Render Modules and Lessons with Direct Links
+    function togglePriorityFilter() {
+      priorityOnlyFilter = !priorityOnlyFilter;
+      const btn = document.getElementById('priorityToggleBtn');
+      if (priorityOnlyFilter) {
+        btn.classList.add('active');
+        btn.innerText = "⭐ Kyndryl L1 Priority Only (66 Lessons)";
+      } else {
+        btn.classList.remove('active');
+        btn.innerText = "🌐 Show All Lessons (201 Lessons)";
+      }
+      filterLessons();
+    }
+
+    // Render Modules and Lessons with Direct Links & Priority Flagging
     function renderModules(filter = "") {
       const container = document.getElementById('modulesContainer');
       container.innerHTML = "";
       const lowerFilter = filter.toLowerCase().trim();
 
-      courseModules.forEach((mod, modIdx) => {
-        const filteredLessons = mod.lessons.filter(l => 
-          !lowerFilter || l.name.toLowerCase().includes(lowerFilter) || mod.title.toLowerCase().includes(lowerFilter)
-        );
+      let visibleLessonCount = 0;
 
-        if (lowerFilter && filteredLessons.length === 0) return;
+      courseModules.forEach((mod, modIdx) => {
+        const filteredLessons = mod.lessons.filter(l => {
+          if (priorityOnlyFilter && !l.isPriority) return false;
+          if (!lowerFilter) return true;
+          return l.name.toLowerCase().includes(lowerFilter) || mod.title.toLowerCase().includes(lowerFilter);
+        });
+
+        if (filteredLessons.length === 0) return;
+        visibleLessonCount += filteredLessons.length;
 
         const card = document.createElement('div');
         card.className = "module-card";
@@ -1386,7 +1416,7 @@ Total Usable Hosts: ${currentDrill.hosts}`;
               <span class="module-arrow" id="mod-arrow-${modIdx}">▼</span>
             </div>
           </div>
-          <div class="lessons-container" id="lessons-${modIdx}" style="${lowerFilter ? 'display:flex;' : (modIdx <= 1 ? 'display:flex;' : 'display:none;')}">
+          <div class="lessons-container" id="lessons-${modIdx}" style="${(lowerFilter || priorityOnlyFilter) ? 'display:flex;' : (modIdx <= 1 ? 'display:flex;' : 'display:none;')}">
             ${filteredLessons.map(l => {
               const isDone = appState.completedLessons.includes(l.slug);
               return `
@@ -1394,6 +1424,7 @@ Total Usable Hosts: ${currentDrill.hosts}`;
                   <div class="lesson-left">
                     <input type="checkbox" class="lesson-checkbox" id="${l.slug}" ${isDone ? 'checked' : ''} onchange="updateProgress()">
                     <a href="${l.url}" target="_blank" class="lesson-link" title="Click to open lesson on LinkedIn Learning">${l.name}</a>
+                    ${l.isPriority ? `<span class="badge-priority">⭐ Kyndryl L1 Core</span>` : ''}
                   </div>
                   <div class="lesson-right">
                     ${l.duration ? `<span class="lesson-duration">${l.duration}</span>` : ''}
@@ -1537,4 +1568,4 @@ full_html = html_template.replace('MODULES_PLACEHOLDER', modules_js)
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(full_html)
 
-print("Successfully written index.html with all 201 direct lesson links!")
+print("Updated index.html with priority tagging and toggle button!")
