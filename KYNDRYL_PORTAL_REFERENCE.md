@@ -44,6 +44,19 @@ The platform now simulates an end-to-end Kyndryl Enterprise Campus & Data Path a
 
 ---
 
+## 🎓 Dedicated Network Engineer Core Topics & Lessons
+
+The dashboard includes a dedicated **Network Engineer Topics & Lessons** tab organizing 73 priority lessons across 7 domains with deep CLI linking:
+1. **🔌 Topic 1: Enterprise Campus LAN Switching & Layer 2 Health (18 Lessons)** — Cabling, MAC tables, VLANs, 802.1Q trunks, RSTP, PortFast, BPDU Guard, EtherChannel (`KYNDRYL-ACC-SW02`).
+2. **⚡ Topic 2: IPv4 Addressing, Mental Subnetting & Routing Architecture (16 Lessons)** — Mental CIDR math, Longest Prefix Match, AD, static/floating routes, SVIs, HSRP (`KYNDRYL-CORE-SW01`).
+3. **🌐 Topic 3: Dynamic Enterprise Routing: OSPFv2 & BGP (8 Lessons)** — OSPF areas, DR/BDR, MTU mismatch triage, BGP peering (`KYNDRYL-EDGE-RTR01`).
+4. **⚙️ Topic 4: Critical Infrastructure IP Services (9 Lessons)** — DHCP relay, SVI helper, NAT/PAT overload, NTP drift, Syslog (`KYNDRYL-EDGE-RTR01` & `KYNDRYL-FW01`).
+5. **🛡️ Topic 5: Enterprise Network Security & Port Hardening (12 Lessons)** — Standard/Extended ACLs, Port Security, Sticky MAC, DHCP Snooping, DAI (`KYNDRYL-ACC-SW02`).
+6. **🚨 Topic 6: NOC Incident Triage, ITIL Playbooks & Shift Handover (3 Lessons + SOPs)** — Non-disruptive show command triage, ServiceNow worklogs, Sev-1 incident bridges (`NOC-ADMIN-PC`).
+7. **🤖 Topic 7: Modern Network Automation, SDN & Cloud Interconnects (7 Lessons)** — Catalyst Center, REST APIs, JSON parsing, Ansible, Cloud IPsec (`NOC-ADMIN-PC`).
+
+---
+
 ## 📋 Standard Sign-In Sequence
 1. Open the [TPL Card Login Form](https://www.linkedin.com/checkpoint/enterprise/login/76281980?pathWildcard=76281980&application=learning).
 2. Paste Card Number: `29100701939436`.

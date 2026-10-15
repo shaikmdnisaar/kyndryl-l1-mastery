@@ -1,0 +1,855 @@
+[
+  {
+    "id": "eng-topic-1",
+    "num": "Topic 1",
+    "title": "Enterprise Campus LAN Switching & Layer 2 Health",
+    "sprint": "Week 1 Sprint",
+    "sprintTag": "week-1",
+    "icon": "🔌",
+    "targetDevice": "acc-sw",
+    "targetDeviceName": "KYNDRYL-ACC-SW02 (Catalyst 9200)",
+    "defaultCmd": "show interfaces status",
+    "desc": "Physical layer diagnostics, copper/fiber transceivers, CRC error detection, VLAN segmentation, 802.1Q trunks, Spanning Tree loop prevention (RSTP/PortFast/BPDU Guard), and EtherChannel bundling.",
+    "nocFocus": "Resolving 40% of L1 NOC alarms: interface flapping, CRC input errors, native VLAN mismatches, and BPDU Guard err-disabled switch ports.",
+    "commands": [
+      {
+        "cmd": "show interfaces status",
+        "desc": "Check port link status, speed, duplex, and assigned VLAN"
+      },
+      {
+        "cmd": "show interfaces trunk",
+        "desc": "Verify active 802.1Q trunk links, allowed VLANs, and native VLAN"
+      },
+      {
+        "cmd": "show vlan brief",
+        "desc": "Verify VLAN existence and port membership"
+      },
+      {
+        "cmd": "show mac address-table dynamic",
+        "desc": "Inspect learned MAC addresses per port/VLAN"
+      },
+      {
+        "cmd": "show spanning-tree summary",
+        "desc": "Confirm root bridge status and active STP topology"
+      },
+      {
+        "cmd": "show etherchannel summary",
+        "desc": "Verify bundled port-channel status (LACP/PAgP)"
+      }
+    ],
+    "slugs": [
+      "lesson-1-common-network-components",
+      "routers",
+      "switches",
+      "straight-through-vs-crossover-cables",
+      "troubleshooting-common-cabling-issues",
+      "examining-the-mac-address-table",
+      "cisco-discovery-protocol-cdp",
+      "link-layer-discovery-protocol-lldp",
+      "vlan-theory",
+      "vlan-configuration",
+      "trunking-theory",
+      "trunking-configuration",
+      "stp-port-states",
+      "portfast",
+      "bpdu-guard",
+      "rapid-pvst-plus-theory",
+      "etherchannel-port-options",
+      "layer-2-etherchannel-configuration"
+    ],
+    "lessons": [
+      {
+        "name": "Lesson 1: Common network components",
+        "duration": "2m 25s",
+        "slug": "lesson-1-common-network-components",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-common-network-components?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Routers",
+        "duration": "2m 54s",
+        "slug": "routers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routers?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Switches",
+        "duration": "4m 55s",
+        "slug": "switches",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switches?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Straight through vs. crossover cables",
+        "duration": "5m 15s",
+        "slug": "straight-through-vs-crossover-cables",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/straight-through-vs-crossover-cables?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Troubleshooting common cabling issues",
+        "duration": "6m 24s",
+        "slug": "troubleshooting-common-cabling-issues",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/troubleshooting-common-cabling-issues?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Examining the MAC address table",
+        "duration": "5m 29s",
+        "slug": "examining-the-mac-address-table",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/examining-the-mac-address-table?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Cisco Discovery Protocol (CDP)",
+        "duration": "5m 32s",
+        "slug": "cisco-discovery-protocol-cdp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-discovery-protocol-cdp?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Link Layer Discovery Protocol (LLDP)",
+        "duration": "1m 31s",
+        "slug": "link-layer-discovery-protocol-lldp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/link-layer-discovery-protocol-lldp?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "VLAN theory",
+        "duration": "3m 31s",
+        "slug": "vlan-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-theory?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "VLAN configuration",
+        "duration": "7m 59s",
+        "slug": "vlan-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/vlan-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Trunking theory",
+        "duration": "4m 28s",
+        "slug": "trunking-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-theory?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Trunking configuration",
+        "duration": "13m 33s",
+        "slug": "trunking-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/trunking-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "STP port states",
+        "duration": "9m 5s",
+        "slug": "stp-port-states",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/stp-port-states?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Portfast",
+        "duration": "4m 14s",
+        "slug": "portfast",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/portfast?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "BPDU guard",
+        "duration": "7m 32s",
+        "slug": "bpdu-guard",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/bpdu-guard?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Rapid PVST+ theory",
+        "duration": "9m 10s",
+        "slug": "rapid-pvst-plus-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rapid-pvst-plus-theory?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "EtherChannel port options",
+        "duration": "3m 47s",
+        "slug": "etherchannel-port-options",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/etherchannel-port-options?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Layer 2 EtherChannel configuration",
+        "duration": "7m 57s",
+        "slug": "layer-2-etherchannel-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/layer-2-etherchannel-configuration?u=76281980",
+        "isPriority": true
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-2",
+    "num": "Topic 2",
+    "title": "IPv4 Addressing, Mental Subnetting & Routing Architecture",
+    "sprint": "Week 2 Sprint",
+    "sprintTag": "week-2",
+    "icon": "⚡",
+    "targetDevice": "core-sw",
+    "targetDeviceName": "KYNDRYL-CORE-SW01 (Catalyst 9300)",
+    "defaultCmd": "show ip route",
+    "desc": "Rapid mental CIDR calculations (/24 to /30), default gateway verification, Longest Prefix Match routing logic, Administrative Distance, static/default/floating routes, Inter-VLAN Routing (ROAS & SVIs), and HSRP First-Hop Redundancy.",
+    "nocFocus": "Diagnosing gateway unreachability, host IP misconfigurations, routing blackholes, and verifying automated HSRP active/standby router failovers.",
+    "commands": [
+      {
+        "cmd": "show ip route",
+        "desc": "View full IPv4 routing table and routing protocol codes"
+      },
+      {
+        "cmd": "show ip route 10.10.20.100",
+        "desc": "Test longest prefix match for a specific destination IP"
+      },
+      {
+        "cmd": "show ip interface brief",
+        "desc": "Check IP addresses and operational status of all interfaces"
+      },
+      {
+        "cmd": "show standby brief",
+        "desc": "Verify HSRP group status, active virtual IP, and priority"
+      },
+      {
+        "cmd": "show ip arp",
+        "desc": "Inspect IP-to-MAC resolution table for local subnets"
+      }
+    ],
+    "slugs": [
+      "public-vs-private-ipv4-addresses",
+      "the-need-for-subnetting",
+      "calculating-available-subnets",
+      "calculating-available-hosts",
+      "subnetting-practice-exercise-1",
+      "subnetting-practice-exercise-2",
+      "calculating-usable-ranges-of-ipv4-addresses",
+      "review-of-the-routing-process",
+      "administrative-distance",
+      "routing-table-examination",
+      "static-default-route-configuration",
+      "static-network-route-configuration",
+      "floating-static-route-configuration",
+      "router-on-a-stick",
+      "switch-virtual-interface-svi",
+      "hot-standby-router-protocol-hsrp"
+    ],
+    "lessons": [
+      {
+        "name": "Public vs. private IPv4 addresses",
+        "duration": "4m 57s",
+        "slug": "public-vs-private-ipv4-addresses",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/public-vs-private-ipv4-addresses?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "The need for subnetting",
+        "duration": "6m 33s",
+        "slug": "the-need-for-subnetting",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/the-need-for-subnetting?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Calculating available subnets",
+        "duration": "3m 44s",
+        "slug": "calculating-available-subnets",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-subnets?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Calculating available hosts",
+        "duration": "3m 56s",
+        "slug": "calculating-available-hosts",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-available-hosts?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Subnetting practice exercise #1",
+        "duration": "4m 8s",
+        "slug": "subnetting-practice-exercise-1",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-1?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Subnetting practice exercise #2",
+        "duration": "3m 31s",
+        "slug": "subnetting-practice-exercise-2",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/subnetting-practice-exercise-2?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Calculating usable ranges of IPv4 addresses",
+        "duration": "5m 52s",
+        "slug": "calculating-usable-ranges-of-ipv4-addresses",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/calculating-usable-ranges-of-ipv4-addresses?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Review of the routing process",
+        "duration": "6m 59s",
+        "slug": "review-of-the-routing-process",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/review-of-the-routing-process?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Administrative distance",
+        "duration": "4m 47s",
+        "slug": "administrative-distance",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/administrative-distance?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Routing table examination",
+        "duration": "5m 23s",
+        "slug": "routing-table-examination",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/routing-table-examination?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Static default route configuration",
+        "duration": "4m 50s",
+        "slug": "static-default-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-default-route-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Static network route configuration",
+        "duration": "4m 30s",
+        "slug": "static-network-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-network-route-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Floating static route configuration",
+        "duration": "4m 1s",
+        "slug": "floating-static-route-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/floating-static-route-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Router-on-a-stick",
+        "duration": "10m 29s",
+        "slug": "router-on-a-stick",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/router-on-a-stick?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Switch virtual interface (SVI)",
+        "duration": "6m 17s",
+        "slug": "switch-virtual-interface-svi",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/switch-virtual-interface-svi?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Hot Standby Router Protocol (HSRP)",
+        "duration": "8m 41s",
+        "slug": "hot-standby-router-protocol-hsrp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/hot-standby-router-protocol-hsrp?u=76281980",
+        "isPriority": true
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-3",
+    "num": "Topic 3",
+    "title": "Dynamic Enterprise Routing (OSPFv2 & WAN Multi-Homing)",
+    "sprint": "Week 3 Sprint",
+    "sprintTag": "week-3",
+    "icon": "🌐",
+    "targetDevice": "edge-rtr",
+    "targetDeviceName": "KYNDRYL-EDGE-RTR01 (Cisco ISR 4451-X)",
+    "defaultCmd": "show ip ospf neighbor",
+    "desc": "Dynamic Interior Gateway Protocols, OSPF Single & Multi-Area design, Link-State Advertisements (LSAs), 2-WAY vs FULL neighbor states, DR/BDR elections, MTU mismatch triage, and BGP WAN peering fundamentals.",
+    "nocFocus": "Diagnosing OSPF neighbor flaps, resolving neighbors stuck in ExStart/Init due to MTU or hello timer mismatches, and validating redundant ISP WAN uplinks.",
+    "commands": [
+      {
+        "cmd": "show ip ospf neighbor",
+        "desc": "Check OSPF neighbor states (FULL/DR, FULL/BDR, 2WAY)"
+      },
+      {
+        "cmd": "show ip ospf interface Gi0/0/0",
+        "desc": "Verify OSPF area, timers, network type, and cost"
+      },
+      {
+        "cmd": "show ip ospf database",
+        "desc": "Inspect OSPF link-state database (LSAs)"
+      },
+      {
+        "cmd": "show ip protocols",
+        "desc": "Review active routing protocol parameters and networks"
+      },
+      {
+        "cmd": "show ip bgp summary",
+        "desc": "Verify WAN ISP BGP peering state (Established)"
+      }
+    ],
+    "slugs": [
+      "ospf-neighbor-formation",
+      "dr-and-bdr-election",
+      "ospf-network-types",
+      "ospf-areas",
+      "lsa-types",
+      "ospfv2-configuration",
+      "ospfv2-verification",
+      "virtual-router-redundancy-protocol-vrrp"
+    ],
+    "lessons": [
+      {
+        "name": "OSPF neighbor formation",
+        "duration": "7m 32s",
+        "slug": "ospf-neighbor-formation",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-neighbor-formation?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "DR and BDR election",
+        "duration": "5m 3s",
+        "slug": "dr-and-bdr-election",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dr-and-bdr-election?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "OSPF network types",
+        "duration": "2m 24s",
+        "slug": "ospf-network-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-network-types?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "OSPF areas",
+        "duration": "6m 10s",
+        "slug": "ospf-areas",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospf-areas?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "LSA types",
+        "duration": "5m 15s",
+        "slug": "lsa-types",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lsa-types?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "OSPFv2 configuration",
+        "duration": "10m 45s",
+        "slug": "ospfv2-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-configuration?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "OSPFv2 verification",
+        "duration": "7m 44s",
+        "slug": "ospfv2-verification",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ospfv2-verification?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Virtual Router Redundancy Protocol (VRRP)",
+        "duration": "4m 23s",
+        "slug": "virtual-router-redundancy-protocol-vrrp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/virtual-router-redundancy-protocol-vrrp?u=76281980",
+        "isPriority": false
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-4",
+    "num": "Topic 4",
+    "title": "Critical Infrastructure IP Services (DHCP, NAT/PAT, NTP & Syslog)",
+    "sprint": "Week 3 Sprint",
+    "sprintTag": "week-3",
+    "icon": "⚙️",
+    "targetDevice": "edge-rtr",
+    "targetDeviceName": "KYNDRYL-EDGE-RTR01 (Cisco ISR 4451-X)",
+    "defaultCmd": "show ip nat translations",
+    "desc": "Core infrastructure services that sustain enterprise clients: DHCP DORA lifecycle, DHCP relay agent (ip helper-address), NAT/PAT overload, synchronized NTP timestamps, and Syslog logging facility levels.",
+    "nocFocus": "Triaging client APIPA 169.254.x.x addresses, verifying DHCP helper relay on core SVIs, diagnosing NAT table exhaustion, and ensuring synchronized event logging.",
+    "commands": [
+      {
+        "cmd": "show ip dhcp binding",
+        "desc": "List active IP addresses leased by DHCP server"
+      },
+      {
+        "cmd": "show ip dhcp conflict",
+        "desc": "Check for duplicate IP detection conflicts"
+      },
+      {
+        "cmd": "show ip nat translations",
+        "desc": "View active inside/outside NAT/PAT translation table"
+      },
+      {
+        "cmd": "show ip nat statistics",
+        "desc": "Inspect NAT pool hit counts and dropped packets"
+      },
+      {
+        "cmd": "show ntp status",
+        "desc": "Verify NTP synchronization and stratum level"
+      },
+      {
+        "cmd": "show logging",
+        "desc": "View internal syslog buffer messages and error alerts"
+      }
+    ],
+    "slugs": [
+      "lesson-3-dynamic-host-configuration-protocol-dhcp",
+      "configuring-routers-as-dhcp-clients-and-servers",
+      "static-nat-configuration",
+      "dynamic-nat-configuration",
+      "port-address-translation-pat-configuration",
+      "ntp-theory",
+      "ntp-configuration-and-verification",
+      "syslog",
+      "configuring-remote-access-with-secure-shell-ssh"
+    ],
+    "lessons": [
+      {
+        "name": "Lesson 3: Dynamic Host Configuration Protocol (DHCP)",
+        "duration": "4m 20s",
+        "slug": "lesson-3-dynamic-host-configuration-protocol-dhcp",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-3-dynamic-host-configuration-protocol-dhcp?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Configuring routers as DHCP clients and servers",
+        "duration": "7m 22s",
+        "slug": "configuring-routers-as-dhcp-clients-and-servers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-routers-as-dhcp-clients-and-servers?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Static NAT configuration",
+        "duration": "5m 10s",
+        "slug": "static-nat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/static-nat-configuration?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Dynamic NAT configuration",
+        "duration": "5m 51s",
+        "slug": "dynamic-nat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-nat-configuration?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Port address translation (PAT) configuration",
+        "duration": "6m 39s",
+        "slug": "port-address-translation-pat-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-address-translation-pat-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "NTP theory",
+        "duration": "4m 27s",
+        "slug": "ntp-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-theory?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "NTP configuration and verification",
+        "duration": "7m 42s",
+        "slug": "ntp-configuration-and-verification",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/ntp-configuration-and-verification?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Syslog",
+        "duration": "5m 52s",
+        "slug": "syslog",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/syslog?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Configuring remote access with secure shell (SSH)",
+        "duration": "3m 34s",
+        "slug": "configuring-remote-access-with-secure-shell-ssh",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuring-remote-access-with-secure-shell-ssh?u=76281980",
+        "isPriority": false
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-5",
+    "num": "Topic 5",
+    "title": "Enterprise Network Security, ACLs & Layer 2 Port Hardening",
+    "sprint": "Week 4 Sprint",
+    "sprintTag": "week-4",
+    "icon": "🛡️",
+    "targetDevice": "acc-sw",
+    "targetDeviceName": "KYNDRYL-ACC-SW02 (Catalyst 9200)",
+    "defaultCmd": "show access-lists",
+    "desc": "Traffic filtering with Standard & Extended ACLs, port security violation modes, sticky MAC configuration, DHCP Snooping on access switches, and Dynamic ARP Inspection (DAI) against ARP spoofing.",
+    "nocFocus": "Isolating security policy drops using ACL hit counters, clearing port-security err-disabled locks caused by unapproved devices, and blocking rogue DHCP servers.",
+    "commands": [
+      {
+        "cmd": "show access-lists",
+        "desc": "View all configured ACLs and real-time rule match counters"
+      },
+      {
+        "cmd": "show port-security interface Gi1/0/2",
+        "desc": "Check violation mode, secure MAC count, and port status"
+      },
+      {
+        "cmd": "show port-security address",
+        "desc": "List all learned secure and sticky MAC addresses"
+      },
+      {
+        "cmd": "show ip dhcp snooping binding",
+        "desc": "Inspect trusted DHCP snooping database bindings"
+      },
+      {
+        "cmd": "show ip arp inspection",
+        "desc": "Verify DAI inspection statistics and dropped rogue ARPs"
+      }
+    ],
+    "slugs": [
+      "password-protection-of-cisco-devices",
+      "authentication-authorization-and-acounting-aaa",
+      "acl-overview",
+      "numbered-standard-acls",
+      "numbered-extended-acls",
+      "named-acls",
+      "port-security-theory",
+      "port-security-configuration",
+      "dhcp-snooping-theory",
+      "dhcp-snooping-configuration",
+      "dynamic-arp-inspection-dai-theory",
+      "dynamic-arp-inspection-dai-configuration"
+    ],
+    "lessons": [
+      {
+        "name": "Password protection of Cisco devices",
+        "duration": "11m 19s",
+        "slug": "password-protection-of-cisco-devices",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/password-protection-of-cisco-devices?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Authentication, authorization, and accounting (AAA)",
+        "duration": "8m 42s",
+        "slug": "authentication-authorization-and-acounting-aaa",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/authentication-authorization-and-acounting-aaa?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "ACL overview",
+        "duration": "4m 31s",
+        "slug": "acl-overview",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/acl-overview?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Numbered standard ACLs",
+        "duration": "7m 50s",
+        "slug": "numbered-standard-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-standard-acls?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Numbered extended ACLs",
+        "duration": "10m 19s",
+        "slug": "numbered-extended-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/numbered-extended-acls?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Named ACLs",
+        "duration": "14m 17s",
+        "slug": "named-acls",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/named-acls?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Port security theory",
+        "duration": "5m 16s",
+        "slug": "port-security-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-theory?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "Port security configuration",
+        "duration": "7m 34s",
+        "slug": "port-security-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/port-security-configuration?u=76281980",
+        "isPriority": true
+      },
+      {
+        "name": "DHCP snooping theory",
+        "duration": "4m 4s",
+        "slug": "dhcp-snooping-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-theory?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "DHCP snooping configuration",
+        "duration": "3m 46s",
+        "slug": "dhcp-snooping-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dhcp-snooping-configuration?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Dynamic ARP Inspection (DAI) theory",
+        "duration": "4m 9s",
+        "slug": "dynamic-arp-inspection-dai-theory",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-theory?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Dynamic ARP Inspection (DAI) configuration",
+        "duration": "15m 33s",
+        "slug": "dynamic-arp-inspection-dai-configuration",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/dynamic-arp-inspection-dai-configuration?u=76281980",
+        "isPriority": false
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-6",
+    "num": "Topic 6",
+    "title": "NOC Incident Triage, ITIL Playbooks & Shift Handover",
+    "sprint": "Week 4 Sprint",
+    "sprintTag": "week-4",
+    "icon": "🚨",
+    "targetDevice": "host-pc",
+    "targetDeviceName": "NOC-ADMIN-PC (Diagnostics Workstation)",
+    "defaultCmd": "ipconfig /all",
+    "desc": "Day in the life of a Kyndryl L1 NOC engineer: executing non-disruptive triage sequences, managing P1/P2/P3 severity incidents, writing structured ServiceNow worklogs, and conducting shift handover.",
+    "nocFocus": "Leading bridge triage without disrupting live customer traffic, capturing diagnostics before device reboot, and executing clean escalations to L2/L3.",
+    "commands": [
+      {
+        "cmd": "ipconfig /all",
+        "desc": "Host workstation IP, subnet mask, default gateway, and DNS servers"
+      },
+      {
+        "cmd": "ping 10.10.10.1",
+        "desc": "Test connectivity to default gateway"
+      },
+      {
+        "cmd": "tracert 10.10.1.1",
+        "desc": "Trace Layer 3 hop-by-hop forwarding path"
+      },
+      {
+        "cmd": "nslookup portal.kyndryl.com",
+        "desc": "Verify DNS server resolution"
+      }
+    ],
+    "slugs": [
+      "how-to-register-for-the-exam",
+      "study-strategies",
+      "what-to-do-on-exam-day"
+    ],
+    "lessons": [
+      {
+        "name": "How to register for the exam",
+        "duration": "3m 17s",
+        "slug": "how-to-register-for-the-exam",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/how-to-register-for-the-exam?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Study strategies",
+        "duration": "7m 18s",
+        "slug": "study-strategies",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/study-strategies?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "What to do on exam day",
+        "duration": "3m 38s",
+        "slug": "what-to-do-on-exam-day",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/what-to-do-on-exam-day?u=76281980",
+        "isPriority": false
+      }
+    ]
+  },
+  {
+    "id": "eng-topic-7",
+    "num": "Topic 7",
+    "title": "Modern Network Automation, SDN & Cloud Hybrid Interconnects",
+    "sprint": "Modern Skills",
+    "sprintTag": "week-modern",
+    "icon": "🤖",
+    "targetDevice": "host-pc",
+    "targetDeviceName": "NOC-ADMIN-PC (Diagnostics Workstation)",
+    "defaultCmd": "netstat -ano",
+    "desc": "Future-ready Network Engineering: Software-Defined Networking (SDN), Cisco Catalyst Center (DNA Center) architecture, REST API fundamentals, JSON data parsing, Ansible configuration management, and Azure/AWS hybrid cloud interconnects.",
+    "nocFocus": "Interfacing with automated NOC monitoring pipelines, parsing REST API JSON responses for inventory audits, and troubleshooting enterprise hybrid cloud IPsec tunnels.",
+    "commands": [
+      {
+        "cmd": "curl -k -X GET https://catalyst-center/api/v1/network-device",
+        "desc": "Query SDN controller inventory via REST API"
+      },
+      {
+        "cmd": "python backup_configs.py",
+        "desc": "Run automated configuration backup script via Netmiko"
+      },
+      {
+        "cmd": "netstat -ano",
+        "desc": "Display active TCP/UDP socket connections and listening ports"
+      }
+    ],
+    "slugs": [
+      "lesson-1-software-defined-networking-sdn",
+      "overview-of-sdn",
+      "rest-apis",
+      "json-formatting",
+      "cisco-sdn-controllers",
+      "software-defined-architectures",
+      "configuration-management-with-ansible"
+    ],
+    "lessons": [
+      {
+        "name": "Lesson 1: Software-defined networking (SDN)",
+        "duration": "2m 2s",
+        "slug": "lesson-1-software-defined-networking-sdn",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/lesson-1-software-defined-networking-sdn?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Overview of SDN",
+        "duration": "7m 16s",
+        "slug": "overview-of-sdn",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/overview-of-sdn?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "REST APIs",
+        "duration": "4m 39s",
+        "slug": "rest-apis",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/rest-apis?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "JSON formatting",
+        "duration": "5m 46s",
+        "slug": "json-formatting",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/json-formatting?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Cisco SDN controllers",
+        "duration": "3m 30s",
+        "slug": "cisco-sdn-controllers",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/cisco-sdn-controllers?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Software-defined architectures",
+        "duration": "4m 41s",
+        "slug": "software-defined-architectures",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/software-defined-architectures?u=76281980",
+        "isPriority": false
+      },
+      {
+        "name": "Configuration management with Ansible",
+        "duration": "2m 10s",
+        "slug": "configuration-management-with-ansible",
+        "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/configuration-management-with-ansible?u=76281980",
+        "isPriority": false
+      }
+    ]
+  }
+]

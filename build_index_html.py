@@ -3,7 +3,11 @@ import json
 with open('clean_modules_with_priority.json', encoding='utf-8') as f:
     modules = json.load(f)
 
+with open('engineer_topics.json', encoding='utf-8') as f:
+    engineer_topics = json.load(f)
+
 modules_js = json.dumps(modules)
+engineer_topics_js = json.dumps(engineer_topics)
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
@@ -980,6 +984,310 @@ html_template = """<!DOCTYPE html>
     }
 
     .qa-answer.open { display: block; }
+
+    /* NETWORK ENGINEER TOPICS & LESSONS TAB STYLING */
+    .engineer-header-card {
+      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95), rgba(20, 29, 51, 0.85));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 26px 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .engineer-header-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #38bdf8, #6366f1, #10b981);
+    }
+    .engineer-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .engineer-header-title h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .engineer-header-title p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+    .engineer-stats-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .eng-stat-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      text-align: center;
+    }
+    .eng-stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+    .eng-stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    .engineer-progress-wrap {
+      margin-top: 16px;
+    }
+    .eng-prog-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    /* SPRINT FILTER TABS */
+    .sprint-filters-wrap {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      scrollbar-width: thin;
+    }
+    .sprint-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sprint-chip:hover {
+      border-color: var(--cyan);
+      color: var(--text-main);
+      background: var(--bg-card-hover);
+    }
+    .sprint-chip.active {
+      background: rgba(56, 189, 248, 0.14);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan-glow);
+    }
+
+    /* TOPIC CARD */
+    .eng-topic-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 22px;
+      overflow: hidden;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .eng-topic-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+    .eng-topic-header {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.015);
+      border-bottom: 1px solid transparent;
+      user-select: none;
+    }
+    .eng-topic-header.open {
+      border-bottom-color: var(--border);
+      background: rgba(56, 189, 248, 0.03);
+    }
+    .eng-topic-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 0;
+    }
+    .eng-topic-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 0.3);
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .eng-topic-meta {
+      flex: 1;
+      min-width: 0;
+    }
+    .eng-topic-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .badge-sprint {
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-device-target {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .eng-topic-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .eng-topic-actions-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .eng-topic-counter-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 99px;
+    }
+    .eng-topic-arrow {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: transform 0.2s;
+    }
+
+    /* TOPIC BODY */
+    .eng-topic-body {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    /* NOC CALLOUT */
+    .eng-noc-callout {
+      background: rgba(56, 189, 248, 0.05);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 12px 16px;
+      font-size: 0.86rem;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .eng-noc-callout strong {
+      color: var(--cyan);
+    }
+
+    /* COMMANDS SHOWCASE */
+    .eng-cmds-wrap {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+    .eng-cmds-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .eng-cmds-header span {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .eng-cmds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+    }
+    .eng-cmd-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 6px;
+      padding: 8px 12px;
+      gap: 10px;
+    }
+    .eng-cmd-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #38bdf8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .eng-cmd-desc {
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* TOPIC LESSONS WRAPPER */
+    .eng-lessons-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
   </style>
 </head>
 <body>
@@ -1046,6 +1354,7 @@ html_template = """<!DOCTYPE html>
     <!-- Navigation Tabs -->
     <nav class="nav-tabs">
       <button class="tab-btn active" onclick="switchTab('trackerTab')">🎬 Course Tracker & Priority Path</button>
+      <button class="tab-btn" onclick="switchTab('engineerTab')">🎓 Network Engineer Topics & Lessons</button>
       <button class="tab-btn" onclick="switchTab('terminalTab')">💻 Interactive Cisco Terminal</button>
       <button class="tab-btn" onclick="switchTab('subnetTab')">⚡ Subnetting Speed Trainer</button>
       <button class="tab-btn" onclick="switchTab('warRoomTab')">🚨 Kyndryl Incident War Room</button>
@@ -1068,6 +1377,77 @@ html_template = """<!DOCTYPE html>
         <!-- Rendered dynamically by JavaScript with all 201 lesson links -->
       </div>
     </div>
+
+    <!-- TAB: NETWORK ENGINEER TOPICS & LESSONS (KYNDRYL L1/L2 NOC MASTER PATH) -->
+    <div id="engineerTab" class="tab-pane">
+      
+      <!-- Executive Overview Banner -->
+      <div class="engineer-header-card">
+        <div class="engineer-header-top">
+          <div class="engineer-header-title">
+            <h2><span>🎓</span> Kyndryl Network Engineer Core Curriculum</h2>
+            <p>7 Mission-Critical Topics • 73 High-Yield Lessons • Cisco IOS-XE CLI Diagnostic Sequences • Day-1 NOC Readiness</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn-sm" onclick="expandAllEngineerTopics()">Expand All Topics</button>
+            <button class="btn-sm" onclick="collapseAllEngineerTopics()">Collapse All</button>
+          </div>
+        </div>
+
+        <div class="engineer-stats-strip">
+          <div class="eng-stat-box">
+            <div class="eng-stat-num" id="engStatTopics">7 / 7</div>
+            <div class="eng-stat-label">Core Topics</div>
+          </div>
+          <div class="eng-stat-box">
+            <div class="eng-stat-num" id="engStatLessonsDone">0 / 73</div>
+            <div class="eng-stat-label">Lessons Done</div>
+          </div>
+          <div class="eng-stat-box">
+            <div class="eng-stat-num" id="engStatPct">0%</div>
+            <div class="eng-stat-label">Role Track Progress</div>
+          </div>
+          <div class="eng-stat-box">
+            <div class="eng-stat-num">6</div>
+            <div class="eng-stat-label">Simulated Devices</div>
+          </div>
+          <div class="eng-stat-box">
+            <div class="eng-stat-num">100%</div>
+            <div class="eng-stat-label">NOC Aligned</div>
+          </div>
+        </div>
+
+        <div class="engineer-progress-wrap">
+          <div class="eng-prog-meta">
+            <span>Overall Network Engineer Curriculum Completion</span>
+            <span id="engProgressLabel">0% Done (0 of 73 Lessons)</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="engProgressBar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint / Domain Filter Chips & Search -->
+      <div class="tracker-toolbar" style="margin-bottom: 18px;">
+        <input type="text" id="engSearchInput" class="search-input" placeholder="🔍 Filter lessons across Network Engineer topics (e.g. VLAN, OSPF, HSRP, BPDU, ACL, NAT)..." oninput="filterEngineerTopicsUI()">
+      </div>
+
+      <div class="sprint-filters-wrap" id="sprintFilterWrap">
+        <button class="sprint-chip active" onclick="setSprintFilter('all')">🌟 All 7 Topics (73 Lessons)</button>
+        <button class="sprint-chip" onclick="setSprintFilter('week-1')">🔌 Week 1: LAN Switching & Layer 2 (18 Lessons)</button>
+        <button class="sprint-chip" onclick="setSprintFilter('week-2')">⚡ Week 2: Subnetting & Routing (16 Lessons)</button>
+        <button class="sprint-chip" onclick="setSprintFilter('week-3')">🌐 Week 3: OSPF & IP Services (17 Lessons)</button>
+        <button class="sprint-chip" onclick="setSprintFilter('week-4')">🛡️ Week 4: Security & NOC Operations (15 Lessons)</button>
+        <button class="sprint-chip" onclick="setSprintFilter('week-modern')">🤖 Modern: Automation & Cloud (7 Lessons)</button>
+      </div>
+
+      <!-- Container where JavaScript renders the 7 Topics -->
+      <div id="engineerTopicsContainer">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+
 
     <!-- TAB 2: INTERACTIVE MULTI-DEVICE CISCO CLI TERMINAL SIMULATOR -->
     <div id="terminalTab" class="tab-pane">
@@ -2302,7 +2682,264 @@ Network Destination        Netmask          Gateway       Interface  Metric
     }
 
 
-        // Subnetting Drill
+    
+    // 7 Core Network Engineer Topics Database with Direct Links & CLI Labs
+    const engineerTopicsData = ENGINEER_TOPICS_PLACEHOLDER;
+    let currentSprintFilter = 'all';
+
+    function renderEngineerTopicsUI() {
+      const container = document.getElementById('engineerTopicsContainer');
+      if (!container) return;
+      container.innerHTML = "";
+
+      const searchQuery = (document.getElementById('engSearchInput')?.value || "").toLowerCase().trim();
+
+      engineerTopicsData.forEach((topic, tIdx) => {
+        // Sprint filter
+        if (currentSprintFilter !== 'all' && topic.sprintTag !== currentSprintFilter) {
+          if (!searchQuery) return;
+        }
+
+        // Filter lessons
+        const visibleLessons = topic.lessons.filter(l => {
+          if (!searchQuery) return true;
+          return l.name.toLowerCase().includes(searchQuery) || topic.title.toLowerCase().includes(searchQuery) || topic.desc.toLowerCase().includes(searchQuery);
+        });
+
+        if (searchQuery && visibleLessons.length === 0) return;
+
+        // Calculate progress for this topic
+        const doneCount = topic.lessons.filter(l => appState.completedLessons.includes(l.slug)).length;
+        const totalCount = topic.lessons.length;
+        const topicPct = Math.round((doneCount / totalCount) * 100);
+
+        const card = document.createElement('div');
+        card.className = "eng-topic-card";
+        card.id = `eng-topic-card-${tIdx}`;
+
+        const isAutoOpen = searchQuery || currentSprintFilter !== 'all' || tIdx <= 1;
+
+        card.innerHTML = `
+          <div class="eng-topic-header ${isAutoOpen ? 'open' : ''}" onclick="toggleEngineerTopic(${tIdx})">
+            <div class="eng-topic-info">
+              <span class="eng-topic-icon">${topic.icon}</span>
+              <div class="eng-topic-meta">
+                <div class="eng-topic-badges">
+                  <span class="badge-sprint">${topic.sprint}</span>
+                  <span class="badge-priority">${topic.num}</span>
+                  <span class="badge-device-target">💻 Target: ${topic.targetDeviceName}</span>
+                </div>
+                <div class="eng-topic-title">${topic.title}</div>
+              </div>
+            </div>
+            <div class="eng-topic-actions-right">
+              <span class="eng-topic-counter-pill" id="eng-topic-pill-${tIdx}">${doneCount}/${totalCount} Done (${topicPct}%)</span>
+              <span class="eng-topic-arrow" id="eng-arrow-${tIdx}">${isAutoOpen ? '▲' : '▼'}</span>
+            </div>
+          </div>
+
+          <div class="eng-topic-body" id="eng-body-${tIdx}" style="${isAutoOpen ? 'display:flex;' : 'display:none;'}">
+            
+            <!-- NOC Application Callout -->
+            <div class="eng-noc-callout">
+              <strong>🚨 Kyndryl NOC Focus:</strong> ${topic.nocFocus}
+            </div>
+
+            <!-- Key Cisco Commands Showcase -->
+            <div class="eng-cmds-wrap">
+              <div class="eng-cmds-header">
+                <span>🛠️ Core Diagnostic Show Commands (${topic.commands.length})</span>
+                <button class="btn-sm primary" onclick="event.stopPropagation(); jumpToTerminal('${topic.targetDevice}', '${topic.defaultCmd}')">
+                  💻 Launch ${topic.targetDeviceName} Simulator
+                </button>
+              </div>
+              <div class="eng-cmds-grid">
+                ${topic.commands.map(c => `
+                  <div class="eng-cmd-row">
+                    <div style="overflow:hidden;">
+                      <div class="eng-cmd-text">${c.cmd}</div>
+                      <div class="eng-cmd-desc">${c.desc}</div>
+                    </div>
+                    <div style="display:flex; gap:6px; flex-shrink:0;">
+                      <button class="btn-sm" style="font-size:0.7rem; padding:3px 8px;" onclick="event.stopPropagation(); copyText('${c.cmd}')">Copy</button>
+                      <button class="btn-sm" style="font-size:0.7rem; padding:3px 8px;" onclick="event.stopPropagation(); jumpToTerminal('${topic.targetDevice}', '${c.cmd}')">Run</button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Lessons Checklist -->
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span style="font-size:0.8rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">
+                  Curated Lessons (${visibleLessons.length} of ${totalCount})
+                </span>
+                <span style="font-size:0.75rem; color:var(--cyan);">Direct SSO Watch Links Enabled</span>
+              </div>
+              <div class="eng-lessons-wrap">
+                ${visibleLessons.map(l => {
+                  const isDone = appState.completedLessons.includes(l.slug);
+                  return `
+                    <div class="lesson-row ${isDone ? 'completed' : ''}">
+                      <div class="lesson-left">
+                        <input type="checkbox" class="lesson-checkbox" id="eng-${l.slug}" data-slug="${l.slug}" ${isDone ? 'checked' : ''} onchange="handleEngineerCheckbox(this)">
+                        <a href="${l.url}" target="_blank" class="lesson-link" title="Open lesson on LinkedIn Learning">${l.name}</a>
+                        ${l.isPriority ? `<span class="badge-priority">⭐ Kyndryl L1 Core</span>` : ''}
+                      </div>
+                      <div class="lesson-right">
+                        ${l.duration ? `<span class="lesson-duration">${l.duration}</span>` : ''}
+                        <a href="${l.url}" target="_blank" class="btn-sm watch-btn" title="Open video lesson in new tab">▶ Watch</a>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      updateEngineerStatsUI();
+    }
+
+    function toggleEngineerTopic(idx) {
+      const body = document.getElementById(`eng-body-${idx}`);
+      const arrow = document.getElementById(`eng-arrow-${idx}`);
+      const header = document.querySelector(`#eng-topic-card-${idx} .eng-topic-header`);
+      if (!body) return;
+
+      if (body.style.display === "none") {
+        body.style.display = "flex";
+        arrow.innerText = "▲";
+        header.classList.add('open');
+      } else {
+        body.style.display = "none";
+        arrow.innerText = "▼";
+        header.classList.remove('open');
+      }
+    }
+
+    function expandAllEngineerTopics() {
+      engineerTopicsData.forEach((_, idx) => {
+        const body = document.getElementById(`eng-body-${idx}`);
+        const arrow = document.getElementById(`eng-arrow-${idx}`);
+        const header = document.querySelector(`#eng-topic-card-${idx} .eng-topic-header`);
+        if (body) body.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+        if (header) header.classList.add('open');
+      });
+    }
+
+    function collapseAllEngineerTopics() {
+      engineerTopicsData.forEach((_, idx) => {
+        const body = document.getElementById(`eng-body-${idx}`);
+        const arrow = document.getElementById(`eng-arrow-${idx}`);
+        const header = document.querySelector(`#eng-topic-card-${idx} .eng-topic-header`);
+        if (body) body.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+        if (header) header.classList.remove('open');
+      });
+    }
+
+    function setSprintFilter(sprintTag) {
+      currentSprintFilter = sprintTag;
+      document.querySelectorAll('.sprint-chip').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderEngineerTopicsUI();
+    }
+
+    function filterEngineerTopicsUI() {
+      renderEngineerTopicsUI();
+    }
+
+    function handleEngineerCheckbox(box) {
+      const slug = box.dataset.slug || box.id.replace('eng-', '');
+      if (box.checked) {
+        if (!appState.completedLessons.includes(slug)) {
+          appState.completedLessons.push(slug);
+        }
+      } else {
+        appState.completedLessons = appState.completedLessons.filter(s => s !== slug);
+      }
+
+      // Sync CCNA tracker checkbox
+      const ccnaBox = document.getElementById(slug);
+      if (ccnaBox) {
+        ccnaBox.checked = box.checked;
+        const row = ccnaBox.closest('.lesson-row');
+        if (row) {
+          if (box.checked) row.classList.add('completed');
+          else row.classList.remove('completed');
+        }
+      }
+
+      const engRow = box.closest('.lesson-row');
+      if (engRow) {
+        if (box.checked) engRow.classList.add('completed');
+        else engRow.classList.remove('completed');
+      }
+
+      saveState();
+      updateProgressUI();
+      updateEngineerStatsUI();
+    }
+
+    function updateEngineerStatsUI() {
+      let totalLessonsInTopics = 0;
+      let totalCompletedInTopics = 0;
+
+      engineerTopicsData.forEach((t, idx) => {
+        const done = t.lessons.filter(l => appState.completedLessons.includes(l.slug)).length;
+        const total = t.lessons.length;
+        totalLessonsInTopics += total;
+        totalCompletedInTopics += done;
+        const pct = Math.round((done / total) * 100);
+
+        const pill = document.getElementById(`eng-topic-pill-${idx}`);
+        if (pill) pill.innerText = `${done}/${total} Done (${pct}%)`;
+      });
+
+      const overallPct = totalLessonsInTopics > 0 ? Math.round((totalCompletedInTopics / totalLessonsInTopics) * 100) : 0;
+
+      const statDone = document.getElementById('engStatLessonsDone');
+      if (statDone) statDone.innerText = `${totalCompletedInTopics} / ${totalLessonsInTopics}`;
+
+      const statPct = document.getElementById('engStatPct');
+      if (statPct) statPct.innerText = `${overallPct}%`;
+
+      const progLabel = document.getElementById('engProgressLabel');
+      if (progLabel) progLabel.innerText = `${overallPct}% Done (${totalCompletedInTopics} of ${totalLessonsInTopics} Lessons)`;
+
+      const progBar = document.getElementById('engProgressBar');
+      if (progBar) progBar.style.width = `${overallPct}%`;
+    }
+
+    function jumpToTerminal(deviceId, cmd) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+      
+      const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick')?.includes('terminalTab'));
+      if (targetBtn) targetBtn.classList.add('active');
+      const termPane = document.getElementById('terminalTab');
+      if (termPane) termPane.classList.add('active');
+
+      switchDevice(deviceId);
+
+      if (cmd) {
+        setTimeout(() => {
+          runPreset(cmd);
+          const termEl = document.getElementById('terminalWrap');
+          if (termEl) termEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
+      }
+    }
+
+
+    // Subnetting Drill
     let currentDrill = {
       ip: "192.168.10.74", cidr: 27,
       netId: "192.168.10.64", firstHost: "192.168.10.65", lastHost: "192.168.10.94", bcast: "192.168.10.95", hosts: 30
@@ -2413,7 +3050,9 @@ Network Destination        Netmask          Gateway       Interface  Metric
         try { appState = JSON.parse(saved); } catch (e) {}
       }
       renderModules();
+      renderEngineerTopicsUI();
       updateProgressUI();
+      updateEngineerStatsUI();
     }
 
     function saveState() {
@@ -2424,16 +3063,34 @@ Network Destination        Netmask          Gateway       Interface  Metric
     }
 
     function updateProgress() {
+      const checkedIds = [];
       document.querySelectorAll('.lesson-checkbox').forEach(box => {
+        const slug = box.dataset.slug || box.id.replace('eng-', '');
         const row = box.closest('.lesson-row');
         if (box.checked) {
-          row.classList.add('completed');
+          if (row) row.classList.add('completed');
+          if (!checkedIds.includes(slug)) checkedIds.push(slug);
         } else {
-          row.classList.remove('completed');
+          if (row) row.classList.remove('completed');
         }
       });
+      appState.completedLessons = checkedIds;
+      
+      // Synchronize all checkboxes across both tabs
+      document.querySelectorAll('.lesson-checkbox').forEach(box => {
+        const slug = box.dataset.slug || box.id.replace('eng-', '');
+        const isDone = appState.completedLessons.includes(slug);
+        box.checked = isDone;
+        const row = box.closest('.lesson-row');
+        if (row) {
+          if (isDone) row.classList.add('completed');
+          else row.classList.remove('completed');
+        }
+      });
+
       saveState();
       updateProgressUI();
+      updateEngineerStatsUI();
     }
 
     function updateProgressUI() {
@@ -2638,6 +3295,7 @@ Network Destination        Netmask          Gateway       Interface  Metric
         localStorage.removeItem(STORAGE_KEY);
         appState.completedLessons = [];
         loadState();
+        renderEngineerTopicsUI();
       }
     }
 
@@ -2652,7 +3310,7 @@ Network Destination        Netmask          Gateway       Interface  Metric
 </html>
 """
 
-full_html = html_template.replace('MODULES_PLACEHOLDER', modules_js)
+full_html = html_template.replace('MODULES_PLACEHOLDER', modules_js).replace('ENGINEER_TOPICS_PLACEHOLDER', engineer_topics_js)
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(full_html)

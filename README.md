@@ -18,7 +18,19 @@ An interactive, enterprise-grade Network Operations Center (NOC) training platfo
 - **Interactive Checkboxes** with persistent browser progress tracking (`localStorage`).
 - **Module Collapsing/Expanding** and full-text keyword search across all 201 video lessons.
 
-### 2. ⭐ Kyndryl L1 Priority Track (66 High-Yield Lessons)
+### 2. 🎓 Network Engineer Core Curriculum (7 Topics • 73 Focused Lessons)
+A dedicated, role-specific career track organizing critical lessons and diagnostic CLI labs directly into enterprise operational pillars:
+- **Topic 1: Enterprise Campus LAN Switching & Layer 2 Health** (18 Lessons) — Cable diagnostics, CRC errors, VLANs, 802.1Q trunks, RSTP, PortFast, BPDU Guard, EtherChannel.
+- **Topic 2: IPv4 Addressing, Mental Subnetting & Routing Architecture** (16 Lessons) — Rapid CIDR math, Longest Prefix Match, Administrative Distance, Static/Floating routes, SVIs, HSRP.
+- **Topic 3: Dynamic Enterprise Routing (OSPFv2 & WAN Multi-Homing)** (8 Lessons) — OSPF areas, DR/BDR, MTU mismatch triage, BGP ISP multi-homing.
+- **Topic 4: Critical Infrastructure IP Services (DHCP, NAT/PAT, NTP & Syslog)** (9 Lessons) — DHCP relay helper, NAT Overload, NTP stratum sync, Syslog facilities.
+- **Topic 5: Enterprise Network Security, ACLs & Layer 2 Port Hardening** (12 Lessons) — Standard/Extended ACLs, Port Security, Sticky MAC, DHCP Snooping, Dynamic ARP Inspection.
+- **Topic 6: NOC Incident Triage, ITIL Playbooks & Shift Handover** (3 Lessons + 3 Incident SOPs) — Non-disruptive show command triage, ServiceNow worklogs, Sev-1 incident handling.
+- **Topic 7: Modern Network Automation, SDN & Cloud Hybrid Interconnects** (7 Lessons) — SDN controllers, Cisco Catalyst Center, REST APIs, JSON parsing, Ansible, Cloud IPsec.
+- **Sprint Filters:** Quick toggle by sprint (`Week 1`, `Week 2`, `Week 3`, `Week 4`, `Modern Skills`).
+- **Deep CLI Jumping:** Direct "Launch Simulator" and "Run" buttons that immediately jump to the Cisco Terminal tab, select the target device, and execute the show command!
+
+### 3. ⭐ Kyndryl L1 Priority Track (66 High-Yield Lessons)
 - Instant toggle filter that reduces study overhead by ~65% while covering 100% of L1 NOC alert scenarios:
   - Switching loops & Spanning Tree (STP/RSTP/PortFast/BPDU Guard)
   - 802.1Q Trunks, Native VLANs & Voice VLANs
