@@ -1662,6 +1662,181 @@
       line-height: 1.45;
     }
 
+
+    /* KEVIN WALLACE 15-COURSE CATALOG STYLES */
+    .kw-catalog-wrap {
+      margin-top: 36px;
+      margin-bottom: 30px;
+    }
+    .kw-catalog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .kw-catalog-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .kw-filter-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      margin-bottom: 16px;
+    }
+    .kw-filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .kw-filter-chip:hover {
+      border-color: var(--cyan);
+      color: var(--text-main);
+    }
+    .kw-filter-chip.active {
+      background: rgba(56, 189, 248, 0.14);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+    .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 16px;
+    }
+    .kw-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.2s ease;
+    }
+    .kw-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+    .kw-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .kw-card-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .kw-badge-tier {
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .kw-badge-tier.tier-foundations { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .kw-badge-tier.tier-ccna { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .kw-badge-tier.tier-support { background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .kw-badge-tier.tier-ccnp { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); }
+
+    .kw-badge-cert {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kw-duration-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .kw-course-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+    .kw-course-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .kw-modules-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .kw-modules-header {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .kw-modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 6px;
+    }
+    .kw-mod-item {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .kw-skills-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .kw-skill-tag {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
   </style>
 </head>
 <body>
@@ -2021,7 +2196,43 @@
 
       </div>
 
-      <!-- Dual Grid: What to Prioritize & Weekly Study Routine -->
+
+      <!-- Kevin Wallace 15-Course LinkedIn Learning Master Library -->
+      <div class="kw-catalog-wrap">
+        <div class="kw-catalog-header">
+          <div>
+            <div class="kw-catalog-title">
+              <span>📚</span> Kevin Wallace 15-Course Master Library (LinkedIn Learning)
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:3px;">
+              Complete catalog with course syllabi, module breakdowns, durations, and direct Toronto Public Library SSO links.
+            </p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-sm" onclick="expandAllKWModules()">Expand Modules</button>
+            <button class="btn-sm" onclick="collapseAllKWModules()">Collapse</button>
+          </div>
+        </div>
+
+        <div class="tracker-toolbar" style="margin-bottom:14px;">
+          <input type="text" id="kwSearchInput" class="search-input" placeholder="🔍 Search across 15 Kevin Wallace courses (e.g. Subnetting, BGP, ENCOR, Switching, Wireless, CCST)..." oninput="renderKWCatalogUI()">
+        </div>
+
+        <div class="kw-filter-chips" id="kwFilterChips">
+          <button class="kw-filter-chip active" onclick="setKWTierFilter('all')">🌟 All 15 Courses</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-foundations')">🟢 Foundations (Courses 1–5)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-ccna')">🟡 Cisco CCNA Track (Courses 6–9)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-support')">🛡️ Support & Security (Courses 10–11)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-ccnp')">🟣 Enterprise CCNP Tier (Courses 12–15)</button>
+        </div>
+
+        <div class="kw-grid" id="kwCoursesContainer">
+          <!-- Rendered dynamically by JavaScript -->
+        </div>
+      </div>
+
+
+            <!-- Dual Grid: What to Prioritize & Weekly Study Routine -->
       <div class="dual-roadmap-grid">
 
         <!-- Priority Matrix -->
@@ -3953,6 +4164,116 @@ Network Destination        Netmask          Gateway       Interface  Metric
         localStorage.removeItem(ROADMAP_STORAGE_KEY);
         loadRoadmapState();
       }
+    }
+
+
+
+    // Kevin Wallace 15-Course Master Library Database
+    const kwCoursesData = [{"id": "kw-course-1", "num": "Course 1", "title": "Networking Foundations: Networking Basics", "tier": "Foundations", "tierTag": "tier-foundations", "duration": "2h 15m", "cert": "Network+ / CCNA Baseline", "url": "https://www.linkedin.com/learning/search?keywords=Networking+Foundations+Networking+Basics&u=76281980", "desc": "Foundational overview of network infrastructure, physical topologies, OSI 7-layer model, TCP/IP stack, and essential enterprise services.", "skills": ["OSI Reference Model", "TCP vs UDP", "Network Topologies", "DNS & DHCP DORA", "Copper & Fiber Media"], "modules": ["Module 1: Exploring Network Types & Topologies (LAN, WAN, WLAN)", "Module 2: Network Media & Hardware Components (Switches, Routers, SFPs)", "Module 3: OSI & TCP/IP Reference Models (Layers 1-7, TCP 3-Way Handshake)", "Module 4: Logical Addressing & Network Protocols (IPv4, MAC, ARP, DNS, DHCP)", "Module 5: Modern Enterprise Trends (Cloud Networking, SDN Basics)"]}, {"id": "kw-course-2", "num": "Course 2", "title": "Learning IP Addressing", "tier": "Foundations", "tierTag": "tier-foundations", "duration": "1h 45m", "cert": "CCNA / Network+", "url": "https://www.linkedin.com/learning/search?keywords=Learning+IP+Addressing&u=76281980", "desc": "Mastering the structure of IPv4 and IPv6 logical addresses, binary-to-decimal conversion, address classes, and RFC 1918 private spaces.", "skills": ["Binary-to-Decimal Math", "Classful IP Classes A-E", "RFC 1918 Private Spaces", "APIPA 169.254.x.x", "IPv6 Hex Formats"], "modules": ["Module 1: IPv4 Structure & Binary Essentials (32-bit math, octet boundaries)", "Module 2: Address Classes & RFC 1918 Private Ranges (10.0.0.0, 172.16.0.0, 192.168.0.0)", "Module 3: Classless Inter-Domain Routing (CIDR prefix notations /8 to /32)", "Module 4: Special Use Addresses (Loopback 127.0.0.1, APIPA, Broadcast)", "Module 5: Introduction to IPv6 Addressing (128-bit hex, zero compression, EUI-64)"]}, {"id": "kw-course-3", "num": "Course 3", "title": "Learning Subnetting", "tier": "Foundations", "tierTag": "tier-foundations", "duration": "1h 30m", "cert": "CCNA Core / L1 NOC", "url": "https://www.linkedin.com/learning/search?keywords=Learning+Subnetting&u=76281980", "desc": "Rapid mental and mathematical subnetting techniques, calculating block sizes, usable host ranges, and Variable Length Subnet Masking (VLSM).", "skills": ["Mental Subnet Math", "Block Size Calculation", "VLSM Address Planning", "Host Densities", "/24 through /30 Subnetting"], "modules": ["Module 1: The Mathematics of Subnetting (Powers of 2, 2^n subnets, 2^h - 2 hosts)", "Module 2: Subnetting Class C Networks (/24 to /30, point-to-point links)", "Module 3: Subnetting Class B and Class A Networks (Multi-octet borrowing)", "Module 4: Variable Length Subnet Masking (VLSM hierarchical IP design)", "Module 5: Mental Speed Subnetting Shortcuts (Finger method, chart-free CIDR hacks)"]}, {"id": "kw-course-4", "num": "Course 4", "title": "Cisco Networking Foundations: IP Addressing", "tier": "Foundations", "tierTag": "tier-foundations", "duration": "1h 15m", "cert": "Cisco IOS Practical", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+IP+Addressing&u=76281980", "desc": "Hands-on implementation of IPv4 and IPv6 on Cisco IOS routers and Catalyst switches, including SVI management and loopback interfaces.", "skills": ["Cisco IOS Interface IP", "SVI Configuration", "Loopback Testing", "show ip interface brief", "IPv6 Interface Commands"], "modules": ["Module 1: Cisco IOS Interface IP Configuration (ip address command, no shutdown)", "Module 2: Secondary IP Addresses & Loopback Interfaces (Stability testing)", "Module 3: IPv6 Interface Configuration (Static assignment, EUI-64 link-local)", "Module 4: Address Verification on Cisco IOS (ping, traceroute, show ip int br)"]}, {"id": "kw-course-5", "num": "Course 5", "title": "Cisco Networking Foundations: Fundamentals of Cisco Networking", "tier": "Foundations", "tierTag": "tier-foundations", "duration": "2h 00m", "cert": "Cisco Entry / L1 CLI", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Fundamentals+of+Cisco+Networking&u=76281980", "desc": "Cisco hardware architecture, IOS CLI navigation modes, baseline switch and router hardening, and neighbor discovery via CDP and LLDP.", "skills": ["Cisco IOS CLI Navigation", "Enable Secret & Console", "VTY Remote SSH Access", "CDP & LLDP Discovery", "write memory / copy run start"], "modules": ["Module 1: Cisco Enterprise Hardware Ecosystem (Catalyst 9000, ISR 4000)", "Module 2: Cisco IOS CLI Navigation (User EXEC, Privileged EXEC, Global Config)", "Module 3: Baseline Device Hardening (Hostname, passwords, banners, saving config)", "Module 4: Neighbor Discovery Protocols (CDP, LLDP topology mapping)"]}, {"id": "kw-course-6", "num": "Course 6", "title": "Cisco Certified Network Associate (CCNA 200-301) v1.1 Cert Prep", "tier": "CCNA Master", "tierTag": "tier-ccna", "duration": "18h 22m (201 Lessons)", "cert": "Cisco CCNA 200-301 v1.1", "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980", "desc": "The flagship, 201-lesson master curriculum covering all official Cisco 200-301 v1.1 exam domains from switching to security, OSPF, and automation.", "skills": ["Full CCNA 200-301 Blueprint", "VLANs & 802.1Q Trunks", "Spanning Tree (RSTP)", "OSPFv2 Routing", "HSRP & NAT", "ACLs & Port Security"], "modules": ["Module 1: Foundational Networking Technologies (25 Lessons)", "Module 2: IPv4 Addressing & Subnetting (21 Lessons)", "Module 3: IPv6 Addressing (17 Lessons)", "Module 4: Ethernet Switching (38 Lessons)", "Module 5: Routing (22 Lessons)", "Module 6: Wireless Networks (13 Lessons)", "Module 7: Network Services (23 Lessons)", "Module 8: Network Security (27 Lessons)", "Module 9: Network Programmability (10 Lessons)", "Module 10: Exam Preparation & Practice (3 Lessons)"]}, {"id": "kw-course-7", "num": "Course 7", "title": "Cisco Networking Foundations: Switching and Routing", "tier": "CCNA Master", "tierTag": "tier-ccna", "duration": "3h 30m", "cert": "CCNA Layer 2 & Layer 3", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Switching+and+Routing&u=76281980", "desc": "Deep dive into Layer 2 switching operations, CAM/MAC tables, 802.1Q trunks, Spanning Tree loop avoidance, EtherChannel, and packet routing.", "skills": ["CAM / MAC Learning", "802.1Q Trunking", "Spanning Tree Protocol (STP)", "EtherChannel (LACP)", "Static & Default Routing"], "modules": ["Module 1: Ethernet Switching Deep Dive (Frame format, CAM table flooding)", "Module 2: VLANs & 802.1Q Trunking (Access vs Trunk, Native VLAN)", "Module 3: Spanning Tree Protocol Operations (Root election, port states)", "Module 4: EtherChannel Link Aggregation (LACP, PAgP, load balancing)", "Module 5: IP Routing & Packet Forwarding (Packet flow, Static routes, RIP/RIPng)"]}, {"id": "kw-course-8", "num": "Course 8", "title": "Cisco Networking Foundations: Wireless, Services, Security & Virtualization", "tier": "CCNA Master", "tierTag": "tier-ccna", "duration": "2h 45m", "cert": "CCNA Services & Security", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Wireless+Networks+Services+Security+Virtualization&u=76281980", "desc": "Enterprise wireless LAN architecture, Cisco WLCs, DHCP relay, NAT/PAT translation pools, ACL traffic filtering, and network virtualization.", "skills": ["Cisco WLC Management", "DHCP Relay Helper", "NAT/PAT Overload", "Standard & Extended ACLs", "Network Virtualization (VRF)"], "modules": ["Module 1: Cisco Wireless Architecture (Autonomous vs Lightweight APs, WLCs)", "Module 2: Network Infrastructure Services (DHCP server & relay, NAT/PAT)", "Module 3: Basic Network Security & ACLs (Standard & Extended ACL syntax)", "Module 4: Network Virtualization & Cloud Integration (Virtual switching, VRF-Lite)"]}, {"id": "kw-course-9", "num": "Course 9", "title": "Wireless Networking Essential Training", "tier": "CCNA Master", "tierTag": "tier-ccna", "duration": "2h 10m", "cert": "Enterprise Wireless / Wi-Fi", "url": "https://www.linkedin.com/learning/search?keywords=Wireless+Networking+Essential+Training&u=76281980", "desc": "Radio frequency principles, 802.11 standards from Wi-Fi 4 through Wi-Fi 7, spectrum channel planning, and WPA2/WPA3 enterprise encryption.", "skills": ["RF Principles (dBm, SNR)", "802.11ax Wi-Fi 6/6E", "2.4 GHz vs 5 GHz Channels", "WPA3 SAE Encryption", "Wireless Roaming & Triage"], "modules": ["Module 1: Radio Frequency (RF) Principles (Antennas, signal attenuation, SNR)", "Module 2: 802.11 Standards Evolution (802.11a/b/g/n/ac/ax/be)", "Module 3: Spectrum Management (2.4 GHz channels 1, 6, 11, 5 GHz DFS, 6 GHz)", "Module 4: Wireless Security & Authentication (WPA2-Enterprise, WPA3 SAE)", "Module 5: Troubleshooting Wireless Issues (Co-channel interference, hidden nodes)"]}, {"id": "kw-course-10", "num": "Course 10", "title": "Cisco Certified Support Technician (CCST) Networking Cert Prep", "tier": "Support & Security", "tierTag": "tier-support", "duration": "2h 30m", "cert": "Cisco CCST Networking", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Certified+Support+Technician+CCST+Networking+Cert+Prep&u=76281980", "desc": "Cisco official entry-level support technician cert prep focusing on physical connectivity, host IP diagnostics, and structured ticket triage.", "skills": ["First-Call Ticket Resolution", "Diagnostic Utilities", "Cable & Transceiver Check", "Fault Domain Isolation", "Client Connectivity Triage"], "modules": ["Module 1: Standards and Concepts (Core definitions, bandwidth vs throughput)", "Module 2: Addressing & Subnet Formats (Default gateways, broadcast boundaries)", "Module 3: Endpoints and Media Types (Host adapter properties, RJ-45, fiber)", "Module 4: Infrastructure Diagnostics (ping, tracert, nslookup, arp, netstat)", "Module 5: Structured Troubleshooting Methodology (7-step triage approach)"]}, {"id": "kw-course-11", "num": "Course 11", "title": "Cisco Certified Support Technician (CCST) Cybersecurity Cert Prep", "tier": "Support & Security", "tierTag": "tier-support", "duration": "2h 45m", "cert": "Cisco CCST Cybersecurity", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Certified+Support+Technician+CCST+Cybersecurity+Cert+Prep&u=76281980", "desc": "Cybersecurity principles, CIA triad, threat vectors, stateful perimeter defense, multi-factor authentication, and security incident response.", "skills": ["CIA Security Triad", "Threat Mitigation (Malware/DDoS)", "Stateful Firewalls & DMZs", "MFA & Authentication", "Security Incident Response"], "modules": ["Module 1: Security Principles (CIA triad, least privilege, threat vs vulnerability)", "Module 2: Threat Landscape (Malware, phishing, man-in-the-middle, DDoS)", "Module 3: Network Defense Fundamentals (Stateful inspection, DMZ, IDS/IPS)", "Module 4: Endpoint Security & Access Management (MFA, certificates, VPNs)", "Module 5: Incident Handling & Compliance (SIEM alerts, containment phases)"]}, {"id": "kw-course-12", "num": "Course 12", "title": "Cisco CCNP Enterprise: ENCOR (350-401) Cert Prep: 1 Architecture, Virtualization, Network Assurance, and Security", "tier": "CCNP Enterprise", "tierTag": "tier-ccnp", "duration": "4h 15m", "cert": "Cisco CCNP ENCOR Core", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENCOR+350-401+Cert+Prep+1&u=76281980", "desc": "Enterprise core architecture, Cisco SD-Access, SD-WAN controllers, network telemetry (NetFlow, SPAN, IP SLA), and enterprise security (TrustSec, CoPP).", "skills": ["Enterprise Spine-Leaf Arch", "Cisco SD-Access & LISP/VXLAN", "Cisco SD-WAN Architecture", "NetFlow & Streaming Telemetry", "Cisco TrustSec & CoPP Hardening"], "modules": ["Module 1: Enterprise Campus Architecture (2-tier vs 3-tier, Spine-Leaf)", "Module 2: Cisco Software-Defined Access (Underlay vs overlay, LISP, VXLAN)", "Module 3: Cisco SD-WAN Architecture (vManage, vSmart, vBond, vEdge)", "Module 4: Network Virtualization (Hypervisors, VNFs, VRF-Lite)", "Module 5: Network Assurance & Telemetry (NetFlow, ERSPAN, IP SLA, DNA Center)", "Module 6: Enterprise Security Hardening (TrustSec, 802.1X ISE, MACsec, CoPP)"]}, {"id": "kw-course-13", "num": "Course 13", "title": "Cisco CCNP Enterprise: ENCOR (350-401) Cert Prep: 2 Infrastructure and Automation", "tier": "CCNP Enterprise", "tierTag": "tier-ccnp", "duration": "4h 45m", "cert": "Cisco CCNP ENCOR Core", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENCOR+350-401+Cert+Prep+2&u=76281980", "desc": "Advanced enterprise switching (MSTP), multi-area OSPFv3, enterprise BGP path selection, high availability (VRRP/BFD), and Python automation.", "skills": ["Multiple Spanning Tree (MSTP)", "OSPFv3 Multi-Area Tuning", "BGP Path Selection Attributes", "VRRPv3 & BFD Failover", "Python Netmiko & RESTCONF"], "modules": ["Module 1: Advanced Layer 2 Switching (MSTP, Root Guard, BPDU Filtering)", "Module 2: Advanced OSPFv2 and OSPFv3 (Multi-area, LSA types 1-7, summarization)", "Module 3: Enterprise BGP Routing (eBGP, Weight, Local Pref, AS-Path, MED)", "Module 4: Network Redundancy & IP Services (VRRPv3, GLBP, BFD sub-second)", "Module 5: Network Automation & Programmability (Python Netmiko, YANG, RESTCONF)"]}, {"id": "kw-course-14", "num": "Course 14", "title": "Cisco CCNP Enterprise: ENARSI (300-410) Cert Prep: Layer 3 Technologies", "tier": "CCNP Enterprise", "tierTag": "tier-ccnp", "duration": "5h 00m", "cert": "Cisco CCNP ENARSI Concentration", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENARSI+300-410+Cert+Prep+Layer+3&u=76281980", "desc": "Advanced enterprise routing, complex mutual route redistribution, route maps, prefix lists, policy-based routing, and deep BGP customer multi-homing.", "skills": ["Complex Route Redistribution", "Route Maps & Prefix Lists", "Policy-Based Routing (PBR)", "BGP Communities & Multi-homing", "Advanced IPv6 Routing"], "modules": ["Module 1: Complex IPv4 and IPv6 Routing (EIGRP named, OSPF virtual links)", "Module 2: Advanced Route Redistribution (OSPF to BGP, route tagging loops)", "Module 3: Route Filtering & Policy-Based Routing (Prefix lists, route maps, PBR)", "Module 4: Deep-Dive BGP Operations (BGP communities, multi-homed customer failover)"]}, {"id": "kw-course-15", "num": "Course 15", "title": "Cisco CCNP Enterprise: ENARSI (300-410) Cert Prep: VPN Technologies and Infrastructure Security", "tier": "CCNP Enterprise", "tierTag": "tier-ccnp", "duration": "4h 30m", "cert": "Cisco CCNP ENARSI Concentration", "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENARSI+300-410+Cert+Prep+VPN&u=76281980", "desc": "Enterprise WAN VPNs including DMVPN Phase 1/2/3, MPLS Layer 3 VPN fundamentals, Control Plane Policing (CoPP), and TACACS+/RADIUS AAA server integration.", "skills": ["DMVPN Phase 1/2/3 & mGRE", "MPLS L3VPN (PE-CE, RD/RT)", "Control Plane Policing (CoPP)", "Enterprise AAA Hardening", "SNMPv3 authPriv Encryption"], "modules": ["Module 1: Enterprise VPN Technologies (DMVPN, NHRP, IPsec tunnel protection)", "Module 2: MPLS Layer 3 VPN Fundamentals (P, PE, CE roles, Route Targets/Distinguishers)", "Module 3: Infrastructure Security & CoPP (Control Plane Policing CPU protection)", "Module 4: Enterprise Device Hardening (TACACS+/RADIUS AAA, SSH key security, SNMPv3)"]}];
+    let currentKWTier = 'all';
+
+    function renderKWCatalogUI() {
+      const container = document.getElementById('kwCoursesContainer');
+      if (!container) return;
+      container.innerHTML = "";
+
+      const query = (document.getElementById('kwSearchInput')?.value || "").toLowerCase().trim();
+
+      kwCoursesData.forEach((c, idx) => {
+        if (currentKWTier !== 'all' && c.tierTag !== currentKWTier) {
+          if (!query) return;
+        }
+
+        if (query) {
+          const matchTitle = c.title.toLowerCase().includes(query);
+          const matchDesc = c.desc.toLowerCase().includes(query);
+          const matchSkills = c.skills.some(s => s.toLowerCase().includes(query));
+          const matchMods = c.modules.some(m => m.toLowerCase().includes(query));
+          if (!matchTitle && !matchDesc && !matchSkills && !matchMods) return;
+        }
+
+        const card = document.createElement('div');
+        card.className = "kw-card";
+        card.id = `kw-card-${idx}`;
+
+        card.innerHTML = `
+          <div>
+            <div class="kw-card-top">
+              <div class="kw-card-badges">
+                <span class="kw-badge-tier ${c.tierTag}">${c.tier}</span>
+                <span class="kw-badge-cert">${c.cert}</span>
+                <span style="font-size:0.68rem; font-weight:800; color:var(--text-dim);">${c.num}</span>
+              </div>
+              <span class="kw-duration-pill">${c.duration}</span>
+            </div>
+
+            <div class="kw-course-title">${c.title}</div>
+            <div class="kw-course-desc" style="margin-top:6px;">${c.desc}</div>
+
+            <div class="kw-modules-box" style="margin-top:12px;">
+              <div class="kw-modules-header" onclick="toggleKWModules(${idx})">
+                <span>📚 Course Structure (${c.modules.length} Modules)</span>
+                <span id="kw-arrow-${idx}" style="font-size:0.75rem; color:var(--cyan);">▼</span>
+              </div>
+              <div class="kw-modules-list" id="kw-mods-${idx}" style="${query ? 'display:flex;' : 'display:none;'}">
+                ${c.modules.map(m => `
+                  <div class="kw-mod-item">
+                    <span style="color:var(--cyan); font-weight:800;">•</span>
+                    <span>${m}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-top:8px;">
+            <div class="kw-skills-strip">
+              ${c.skills.slice(0, 3).map(s => `<span class="kw-skill-tag">${s}</span>`).join('')}
+            </div>
+            <a href="${c.url}" target="_blank" class="btn-sm primary" style="white-space:nowrap;">▶ Watch on LinkedIn</a>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function toggleKWModules(idx) {
+      const list = document.getElementById(`kw-mods-${idx}`);
+      const arrow = document.getElementById(`kw-arrow-${idx}`);
+      if (!list) return;
+      if (list.style.display === "none") {
+        list.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+      } else {
+        list.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+      }
+    }
+
+    function expandAllKWModules() {
+      kwCoursesData.forEach((_, idx) => {
+        const list = document.getElementById(`kw-mods-${idx}`);
+        const arrow = document.getElementById(`kw-arrow-${idx}`);
+        if (list) list.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+      });
+    }
+
+    function collapseAllKWModules() {
+      kwCoursesData.forEach((_, idx) => {
+        const list = document.getElementById(`kw-mods-${idx}`);
+        const arrow = document.getElementById(`kw-arrow-${idx}`);
+        if (list) list.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+      });
+    }
+
+    function setKWTierFilter(tierTag) {
+      currentKWTier = tierTag;
+      document.querySelectorAll('.kw-filter-chip').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderKWCatalogUI();
     }
 
 

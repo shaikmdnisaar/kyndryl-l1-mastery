@@ -6,8 +6,12 @@ with open('clean_modules_with_priority.json', encoding='utf-8') as f:
 with open('engineer_topics.json', encoding='utf-8') as f:
     engineer_topics = json.load(f)
 
+with open('kevin_wallace_15_courses.json', encoding='utf-8') as f:
+    kw_courses = json.load(f)
+
 modules_js = json.dumps(modules)
 engineer_topics_js = json.dumps(engineer_topics)
+kw_courses_js = json.dumps(kw_courses)
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
@@ -1673,6 +1677,181 @@ html_template = """<!DOCTYPE html>
       line-height: 1.45;
     }
 
+
+    /* KEVIN WALLACE 15-COURSE CATALOG STYLES */
+    .kw-catalog-wrap {
+      margin-top: 36px;
+      margin-bottom: 30px;
+    }
+    .kw-catalog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .kw-catalog-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .kw-filter-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      margin-bottom: 16px;
+    }
+    .kw-filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .kw-filter-chip:hover {
+      border-color: var(--cyan);
+      color: var(--text-main);
+    }
+    .kw-filter-chip.active {
+      background: rgba(56, 189, 248, 0.14);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+    .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 16px;
+    }
+    .kw-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.2s ease;
+    }
+    .kw-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+    .kw-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .kw-card-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .kw-badge-tier {
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .kw-badge-tier.tier-foundations { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .kw-badge-tier.tier-ccna { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .kw-badge-tier.tier-support { background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .kw-badge-tier.tier-ccnp { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); }
+
+    .kw-badge-cert {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .kw-duration-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .kw-course-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+    .kw-course-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .kw-modules-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .kw-modules-header {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .kw-modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 6px;
+    }
+    .kw-mod-item {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .kw-skills-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .kw-skill-tag {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
   </style>
 </head>
 <body>
@@ -2032,7 +2211,43 @@ html_template = """<!DOCTYPE html>
 
       </div>
 
-      <!-- Dual Grid: What to Prioritize & Weekly Study Routine -->
+
+      <!-- Kevin Wallace 15-Course LinkedIn Learning Master Library -->
+      <div class="kw-catalog-wrap">
+        <div class="kw-catalog-header">
+          <div>
+            <div class="kw-catalog-title">
+              <span>📚</span> Kevin Wallace 15-Course Master Library (LinkedIn Learning)
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:3px;">
+              Complete catalog with course syllabi, module breakdowns, durations, and direct Toronto Public Library SSO links.
+            </p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-sm" onclick="expandAllKWModules()">Expand Modules</button>
+            <button class="btn-sm" onclick="collapseAllKWModules()">Collapse</button>
+          </div>
+        </div>
+
+        <div class="tracker-toolbar" style="margin-bottom:14px;">
+          <input type="text" id="kwSearchInput" class="search-input" placeholder="🔍 Search across 15 Kevin Wallace courses (e.g. Subnetting, BGP, ENCOR, Switching, Wireless, CCST)..." oninput="renderKWCatalogUI()">
+        </div>
+
+        <div class="kw-filter-chips" id="kwFilterChips">
+          <button class="kw-filter-chip active" onclick="setKWTierFilter('all')">🌟 All 15 Courses</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-foundations')">🟢 Foundations (Courses 1–5)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-ccna')">🟡 Cisco CCNA Track (Courses 6–9)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-support')">🛡️ Support & Security (Courses 10–11)</button>
+          <button class="kw-filter-chip" onclick="setKWTierFilter('tier-ccnp')">🟣 Enterprise CCNP Tier (Courses 12–15)</button>
+        </div>
+
+        <div class="kw-grid" id="kwCoursesContainer">
+          <!-- Rendered dynamically by JavaScript -->
+        </div>
+      </div>
+
+
+            <!-- Dual Grid: What to Prioritize & Weekly Study Routine -->
       <div class="dual-roadmap-grid">
 
         <!-- Priority Matrix -->
@@ -3967,6 +4182,116 @@ Network Destination        Netmask          Gateway       Interface  Metric
     }
 
 
+
+    // Kevin Wallace 15-Course Master Library Database
+    const kwCoursesData = KW_COURSES_PLACEHOLDER;
+    let currentKWTier = 'all';
+
+    function renderKWCatalogUI() {
+      const container = document.getElementById('kwCoursesContainer');
+      if (!container) return;
+      container.innerHTML = "";
+
+      const query = (document.getElementById('kwSearchInput')?.value || "").toLowerCase().trim();
+
+      kwCoursesData.forEach((c, idx) => {
+        if (currentKWTier !== 'all' && c.tierTag !== currentKWTier) {
+          if (!query) return;
+        }
+
+        if (query) {
+          const matchTitle = c.title.toLowerCase().includes(query);
+          const matchDesc = c.desc.toLowerCase().includes(query);
+          const matchSkills = c.skills.some(s => s.toLowerCase().includes(query));
+          const matchMods = c.modules.some(m => m.toLowerCase().includes(query));
+          if (!matchTitle && !matchDesc && !matchSkills && !matchMods) return;
+        }
+
+        const card = document.createElement('div');
+        card.className = "kw-card";
+        card.id = `kw-card-${idx}`;
+
+        card.innerHTML = `
+          <div>
+            <div class="kw-card-top">
+              <div class="kw-card-badges">
+                <span class="kw-badge-tier ${c.tierTag}">${c.tier}</span>
+                <span class="kw-badge-cert">${c.cert}</span>
+                <span style="font-size:0.68rem; font-weight:800; color:var(--text-dim);">${c.num}</span>
+              </div>
+              <span class="kw-duration-pill">${c.duration}</span>
+            </div>
+
+            <div class="kw-course-title">${c.title}</div>
+            <div class="kw-course-desc" style="margin-top:6px;">${c.desc}</div>
+
+            <div class="kw-modules-box" style="margin-top:12px;">
+              <div class="kw-modules-header" onclick="toggleKWModules(${idx})">
+                <span>📚 Course Structure (${c.modules.length} Modules)</span>
+                <span id="kw-arrow-${idx}" style="font-size:0.75rem; color:var(--cyan);">▼</span>
+              </div>
+              <div class="kw-modules-list" id="kw-mods-${idx}" style="${query ? 'display:flex;' : 'display:none;'}">
+                ${c.modules.map(m => `
+                  <div class="kw-mod-item">
+                    <span style="color:var(--cyan); font-weight:800;">•</span>
+                    <span>${m}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-top:8px;">
+            <div class="kw-skills-strip">
+              ${c.skills.slice(0, 3).map(s => `<span class="kw-skill-tag">${s}</span>`).join('')}
+            </div>
+            <a href="${c.url}" target="_blank" class="btn-sm primary" style="white-space:nowrap;">▶ Watch on LinkedIn</a>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function toggleKWModules(idx) {
+      const list = document.getElementById(`kw-mods-${idx}`);
+      const arrow = document.getElementById(`kw-arrow-${idx}`);
+      if (!list) return;
+      if (list.style.display === "none") {
+        list.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+      } else {
+        list.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+      }
+    }
+
+    function expandAllKWModules() {
+      kwCoursesData.forEach((_, idx) => {
+        const list = document.getElementById(`kw-mods-${idx}`);
+        const arrow = document.getElementById(`kw-arrow-${idx}`);
+        if (list) list.style.display = "flex";
+        if (arrow) arrow.innerText = "▲";
+      });
+    }
+
+    function collapseAllKWModules() {
+      kwCoursesData.forEach((_, idx) => {
+        const list = document.getElementById(`kw-mods-${idx}`);
+        const arrow = document.getElementById(`kw-arrow-${idx}`);
+        if (list) list.style.display = "none";
+        if (arrow) arrow.innerText = "▼";
+      });
+    }
+
+    function setKWTierFilter(tierTag) {
+      currentKWTier = tierTag;
+      document.querySelectorAll('.kw-filter-chip').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderKWCatalogUI();
+    }
+
+
     function loadState() {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
@@ -4233,7 +4558,7 @@ Network Destination        Netmask          Gateway       Interface  Metric
 </html>
 """
 
-full_html = html_template.replace('MODULES_PLACEHOLDER', modules_js).replace('ENGINEER_TOPICS_PLACEHOLDER', engineer_topics_js)
+full_html = html_template.replace('MODULES_PLACEHOLDER', modules_js).replace('ENGINEER_TOPICS_PLACEHOLDER', engineer_topics_js).replace('KW_COURSES_PLACEHOLDER', kw_courses_js)
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(full_html)
