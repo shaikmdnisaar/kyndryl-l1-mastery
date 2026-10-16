@@ -30,7 +30,20 @@ A dedicated, role-specific career track organizing critical lessons and diagnost
 - **Sprint Filters:** Quick toggle by sprint (`Week 1`, `Week 2`, `Week 3`, `Week 4`, `Modern Skills`).
 - **Deep CLI Jumping:** Direct "Launch Simulator" and "Run" buttons that immediately jump to the Cisco Terminal tab, select the target device, and execute the show command!
 
-### 3. ⭐ Kyndryl L1 Priority Track (66 High-Yield Lessons)
+### 3. 🚀 Career Roadmap & Bangalore Market Salary Path (₹3.6L ➔ ₹16L+)
+A strategic career transition system designed for network engineers targeting high-paying positions in Bangalore tech hubs:
+- **Interactive CTC Progression Ladder:** Visual progression from Current L1 Support (₹3.6 LPA) to Next Switch (₹4.5–7.0 LPA), Intermediate L2 (₹6.0–10.0 LPA), Security Specialist (₹7.0–12.0 LPA), Advanced Enterprise CCNP (₹9.0–16.0+ LPA), and Automation Specialist (₹8.0–16.0+ LPA).
+- **The 5-Phase Structured Learning Path:**
+  - **Phase 1: Networking Fundamentals** (Weeks 1–3) — OSI, TCP/IP, Subnetting, DNS/DHCP.
+  - **Phase 2: Cisco Networking & CCNA** (Weeks 4–10) — VLANs, OSPF, ACLs, NAT, Packet Tracer.
+  - **Phase 3: Network Security** (Months 3–4) — Firewalls, IPsec VPNs, Port Security, CCST/CyberOps.
+  - **Phase 4: Advanced Enterprise Networking** (Months 5–8) — CCNP ENCOR/ENARSI, BGP multi-homing.
+  - **Phase 5: Network Automation** (Months 6–10) — DevNet Associate, Python (Netmiko), REST APIs, Ansible.
+- **Ranked Skill Prioritization Matrix (1–7):** Highest ROI skills for Bangalore recruiters.
+- **Weekly 1.5–2 Hour Daily Study Routine:** Monday-to-Sunday schedule with automatic "Today's Focus" highlighting.
+- **Immediate 7-Step Action Plan:** Interactive checklist tracking your execution milestones with progress saving.
+
+### 4. ⭐ Kyndryl L1 Priority Track (66 High-Yield Lessons)
 - Instant toggle filter that reduces study overhead by ~65% while covering 100% of L1 NOC alert scenarios:
   - Switching loops & Spanning Tree (STP/RSTP/PortFast/BPDU Guard)
   - 802.1Q Trunks, Native VLANs & Voice VLANs
@@ -40,7 +53,7 @@ A dedicated, role-specific career track organizing critical lessons and diagnost
   - Port Security & Err-Disabled recovery
   - IPv4 Subnetting & Wildcard Masks
 
-### 3. 💻 Multi-Device Interactive Cisco Terminal Simulator
+### 5. 💻 Multi-Device Interactive Cisco Terminal Simulator
 Simulate troubleshooting across an end-to-end enterprise network topology with authentic CLI responses:
 - **🔀 Core Switch (`KYNDRYL-CORE-SW01`):** Catalyst 9300-24T (IOS-XE 17.9.4a) — Inter-VLAN, HSRP, OSPF, STP
 - **🔌 Access Switch (`KYNDRYL-ACC-SW02`):** Catalyst 9200L-48P (IOS-XE 17.9.3) — PoE+ power draw, 802.1X, Port Security
@@ -56,22 +69,22 @@ Features:
 - **Command History Recall** using Up/Down arrow keys (`↑` / `↓`)
 - **Fuzzy Shortcut Resolution** (`sh ip int br`, `sh run`, `sh vlan`, etc.)
 
-### 4. ⚡ Mental Subnetting Speed Trainer
+### 6. ⚡ Mental Subnetting Speed Trainer
 - Random IPv4 CIDR generator (`/25` through `/30`).
 - Tests mental calculation of Network ID, First Usable IP, Last Usable IP, Broadcast Address, and Host Count.
 - Instant validation and streak tracking for sub-10-second NOC triage speed.
 
-### 5. 🚨 Kyndryl Incident War Room & SOP Playbooks
+### 7. 🚨 Kyndryl Incident War Room & SOP Playbooks
 - Real-world triage workflows with diagnostic sequences:
   - **P1 Critical (INC098231):** Branch Office STP Loop & High CPU Storm
   - **P2 High (INC098402):** VLAN 30 APIPA Address Failure & DHCP Helper Relay
   - **P3 Medium (INC098555):** Conference Room Port Security `err-disable` Violation
 - Copyable **Kyndryl ServiceNow Worklog Templates** ready for shift handover.
 
-### 6. 📖 Top 25 Cisco CLI Reference
+### 8. 📖 Top 25 Cisco CLI Reference
 - Categorized cheatsheet with one-click clipboard copy for interfaces, switching, routing, NAT, security, and diagnostics.
 
-### 7. 🎯 Kyndryl L1 Technical Interview Flashcards
+### 9. 🎯 Kyndryl L1 Technical Interview Flashcards
 - High-yield scenario questions covering duplex mismatches, DHCP DORA, STP BPDU Guard, routing tie-breakers, and OSPF ExStart states.
 
 ---

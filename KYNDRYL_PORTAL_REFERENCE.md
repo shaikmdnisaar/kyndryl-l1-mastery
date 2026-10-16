@@ -57,6 +57,17 @@ The dashboard includes a dedicated **Network Engineer Topics & Lessons** tab org
 
 ---
 
+## 🚀 Bangalore Career Roadmap & Salary Progression (₹3.6L ➔ ₹16L+)
+
+A dedicated **Career Roadmap & Bangalore Salary Path** tab is built directly into the dashboard:
+- **Progression Ladder:** Current L1 Support (₹3.6 LPA) ➔ Next Switch in Bangalore (₹4.5–7.0 LPA) ➔ Intermediate L2 (₹6–10 LPA) ➔ Senior Security / CCNP / Automation (₹9–16+ LPA).
+- **5-Phase Learning Track:** Networking Fundamentals (Weeks 1–3), Cisco CCNA (Weeks 4–10), Security (Months 3–4), CCNP Enterprise (Months 5–8), DevNet Automation (Months 6–10).
+- **Ranked Priorities 1–7 & Weekly Study Routine:** Monday-to-Sunday execution plan with automatic "Today's Focus" highlighting.
+- **Immediate 7-Step Action Plan:** Interactive persistent checklist tracking your milestones to your next offer letter.
+- **Full Guide Document:** [CAREER_ROADMAP_BANGALORE.md](file:///c:/Users/nisaa/OneDrive/Desktop/KV-KENDRYL/CAREER_ROADMAP_BANGALORE.md)
+
+---
+
 ## 📋 Standard Sign-In Sequence
 1. Open the [TPL Card Login Form](https://www.linkedin.com/checkpoint/enterprise/login/76281980?pathWildcard=76281980&application=learning).
 2. Paste Card Number: `29100701939436`.

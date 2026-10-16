@@ -1277,6 +1277,391 @@
       gap: 8px;
     }
 
+
+    /* CAREER ROADMAP & BANGALORE SALARY PROGRESSION STYLES */
+    .roadmap-hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+    .roadmap-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #10b981, #38bdf8, #6366f1, #f59e0b);
+    }
+    .roadmap-hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .roadmap-hero-title h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .roadmap-hero-title p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    /* CTC PROGRESSION LADDER */
+    .ctc-ladder-wrap {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ctc-ladder-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ctc-ladder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .ctc-node {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .ctc-node:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+    .ctc-node.current {
+      border-color: #f43f5e;
+      background: rgba(244, 63, 94, 0.08);
+    }
+    .ctc-node.target {
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    }
+    .ctc-node-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+    .ctc-node.current .ctc-node-tag { color: #fb7185; }
+    .ctc-node.target .ctc-node-tag { color: #34d399; }
+    .ctc-node-salary {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .ctc-node.current .ctc-node-salary { color: #fda4af; }
+    .ctc-node.target .ctc-node-salary { color: #34d399; }
+    .ctc-node-role {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1.3;
+    }
+    .ctc-node-skills {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    /* PHASES CONTAINER & CARDS */
+    .roadmap-section-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 28px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .phase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .phase-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: var(--bg-card-hover);
+    }
+    .phase-card.priority-high {
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .phase-tag-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .phase-number-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .phase-number-badge.p1 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .phase-number-badge.p2 { background: rgba(16, 185, 129, 0.18); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .phase-number-badge.p3 { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .phase-number-badge.p4 { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .phase-number-badge.p5 { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+    
+    .phase-timeline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .phase-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .phase-skills-pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .skill-pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .phase-courses-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+    }
+    .phase-course-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .phase-course-item label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+    }
+    .phase-course-item a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .phase-course-item a:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--cyan);
+    }
+    .phase-goal-note {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      border-left: 2px solid var(--indigo);
+      padding-left: 10px;
+      line-height: 1.4;
+    }
+
+    /* PRIORITIES & SCHEDULE DUAL GRID */
+    .dual-roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .roadmap-subcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .priority-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .priority-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 6px;
+    }
+    .priority-rank {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .priority-row:nth-child(1) .priority-rank { background: #ef4444; color: white; }
+    .priority-row:nth-child(2) .priority-rank { background: #10b981; color: white; }
+    .priority-row:nth-child(3) .priority-rank { background: #38bdf8; color: white; }
+    .priority-name {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #ffffff;
+      flex: 1;
+    }
+    .priority-reason {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    /* WEEKLY SCHEDULE GRID */
+    .schedule-day-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.85rem;
+    }
+    .schedule-day-row.is-today {
+      border-color: var(--cyan);
+      background: rgba(56, 189, 248, 0.08);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+    .day-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 0.75rem;
+      width: 85px;
+      color: var(--text-muted);
+    }
+    .schedule-day-row.is-today .day-badge { color: var(--cyan); }
+    .day-activity {
+      font-weight: 600;
+      color: var(--text-main);
+      flex: 1;
+    }
+    .today-pill {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      background: var(--cyan);
+      color: #070b14;
+      padding: 2px 6px;
+      border-radius: 99px;
+    }
+
+    /* ACTION PLAN CARD */
+    .action-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .action-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .action-step-item.checked {
+      background: rgba(16, 185, 129, 0.06);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .action-step-item.checked .action-text {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .action-text strong { color: #ffffff; }
+    .action-text {
+      font-size: 0.86rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
   </style>
 </head>
 <body>
@@ -1344,6 +1729,7 @@
     <nav class="nav-tabs">
       <button class="tab-btn active" onclick="switchTab('trackerTab')">🎬 Course Tracker & Priority Path</button>
       <button class="tab-btn" onclick="switchTab('engineerTab')">🎓 Network Engineer Topics & Lessons</button>
+      <button class="tab-btn" onclick="switchTab('roadmapTab')">🚀 Career Roadmap & Bangalore Salary Path</button>
       <button class="tab-btn" onclick="switchTab('terminalTab')">💻 Interactive Cisco Terminal</button>
       <button class="tab-btn" onclick="switchTab('subnetTab')">⚡ Subnetting Speed Trainer</button>
       <button class="tab-btn" onclick="switchTab('warRoomTab')">🚨 Kyndryl Incident War Room</button>
@@ -1366,6 +1752,457 @@
         <!-- Rendered dynamically by JavaScript with all 201 lesson links -->
       </div>
     </div>
+
+    <!-- TAB: CAREER ROADMAP & BANGALORE SALARY PROGRESSION (₹3.6L TO ₹16L+) -->
+    <div id="roadmapTab" class="tab-pane">
+      
+      <!-- Executive Roadmap Hero Banner -->
+      <div class="roadmap-hero">
+        <div class="roadmap-hero-top">
+          <div class="roadmap-hero-title">
+            <h2><span>🚀</span> Network Engineer Career Roadmap — Bangalore Market Path</h2>
+            <p>From Kyndryl L1 NOC (₹3.6 LPA) to High-Paying Network Engineering in Bangalore (₹4.5–7L Next Switch ➔ ₹16L+ Specialist)</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="https://shaikmdnisaar.github.io/kyndryl-l1-mastery/" target="_blank" class="btn-sm primary">🌐 Live Deployment</a>
+            <button class="btn-sm" onclick="resetRoadmapProgress()">↺ Reset Action Plan</button>
+          </div>
+        </div>
+
+        <!-- Bangalore CTC Ladder -->
+        <div class="ctc-ladder-wrap">
+          <div class="ctc-ladder-title">
+            <span>📈 Bangalore Annual CTC Progression Ladder</span>
+          </div>
+          <div class="ctc-ladder-grid">
+            <div class="ctc-node current">
+              <span class="ctc-node-tag">Current Role</span>
+              <div class="ctc-node-salary">₹3.6 LPA</div>
+              <div class="ctc-node-role">L1 Network Support</div>
+              <div class="ctc-node-skills">Kyndryl NOC, ticket dispatch, basic show commands</div>
+            </div>
+            <div class="ctc-node target">
+              <span class="ctc-node-tag">⭐ Next Switch (Target)</span>
+              <div class="ctc-node-salary">₹4.5–7.0 LPA</div>
+              <div class="ctc-node-role">L1/L2 Network Engineer</div>
+              <div class="ctc-node-skills">CCNA 200-301, VLANs, OSPF, Packet Tracer & Wireshark triage</div>
+            </div>
+            <div class="ctc-node">
+              <span class="ctc-node-tag">Intermediate</span>
+              <div class="ctc-node-salary">₹6.0–10.0 LPA</div>
+              <div class="ctc-node-role">L2 Enterprise R&S</div>
+              <div class="ctc-node-skills">HSRP, EtherChannel, multi-vendor enterprise NOC</div>
+            </div>
+            <div class="ctc-node">
+              <span class="ctc-node-tag">Specialization</span>
+              <div class="ctc-node-salary">₹7.0–12.0 LPA</div>
+              <div class="ctc-node-role">Network Security</div>
+              <div class="ctc-node-skills">Palo Alto, Fortinet, ASA firewalls, IPsec VPNs, ZTNA</div>
+            </div>
+            <div class="ctc-node">
+              <span class="ctc-node-tag">Advanced</span>
+              <div class="ctc-node-salary">₹9.0–16.0+ LPA</div>
+              <div class="ctc-node-role">CCNP Enterprise</div>
+              <div class="ctc-node-skills">ENCOR/ENARSI, BGP multi-homing, SD-WAN, architecture</div>
+            </div>
+            <div class="ctc-node">
+              <span class="ctc-node-tag">Automation</span>
+              <div class="ctc-node-salary">₹8.0–16.0+ LPA</div>
+              <div class="ctc-node-role">Network Automation</div>
+              <div class="ctc-node-skills">Python (Netmiko), REST APIs, Ansible, Cisco DevNet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Phase Structured Learning Path Grid -->
+      <div class="roadmap-section-title">
+        <span>📚 The 5-Phase Curriculum (Direct One-Click LinkedIn Learning Links)</span>
+      </div>
+
+      <div class="phases-grid">
+
+        <!-- Phase 1 -->
+        <div class="phase-card">
+          <div>
+            <div class="phase-header">
+              <div class="phase-tag-wrap">
+                <span class="phase-number-badge p1">Phase 1</span>
+                <span style="font-size:0.75rem; color:#38bdf8; font-weight:700;">Start Here</span>
+              </div>
+              <span class="phase-timeline">Weeks 1–3</span>
+            </div>
+            <div class="phase-title">Networking Fundamentals</div>
+            <div class="phase-skills-pill-wrap">
+              <span class="skill-pill">OSI 7 Layers</span>
+              <span class="skill-pill">TCP/IP</span>
+              <span class="skill-pill">IPv4 Subnetting</span>
+              <span class="skill-pill">DNS / DHCP</span>
+              <span class="skill-pill">TCP vs UDP</span>
+            </div>
+          </div>
+
+          <div class="phase-courses-list">
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p1_1" onchange="saveRoadmapCheckboxes()"> Networking Basics</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Networking+Foundations+Networking+Basics&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p1_2" onchange="saveRoadmapCheckboxes()"> Learning IP Addressing</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Learning+IP+Addressing&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p1_3" onchange="saveRoadmapCheckboxes()"> Learning Subnetting</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Learning+Subnetting&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p1_4" onchange="saveRoadmapCheckboxes()"> Cisco Foundations: IP Addressing</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+IP+Addressing&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+          </div>
+
+          <div class="phase-goal-note">
+            <strong>Practical Goal:</strong> Master mental CIDR calculation (/24 to /30) under 10 seconds and packet headers.
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-card priority-high">
+          <div>
+            <div class="phase-header">
+              <div class="phase-tag-wrap">
+                <span class="phase-number-badge p2">Phase 2</span>
+                <span style="font-size:0.75rem; color:#34d399; font-weight:800;">⭐ Highest Priority</span>
+              </div>
+              <span class="phase-timeline">Weeks 4–10</span>
+            </div>
+            <div class="phase-title">Cisco Networking & CCNA</div>
+            <div class="phase-skills-pill-wrap">
+              <span class="skill-pill">VLANs & Trunks</span>
+              <span class="skill-pill">STP / RSTP</span>
+              <span class="skill-pill">Inter-VLAN SVI</span>
+              <span class="skill-pill">OSPFv2</span>
+              <span class="skill-pill">ACLs & NAT</span>
+              <span class="skill-pill">Packet Tracer</span>
+            </div>
+          </div>
+
+          <div class="phase-courses-list">
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p2_1" onchange="saveRoadmapCheckboxes()"> Cisco Foundations: Fundamentals</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Fundamentals+of+Cisco+Networking&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p2_2" onchange="saveRoadmapCheckboxes()"> Switching & Routing Foundations</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Switching+and+Routing&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p2_3" onchange="saveRoadmapCheckboxes()"> Wireless, Services, Security</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Wireless+Networks+Services+Security+Virtualization&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p2_4" onchange="saveRoadmapCheckboxes()"> Wireless Networking Training</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Wireless+Networking+Essential+Training&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p2_5" onchange="saveRoadmapCheckboxes()"> Kevin Wallace CCNA (201 Lessons)</label>
+              <a href="https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980" target="_blank">▶ Watch</a>
+            </div>
+          </div>
+
+          <div class="phase-goal-note">
+            <strong>Practical Goal:</strong> Clear CCNA 200-301 and build 3 showcase enterprise topologies in Cisco Packet Tracer.
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-card">
+          <div>
+            <div class="phase-header">
+              <div class="phase-tag-wrap">
+                <span class="phase-number-badge p3">Phase 3</span>
+                <span style="font-size:0.75rem; color:#fbbf24; font-weight:700;">Specialization</span>
+              </div>
+              <span class="phase-timeline">Months 3–4</span>
+            </div>
+            <div class="phase-title">Network Security & Firewalls</div>
+            <div class="phase-skills-pill-wrap">
+              <span class="skill-pill">Extended ACLs</span>
+              <span class="skill-pill">Firewalls (ASA/Palo)</span>
+              <span class="skill-pill">IPsec VPNs</span>
+              <span class="skill-pill">Port Security</span>
+              <span class="skill-pill">DAI & Snooping</span>
+            </div>
+          </div>
+
+          <div class="phase-courses-list">
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p3_1" onchange="saveRoadmapCheckboxes()"> Cisco CCST Cybersecurity Cert Prep</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Certified+Support+Technician+CCST+Cybersecurity+Cert+Prep&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p3_2" onchange="saveRoadmapCheckboxes()"> CCNA Cybersecurity / CyberOps</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=CCNA+Cybersecurity+Cert+Prep&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+          </div>
+
+          <div class="phase-goal-note">
+            <strong>Practical Goal:</strong> Build foundation for Security Operations (SOC/NOC), Next-Gen Firewalls, and IPsec site tunnels.
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase-card">
+          <div>
+            <div class="phase-header">
+              <div class="phase-tag-wrap">
+                <span class="phase-number-badge p4">Phase 4</span>
+                <span style="font-size:0.75rem; color:#818cf8; font-weight:700;">Enterprise Tier</span>
+              </div>
+              <span class="phase-timeline">Months 5–8+</span>
+            </div>
+            <div class="phase-title">Advanced Networking (CCNP)</div>
+            <div class="phase-skills-pill-wrap">
+              <span class="skill-pill">BGP Peering</span>
+              <span class="skill-pill">Multi-Area OSPF</span>
+              <span class="skill-pill">SD-WAN</span>
+              <span class="skill-pill">QoS & VRFs</span>
+              <span class="skill-pill">L3 Escalations</span>
+            </div>
+          </div>
+
+          <div class="phase-courses-list">
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p4_1" onchange="saveRoadmapCheckboxes()"> Cisco CCNP Enterprise: ENCOR (350-401)</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENCOR+350-401+Cert+Prep&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p4_2" onchange="saveRoadmapCheckboxes()"> Cisco CCNP Enterprise: ENARSI (300-410)</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENARSI+300-410+Cert+Prep&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+          </div>
+
+          <div class="phase-goal-note">
+            <strong>Practical Goal:</strong> Target ₹9–16+ LPA Senior Enterprise roles at Cisco, Juniper, Akamai, or Fortune 500 banks.
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="phase-card">
+          <div>
+            <div class="phase-header">
+              <div class="phase-tag-wrap">
+                <span class="phase-number-badge p5">Phase 5</span>
+                <span style="font-size:0.75rem; color:#f472b6; font-weight:700;">Future-Ready</span>
+              </div>
+              <span class="phase-timeline">Months 6–10+</span>
+            </div>
+            <div class="phase-title">Network Automation (DevNet)</div>
+            <div class="phase-skills-pill-wrap">
+              <span class="skill-pill">Python Netmiko</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">JSON / YAML</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">Ansible Playbooks</span>
+            </div>
+          </div>
+
+          <div class="phase-courses-list">
+            <div class="phase-course-item">
+              <label><input type="checkbox" class="roadmap-checkbox" id="rc_p5_1" onchange="saveRoadmapCheckboxes()"> Cisco DevNet Associate (200-901 DEVASC)</label>
+              <a href="https://www.linkedin.com/learning/search?keywords=Cisco+Certified+DevNet+Associate+DEVASC+200-901+Cert+Prep&u=76281980" target="_blank">▶ Watch</a>
+            </div>
+          </div>
+
+          <div class="phase-goal-note">
+            <strong>Practical Goal:</strong> Automate configuration audits, backup routines, and telemetry to transition into NetDevOps.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dual Grid: What to Prioritize & Weekly Study Routine -->
+      <div class="dual-roadmap-grid">
+
+        <!-- Priority Matrix -->
+        <div class="roadmap-subcard">
+          <h3 style="font-size:1.1rem; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:8px;">
+            <span>🎯</span> Ranked Skill Prioritization Matrix
+          </h3>
+          <p style="font-size:0.8rem; color:var(--text-muted);">
+            Focus your energy where the return on investment (ROI) for Bangalore job offers is highest:
+          </p>
+
+          <div class="priority-list">
+            <div class="priority-row">
+              <span class="priority-rank">1</span>
+              <div>
+                <div class="priority-name">IP Addressing & Subnetting</div>
+                <div class="priority-reason">The gatekeeper question in 95% of L1/L2 technical rounds. Zero hesitation allowed.</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">2</span>
+              <div>
+                <div class="priority-name">CCNA 200-301 Certification Baseline</div>
+                <div class="priority-reason">Validates full stack understanding above basic service-desk operators.</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">3</span>
+              <div>
+                <div class="priority-name">Wireshark & Packet Triage</div>
+                <div class="priority-reason">Demonstrates real-world problem-solving (TCP resets, ARP drops, DNS failures).</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">4</span>
+              <div>
+                <div class="priority-name">Routing & Switching Labs (Packet Tracer)</div>
+                <div class="priority-reason">Builds concrete confidence to narrate troubleshooting stories in interviews.</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">5</span>
+              <div>
+                <div class="priority-name">Firewalls, VPNs & Security Specialization</div>
+                <div class="priority-reason">Adds an instant ₹1.5–2.5 LPA premium over generic network support profiles.</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">6</span>
+              <div>
+                <div class="priority-name">CCNP Enterprise (ENCOR / ENARSI)</div>
+                <div class="priority-reason">Key to breaking into ₹10–16+ LPA enterprise architecture after 2-3 years.</div>
+              </div>
+            </div>
+            <div class="priority-row">
+              <span class="priority-rank">7</span>
+              <div>
+                <div class="priority-name">Python & Network Automation</div>
+                <div class="priority-reason">High-leverage differentiator that future-proofs your engineering career.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Study Routine -->
+        <div class="roadmap-subcard">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="font-size:1.1rem; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:8px;">
+              <span>📅</span> Weekly 1.5–2 Hour Daily Study Routine
+            </h3>
+            <span style="font-size:0.72rem; color:var(--cyan); font-weight:700;">Consistent Daily Habit</span>
+          </div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">
+            Suggested routine tailored to work alongside your Kyndryl NOC shift schedule:
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:8px;" id="weeklyScheduleWrap">
+            <div class="schedule-day-row" id="day-row-1">
+              <span class="day-badge">Monday</span>
+              <span class="day-activity">Networking Theory & Architecture</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-2">
+              <span class="day-badge">Tuesday</span>
+              <span class="day-activity">IP Addressing & Mental Subnetting Drills</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-3">
+              <span class="day-badge">Wednesday</span>
+              <span class="day-activity">CCNA Course Modules & Note Taking</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-4">
+              <span class="day-badge">Thursday</span>
+              <span class="day-activity">Packet Tracer Hands-on Lab Practice</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-5">
+              <span class="day-badge">Friday</span>
+              <span class="day-activity">Wireshark Packet Capture & Protocol Triage</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-6">
+              <span class="day-badge">Saturday</span>
+              <span class="day-activity">Hands-on Lab Projects & Interview Q&A Drills</span>
+            </div>
+            <div class="schedule-day-row" id="day-row-0">
+              <span class="day-badge">Sunday</span>
+              <span class="day-activity">Revision, Mock Testing & Ticket Worklogs</span>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Actions -->
+          <div style="display:flex; gap:10px; margin-top:8px; flex-wrap:wrap;">
+            <button class="btn-sm" onclick="switchTab('subnetTab')">⚡ Launch Subnet Trainer</button>
+            <button class="btn-sm" onclick="switchTab('terminalTab')">💻 Practice in Terminal</button>
+            <button class="btn-sm" onclick="switchTab('warRoomTab')">🚨 Review War Room</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Immediate 7-Step Action Plan -->
+      <div class="roadmap-subcard" style="margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h3 style="font-size:1.15rem; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:8px;">
+              <span>✅</span> Immediate 7-Step Action Plan for Bangalore Job Switch
+            </h3>
+            <p style="font-size:0.82rem; color:var(--text-muted);">
+              Track your execution milestones from current ₹3.6 LPA role to your next offer letter:
+            </p>
+          </div>
+          <span style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; font-weight:800; color:var(--emerald); background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); padding:4px 12px; border-radius:99px;" id="actionPlanCounter">
+            0 / 7 Steps Completed
+          </span>
+        </div>
+
+        <div class="action-checklist" style="margin-top:14px;">
+          <div class="action-step-item" id="step-row-1">
+            <input type="checkbox" class="action-checkbox" id="act_step_1" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 1: Finish Networking Fundamentals (Weeks 1–3)</strong> — Lock in OSI model, TCP vs UDP differences, and mental subnetting calculations without calculator.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-2">
+            <input type="checkbox" class="action-checkbox" id="act_step_2" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 2: Complete CCNA 200-301 Preparation (Weeks 4–10)</strong> — Work through the 66 Kyndryl Core Priority lessons and master VLANs, 802.1Q, OSPF, and NAT.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-3">
+            <input type="checkbox" class="action-checkbox" id="act_step_3" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 3: Build 3 Showcase Cisco Packet Tracer Topologies</strong> — Create a multi-VLAN campus with SVI routing, OSPF dynamic routing, and an HSRP redundant gateway.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-4">
+            <input type="checkbox" class="action-checkbox" id="act_step_4" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 4: Learn Packet Capture Analysis in Wireshark</strong> — Inspect TCP 3-way handshakes, SYN-ACK, RST flags, DHCP DORA packets, and ARP request/reply cycles.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-5">
+            <input type="checkbox" class="action-checkbox" id="act_step_5" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 5: Document 3 Technical Incident Scenarios for Interviews</strong> — Prepare concise stories describing a switching loop, DHCP lease failure, and OSPF MTU mismatch resolution.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-6">
+            <input type="checkbox" class="action-checkbox" id="act_step_6" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 6: Update Naukri, LinkedIn & Begin Targeted Bangalore Applications</strong> — Target ₹4.5–7.0 LPA L1/L2 network engineer openings across Bangalore tech parks.
+            </div>
+          </div>
+          <div class="action-step-item" id="step-row-7">
+            <input type="checkbox" class="action-checkbox" id="act_step_7" onchange="handleActionPlanCheck(this)">
+            <div class="action-text">
+              <strong>Step 7: Specialize in Security, CCNP, or DevNet Automation</strong> — Once secured in your new role, pursue CCNP Enterprise or Python automation for the ₹9–16+ LPA tier.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 
     <!-- TAB: NETWORK ENGINEER TOPICS & LESSONS (KYNDRYL L1/L2 NOC MASTER PATH) -->
     <div id="engineerTab" class="tab-pane">
@@ -3032,6 +3869,92 @@ Network Destination        Netmask          Gateway       Interface  Metric
     // LocalStorage State Management
     const STORAGE_KEY = "kyndryl_ccna_v11_tracker";
     let appState = { completedLessons: [] };
+
+
+    // Career Roadmap & Action Plan Persistent State
+    const ROADMAP_STORAGE_KEY = "kyndryl_career_roadmap_state";
+    let roadmapState = {
+      courses: {},
+      actions: {}
+    };
+
+    function loadRoadmapState() {
+      const saved = localStorage.getItem(ROADMAP_STORAGE_KEY);
+      if (saved) {
+        try { roadmapState = JSON.parse(saved); } catch(e) {}
+      }
+      
+      // Restore course checkboxes
+      document.querySelectorAll('.roadmap-checkbox').forEach(box => {
+        box.checked = !!roadmapState.courses[box.id];
+      });
+
+      // Restore action plan checkboxes
+      document.querySelectorAll('.action-checkbox').forEach(box => {
+        const isDone = !!roadmapState.actions[box.id];
+        box.checked = isDone;
+        const row = box.closest('.action-step-item');
+        if (row) {
+          if (isDone) row.classList.add('checked');
+          else row.classList.remove('checked');
+        }
+      });
+
+      updateActionPlanUI();
+      highlightTodaySchedule();
+    }
+
+    function saveRoadmapCheckboxes() {
+      roadmapState.courses = {};
+      document.querySelectorAll('.roadmap-checkbox:checked').forEach(box => {
+        roadmapState.courses[box.id] = true;
+      });
+      localStorage.setItem(ROADMAP_STORAGE_KEY, JSON.stringify(roadmapState));
+    }
+
+    function handleActionPlanCheck(box) {
+      roadmapState.actions[box.id] = box.checked;
+      const row = box.closest('.action-step-item');
+      if (row) {
+        if (box.checked) row.classList.add('checked');
+        else row.classList.remove('checked');
+      }
+      localStorage.setItem(ROADMAP_STORAGE_KEY, JSON.stringify(roadmapState));
+      updateActionPlanUI();
+    }
+
+    function updateActionPlanUI() {
+      const allActions = document.querySelectorAll('.action-checkbox');
+      const checkedActions = document.querySelectorAll('.action-checkbox:checked');
+      const counter = document.getElementById('actionPlanCounter');
+      if (counter) {
+        counter.innerText = `${checkedActions.length} / ${allActions.length} Steps Completed`;
+      }
+    }
+
+    function highlightTodaySchedule() {
+      const today = new Date().getDay(); // 0 is Sunday, 1 is Monday...
+      document.querySelectorAll('.schedule-day-row').forEach(row => row.classList.remove('is-today'));
+      const todayRow = document.getElementById(`day-row-${today}`);
+      if (todayRow) {
+        todayRow.classList.add('is-today');
+        if (!todayRow.querySelector('.today-pill')) {
+          const pill = document.createElement('span');
+          pill.className = 'today-pill';
+          pill.innerText = "Today's Focus";
+          todayRow.appendChild(pill);
+        }
+      }
+    }
+
+    function resetRoadmapProgress() {
+      if (confirm("Reset your Career Roadmap and Action Plan checkboxes?")) {
+        roadmapState = { courses: {}, actions: {} };
+        localStorage.removeItem(ROADMAP_STORAGE_KEY);
+        loadRoadmapState();
+      }
+    }
+
 
     function loadState() {
       const saved = localStorage.getItem(STORAGE_KEY);
