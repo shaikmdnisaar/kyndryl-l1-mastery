@@ -1679,6 +1679,39 @@ html_template = """<!DOCTYPE html>
 
 
     /* KEVIN WALLACE 15-COURSE CATALOG STYLES */
+    .kw-package-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+    .kw-package-tag {
+      font-size: 0.82rem;
+      color: #34d399;
+      font-weight: 800;
+    }
+    .kw-package-role {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .phase-package-banner {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
     .kw-catalog-wrap {
       margin-top: 36px;
       margin-bottom: 30px;
@@ -2067,6 +2100,9 @@ html_template = """<!DOCTYPE html>
               <span class="phase-timeline">Weeks 4–10</span>
             </div>
             <div class="phase-title">Cisco Networking & CCNA</div>
+            <div class="phase-package-banner">
+              <span>💰</span> <strong>CTC Target:</strong> ₹5.5–8.0 LPA · <em>Network Engineer L2 / Cisco Specialist</em>
+            </div>
             <div class="phase-skills-pill-wrap">
               <span class="skill-pill">VLANs & Trunks</span>
               <span class="skill-pill">STP / RSTP</span>
@@ -2116,6 +2152,9 @@ html_template = """<!DOCTYPE html>
               <span class="phase-timeline">Months 3–4</span>
             </div>
             <div class="phase-title">Network Security & Firewalls</div>
+            <div class="phase-package-banner">
+              <span>💰</span> <strong>CTC Target:</strong> ₹5.0–7.5 LPA · <em>SOC Tier 1 / Security Support Specialist</em>
+            </div>
             <div class="phase-skills-pill-wrap">
               <span class="skill-pill">Extended ACLs</span>
               <span class="skill-pill">Firewalls (ASA/Palo)</span>
@@ -2152,6 +2191,9 @@ html_template = """<!DOCTYPE html>
               <span class="phase-timeline">Months 5–8+</span>
             </div>
             <div class="phase-title">Advanced Networking (CCNP)</div>
+            <div class="phase-package-banner">
+              <span>💰</span> <strong>CTC Target:</strong> ₹7.0–13.0 LPA · <em>Senior Network Engineer / L3 Escalations</em>
+            </div>
             <div class="phase-skills-pill-wrap">
               <span class="skill-pill">BGP Peering</span>
               <span class="skill-pill">Multi-Area OSPF</span>
@@ -2188,6 +2230,9 @@ html_template = """<!DOCTYPE html>
               <span class="phase-timeline">Months 6–10+</span>
             </div>
             <div class="phase-title">Network Automation (DevNet)</div>
+            <div class="phase-package-banner">
+              <span>💰</span> <strong>CTC Target:</strong> ₹10.0–16.0+ LPA · <em>Network Automation Engineer / NetDevOps</em>
+            </div>
             <div class="phase-skills-pill-wrap">
               <span class="skill-pill">Python Netmiko</span>
               <span class="skill-pill">REST APIs</span>
@@ -4225,7 +4270,20 @@ Network Destination        Netmask          Gateway       Interface  Metric
             <div class="kw-course-title">${c.title}</div>
             <div class="kw-course-desc" style="margin-top:6px;">${c.desc}</div>
 
-            <div class="kw-modules-box" style="margin-top:12px;">
+            <div class="kw-package-box">
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+                <span class="kw-package-tag">💰 Target Package: <strong>${c.package || '₹4.5–6.5 LPA'}</strong></span>
+                <span class="kw-package-role">${c.packageRole || 'Network Specialist'}</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-muted); margin-top:5px;">
+                🏢 <strong style="color:#e2e8f0;">Hiring in BLR:</strong> ${c.companies || 'Kyndryl, Cisco, NTT Data, Wipro'}
+              </div>
+              <div style="font-size:0.75rem; color:var(--cyan); margin-top:3px;">
+                🛠️ <strong style="color:#e2e8f0;">Lab Package:</strong> ${c.labPackage || 'Packet Tracer 8.2+, Wireshark'}
+              </div>
+            </div>
+
+            <div class="kw-modules-box" style="margin-top:10px;">
               <div class="kw-modules-header" onclick="toggleKWModules(${idx})">
                 <span>📚 Course Structure (${c.modules.length} Modules)</span>
                 <span id="kw-arrow-${idx}" style="font-size:0.75rem; color:var(--cyan);">▼</span>
@@ -4237,6 +4295,11 @@ Network Destination        Netmask          Gateway       Interface  Metric
                     <span>${m}</span>
                   </div>
                 `).join('')}
+                ${c.interviewDeliverable ? `
+                  <div style="margin-top:8px; padding-top:8px; border-top:1px dashed rgba(255,255,255,0.12); font-size:0.74rem; color:#f59e0b;">
+                    🎯 <strong>Interview Deliverable:</strong> ${c.interviewDeliverable}
+                  </div>
+                ` : ''}
               </div>
             </div>
           </div>

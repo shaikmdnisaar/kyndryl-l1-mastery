@@ -9,14 +9,25 @@
     "cert": "Network+ / CCNA Baseline",
     "url": "https://www.linkedin.com/learning/search?keywords=Networking+Foundations+Networking+Basics&u=76281980",
     "desc": "Foundational overview of network infrastructure, physical topologies, OSI 7-layer model, TCP/IP stack, and essential enterprise services.",
-    "skills": ["OSI Reference Model", "TCP vs UDP", "Network Topologies", "DNS & DHCP DORA", "Copper & Fiber Media"],
+    "skills": [
+      "OSI Reference Model",
+      "TCP vs UDP",
+      "Network Topologies",
+      "DNS & DHCP DORA",
+      "Copper & Fiber Media"
+    ],
     "modules": [
       "Module 1: Exploring Network Types & Topologies (LAN, WAN, WLAN)",
       "Module 2: Network Media & Hardware Components (Switches, Routers, SFPs)",
       "Module 3: OSI & TCP/IP Reference Models (Layers 1-7, TCP 3-Way Handshake)",
       "Module 4: Logical Addressing & Network Protocols (IPv4, MAC, ARP, DNS, DHCP)",
       "Module 5: Modern Enterprise Trends (Cloud Networking, SDN Basics)"
-    ]
+    ],
+    "package": "₹4.5–6.5 LPA",
+    "packageRole": "L1 NOC / Junior Network Engineer",
+    "companies": "Kyndryl, Wipro, Infosys, TCS, HCLTech",
+    "labPackage": "Wireshark 4.x (Packet Analysis), Cisco Packet Tracer 8.2+",
+    "interviewDeliverable": "Explain OSI Layer 1-7 encapsulation and troubleshoot TCP 3-way handshake SYN flood"
   },
   {
     "id": "kw-course-2",
@@ -28,14 +39,25 @@
     "cert": "CCNA / Network+",
     "url": "https://www.linkedin.com/learning/search?keywords=Learning+IP+Addressing&u=76281980",
     "desc": "Mastering the structure of IPv4 and IPv6 logical addresses, binary-to-decimal conversion, address classes, and RFC 1918 private spaces.",
-    "skills": ["Binary-to-Decimal Math", "Classful IP Classes A-E", "RFC 1918 Private Spaces", "APIPA 169.254.x.x", "IPv6 Hex Formats"],
+    "skills": [
+      "Binary-to-Decimal Math",
+      "Classful IP Classes A-E",
+      "RFC 1918 Private Spaces",
+      "APIPA 169.254.x.x",
+      "IPv6 Hex Formats"
+    ],
     "modules": [
       "Module 1: IPv4 Structure & Binary Essentials (32-bit math, octet boundaries)",
       "Module 2: Address Classes & RFC 1918 Private Ranges (10.0.0.0, 172.16.0.0, 192.168.0.0)",
       "Module 3: Classless Inter-Domain Routing (CIDR prefix notations /8 to /32)",
       "Module 4: Special Use Addresses (Loopback 127.0.0.1, APIPA, Broadcast)",
       "Module 5: Introduction to IPv6 Addressing (128-bit hex, zero compression, EUI-64)"
-    ]
+    ],
+    "package": "₹4.5–6.5 LPA",
+    "packageRole": "Network Support Analyst",
+    "companies": "Kyndryl, Accenture, Cognizant, NTT Data",
+    "labPackage": "IP Calculator, Packet Tracer IPv4/IPv6 Dual-Stack Lab",
+    "interviewDeliverable": "Classify RFC 1918 private vs public ranges, diagnose 169.254.x.x APIPA failures"
   },
   {
     "id": "kw-course-3",
@@ -47,14 +69,25 @@
     "cert": "CCNA Core / L1 NOC",
     "url": "https://www.linkedin.com/learning/search?keywords=Learning+Subnetting&u=76281980",
     "desc": "Rapid mental and mathematical subnetting techniques, calculating block sizes, usable host ranges, and Variable Length Subnet Masking (VLSM).",
-    "skills": ["Mental Subnet Math", "Block Size Calculation", "VLSM Address Planning", "Host Densities", "/24 through /30 Subnetting"],
+    "skills": [
+      "Mental Subnet Math",
+      "Block Size Calculation",
+      "VLSM Address Planning",
+      "Host Densities",
+      "/24 through /30 Subnetting"
+    ],
     "modules": [
       "Module 1: The Mathematics of Subnetting (Powers of 2, 2^n subnets, 2^h - 2 hosts)",
       "Module 2: Subnetting Class C Networks (/24 to /30, point-to-point links)",
       "Module 3: Subnetting Class B and Class A Networks (Multi-octet borrowing)",
       "Module 4: Variable Length Subnet Masking (VLSM hierarchical IP design)",
       "Module 5: Mental Speed Subnetting Shortcuts (Finger method, chart-free CIDR hacks)"
-    ]
+    ],
+    "package": "₹4.5–6.5 LPA",
+    "packageRole": "NOC Engineer (Subnetting Specialist)",
+    "companies": "Orange Business, Kyndryl, Tech Mahindra, Mindtree",
+    "labPackage": "VLSM Design Matrix (.xlsx), Packet Tracer Multi-Branch Lab",
+    "interviewDeliverable": "Calculate /27, /29, /30 subnets mentally in under 15 seconds during live technical screen"
   },
   {
     "id": "kw-course-4",
@@ -66,13 +99,24 @@
     "cert": "Cisco IOS Practical",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+IP+Addressing&u=76281980",
     "desc": "Hands-on implementation of IPv4 and IPv6 on Cisco IOS routers and Catalyst switches, including SVI management and loopback interfaces.",
-    "skills": ["Cisco IOS Interface IP", "SVI Configuration", "Loopback Testing", "show ip interface brief", "IPv6 Interface Commands"],
+    "skills": [
+      "Cisco IOS Interface IP",
+      "SVI Configuration",
+      "Loopback Testing",
+      "show ip interface brief",
+      "IPv6 Interface Commands"
+    ],
     "modules": [
       "Module 1: Cisco IOS Interface IP Configuration (ip address command, no shutdown)",
       "Module 2: Secondary IP Addresses & Loopback Interfaces (Stability testing)",
       "Module 3: IPv6 Interface Configuration (Static assignment, EUI-64 link-local)",
       "Module 4: Address Verification on Cisco IOS (ping, traceroute, show ip int br)"
-    ]
+    ],
+    "package": "₹4.5–6.5 LPA",
+    "packageRole": "Junior Cisco Administrator",
+    "companies": "Kyndryl, Tata Communications, Microland",
+    "labPackage": "Cisco IOS 15.x / 17.x, Packet Tracer CLI Lab",
+    "interviewDeliverable": "Configure router interfaces, assign SVI IP on Catalyst switch, configure Loopback0"
   },
   {
     "id": "kw-course-5",
@@ -84,13 +128,24 @@
     "cert": "Cisco Entry / L1 CLI",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Fundamentals+of+Cisco+Networking&u=76281980",
     "desc": "Cisco hardware architecture, IOS CLI navigation modes, baseline switch and router hardening, and neighbor discovery via CDP and LLDP.",
-    "skills": ["Cisco IOS CLI Navigation", "Enable Secret & Console", "VTY Remote SSH Access", "CDP & LLDP Discovery", "write memory / copy run start"],
+    "skills": [
+      "Cisco IOS CLI Navigation",
+      "Enable Secret & Console",
+      "VTY Remote SSH Access",
+      "CDP & LLDP Discovery",
+      "write memory / copy run start"
+    ],
     "modules": [
       "Module 1: Cisco Enterprise Hardware Ecosystem (Catalyst 9000, ISR 4000)",
       "Module 2: Cisco IOS CLI Navigation (User EXEC, Privileged EXEC, Global Config)",
       "Module 3: Baseline Device Hardening (Hostname, passwords, banners, saving config)",
       "Module 4: Neighbor Discovery Protocols (CDP, LLDP topology mapping)"
-    ]
+    ],
+    "package": "₹4.5–6.5 LPA",
+    "packageRole": "Associate Network Engineer",
+    "companies": "Kyndryl, Infosys, Wipro, LTI Mindtree",
+    "labPackage": "PuTTY, Tera Term, Cisco Console Cable (USB to RJ45), Packet Tracer",
+    "interviewDeliverable": "Hardening baseline switch config: enable secret, console/VTY password, SSHv2, CDP/LLDP"
   },
   {
     "id": "kw-course-6",
@@ -102,7 +157,14 @@
     "cert": "Cisco CCNA 200-301 v1.1",
     "url": "https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep/diving-into-the-course?u=76281980",
     "desc": "The flagship, 201-lesson master curriculum covering all official Cisco 200-301 v1.1 exam domains from switching to security, OSPF, and automation.",
-    "skills": ["Full CCNA 200-301 Blueprint", "VLANs & 802.1Q Trunks", "Spanning Tree (RSTP)", "OSPFv2 Routing", "HSRP & NAT", "ACLs & Port Security"],
+    "skills": [
+      "Full CCNA 200-301 Blueprint",
+      "VLANs & 802.1Q Trunks",
+      "Spanning Tree (RSTP)",
+      "OSPFv2 Routing",
+      "HSRP & NAT",
+      "ACLs & Port Security"
+    ],
     "modules": [
       "Module 1: Foundational Networking Technologies (25 Lessons)",
       "Module 2: IPv4 Addressing & Subnetting (21 Lessons)",
@@ -114,7 +176,12 @@
       "Module 8: Network Security (27 Lessons)",
       "Module 9: Network Programmability (10 Lessons)",
       "Module 10: Exam Preparation & Practice (3 Lessons)"
-    ]
+    ],
+    "package": "₹5.0–7.5 LPA",
+    "packageRole": "Certified Network Engineer (CCNA)",
+    "companies": "Cisco TAC, Kyndryl L2, NTT Data, Orange Business, Reliance Jio",
+    "labPackage": "Cisco Packet Tracer Comprehensive Enterprise Topology (.pkt), GNS3 / EVE-NG",
+    "interviewDeliverable": "Configure end-to-end multi-VLAN campus network with OSPFv2, NAT Overload, and DHCP relay"
   },
   {
     "id": "kw-course-7",
@@ -126,14 +193,25 @@
     "cert": "CCNA Layer 2 & Layer 3",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Switching+and+Routing&u=76281980",
     "desc": "Deep dive into Layer 2 switching operations, CAM/MAC tables, 802.1Q trunks, Spanning Tree loop avoidance, EtherChannel, and packet routing.",
-    "skills": ["CAM / MAC Learning", "802.1Q Trunking", "Spanning Tree Protocol (STP)", "EtherChannel (LACP)", "Static & Default Routing"],
+    "skills": [
+      "CAM / MAC Learning",
+      "802.1Q Trunking",
+      "Spanning Tree Protocol (STP)",
+      "EtherChannel (LACP)",
+      "Static & Default Routing"
+    ],
     "modules": [
       "Module 1: Ethernet Switching Deep Dive (Frame format, CAM table flooding)",
       "Module 2: VLANs & 802.1Q Trunking (Access vs Trunk, Native VLAN)",
       "Module 3: Spanning Tree Protocol Operations (Root election, port states)",
       "Module 4: EtherChannel Link Aggregation (LACP, PAgP, load balancing)",
       "Module 5: IP Routing & Packet Forwarding (Packet flow, Static routes, RIP/RIPng)"
-    ]
+    ],
+    "package": "₹5.0–7.0 LPA",
+    "packageRole": "L2 Switching & Routing Specialist",
+    "companies": "Kyndryl, Orange Business, Vodafone Idea, Airtel NOC",
+    "labPackage": "Packet Tracer Switching Labs (STP/RSTP, LACP EtherChannel)",
+    "interviewDeliverable": "Root cause a Spanning Tree broadcast storm, reconfigure Root Bridge priority, bundle LACP trunks"
   },
   {
     "id": "kw-course-8",
@@ -145,13 +223,24 @@
     "cert": "CCNA Services & Security",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Networking+Foundations+Wireless+Networks+Services+Security+Virtualization&u=76281980",
     "desc": "Enterprise wireless LAN architecture, Cisco WLCs, DHCP relay, NAT/PAT translation pools, ACL traffic filtering, and network virtualization.",
-    "skills": ["Cisco WLC Management", "DHCP Relay Helper", "NAT/PAT Overload", "Standard & Extended ACLs", "Network Virtualization (VRF)"],
+    "skills": [
+      "Cisco WLC Management",
+      "DHCP Relay Helper",
+      "NAT/PAT Overload",
+      "Standard & Extended ACLs",
+      "Network Virtualization (VRF)"
+    ],
     "modules": [
       "Module 1: Cisco Wireless Architecture (Autonomous vs Lightweight APs, WLCs)",
       "Module 2: Network Infrastructure Services (DHCP server & relay, NAT/PAT)",
       "Module 3: Basic Network Security & ACLs (Standard & Extended ACL syntax)",
       "Module 4: Network Virtualization & Cloud Integration (Virtual switching, VRF-Lite)"
-    ]
+    ],
+    "package": "₹5.2–7.2 LPA",
+    "packageRole": "Enterprise Infrastructure Specialist",
+    "companies": "Kyndryl, Accenture, Capgemini, DXC Technology",
+    "labPackage": "Packet Tracer Cisco WLC 3504 / Lightweight AP (LWAP) Simulation",
+    "interviewDeliverable": "Deploy Cisco WLC WLAN with WPA2-Enterprise, configure DHCP Option 43 for CAPWAP discovery"
   },
   {
     "id": "kw-course-9",
@@ -163,14 +252,25 @@
     "cert": "Enterprise Wireless / Wi-Fi",
     "url": "https://www.linkedin.com/learning/search?keywords=Wireless+Networking+Essential+Training&u=76281980",
     "desc": "Radio frequency principles, 802.11 standards from Wi-Fi 4 through Wi-Fi 7, spectrum channel planning, and WPA2/WPA3 enterprise encryption.",
-    "skills": ["RF Principles (dBm, SNR)", "802.11ax Wi-Fi 6/6E", "2.4 GHz vs 5 GHz Channels", "WPA3 SAE Encryption", "Wireless Roaming & Triage"],
+    "skills": [
+      "RF Principles (dBm, SNR)",
+      "802.11ax Wi-Fi 6/6E",
+      "2.4 GHz vs 5 GHz Channels",
+      "WPA3 SAE Encryption",
+      "Wireless Roaming & Triage"
+    ],
     "modules": [
       "Module 1: Radio Frequency (RF) Principles (Antennas, signal attenuation, SNR)",
       "Module 2: 802.11 Standards Evolution (802.11a/b/g/n/ac/ax/be)",
       "Module 3: Spectrum Management (2.4 GHz channels 1, 6, 11, 5 GHz DFS, 6 GHz)",
       "Module 4: Wireless Security & Authentication (WPA2-Enterprise, WPA3 SAE)",
       "Module 5: Troubleshooting Wireless Issues (Co-channel interference, hidden nodes)"
-    ]
+    ],
+    "package": "₹5.5–7.5 LPA",
+    "packageRole": "Wireless Network Support Engineer",
+    "companies": "Aruba/HPE, Cisco, Kyndryl, Wipro, Tata Communications",
+    "labPackage": "Wi-Fi Analyzer (inSSIDer / Acrylic Wi-Fi), Ekahau Survey viewer",
+    "interviewDeliverable": "Resolve 2.4GHz / 5GHz co-channel interference, optimize SNR, configure 802.1X RADIUS authentication"
   },
   {
     "id": "kw-course-10",
@@ -182,14 +282,25 @@
     "cert": "Cisco CCST Networking",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Certified+Support+Technician+CCST+Networking+Cert+Prep&u=76281980",
     "desc": "Cisco official entry-level support technician cert prep focusing on physical connectivity, host IP diagnostics, and structured ticket triage.",
-    "skills": ["First-Call Ticket Resolution", "Diagnostic Utilities", "Cable & Transceiver Check", "Fault Domain Isolation", "Client Connectivity Triage"],
+    "skills": [
+      "First-Call Ticket Resolution",
+      "Diagnostic Utilities",
+      "Cable & Transceiver Check",
+      "Fault Domain Isolation",
+      "Client Connectivity Triage"
+    ],
     "modules": [
       "Module 1: Standards and Concepts (Core definitions, bandwidth vs throughput)",
       "Module 2: Addressing & Subnet Formats (Default gateways, broadcast boundaries)",
       "Module 3: Endpoints and Media Types (Host adapter properties, RJ-45, fiber)",
       "Module 4: Infrastructure Diagnostics (ping, tracert, nslookup, arp, netstat)",
       "Module 5: Structured Troubleshooting Methodology (7-step triage approach)"
-    ]
+    ],
+    "package": "₹4.5–6.0 LPA",
+    "packageRole": "Cisco Technical Support Specialist",
+    "companies": "Kyndryl, Concentrix, HCLTech, CSS Corp",
+    "labPackage": "Windows/Linux CLI Network Diagnostic Toolkit (ping, tracert, mtr, nslookup)",
+    "interviewDeliverable": "Demonstrate systematic 7-step fault isolation model for Layer 1 cable faults vs Layer 3 gateway drops"
   },
   {
     "id": "kw-course-11",
@@ -201,14 +312,25 @@
     "cert": "Cisco CCST Cybersecurity",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+Certified+Support+Technician+CCST+Cybersecurity+Cert+Prep&u=76281980",
     "desc": "Cybersecurity principles, CIA triad, threat vectors, stateful perimeter defense, multi-factor authentication, and security incident response.",
-    "skills": ["CIA Security Triad", "Threat Mitigation (Malware/DDoS)", "Stateful Firewalls & DMZs", "MFA & Authentication", "Security Incident Response"],
+    "skills": [
+      "CIA Security Triad",
+      "Threat Mitigation (Malware/DDoS)",
+      "Stateful Firewalls & DMZs",
+      "MFA & Authentication",
+      "Security Incident Response"
+    ],
     "modules": [
       "Module 1: Security Principles (CIA triad, least privilege, threat vs vulnerability)",
       "Module 2: Threat Landscape (Malware, phishing, man-in-the-middle, DDoS)",
       "Module 3: Network Defense Fundamentals (Stateful inspection, DMZ, IDS/IPS)",
       "Module 4: Endpoint Security & Access Management (MFA, certificates, VPNs)",
       "Module 5: Incident Handling & Compliance (SIEM alerts, containment phases)"
-    ]
+    ],
+    "package": "₹5.0–7.0 LPA",
+    "packageRole": "SOC Tier 1 Analyst / Security Support",
+    "companies": "Kyndryl Security Operations, IBM SOC, Infosys Cyber Defense",
+    "labPackage": "Wireshark Security Filters, Snort IDS logs, Cisco ASA / Firepower GUI simulator",
+    "interviewDeliverable": "Analyze PCAP for port scanning, brute-force SSH attacks, and configure standard/extended ACLs"
   },
   {
     "id": "kw-course-12",
@@ -220,7 +342,13 @@
     "cert": "Cisco CCNP ENCOR Core",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENCOR+350-401+Cert+Prep+1&u=76281980",
     "desc": "Enterprise core architecture, Cisco SD-Access, SD-WAN controllers, network telemetry (NetFlow, SPAN, IP SLA), and enterprise security (TrustSec, CoPP).",
-    "skills": ["Enterprise Spine-Leaf Arch", "Cisco SD-Access & LISP/VXLAN", "Cisco SD-WAN Architecture", "NetFlow & Streaming Telemetry", "Cisco TrustSec & CoPP Hardening"],
+    "skills": [
+      "Enterprise Spine-Leaf Arch",
+      "Cisco SD-Access & LISP/VXLAN",
+      "Cisco SD-WAN Architecture",
+      "NetFlow & Streaming Telemetry",
+      "Cisco TrustSec & CoPP Hardening"
+    ],
     "modules": [
       "Module 1: Enterprise Campus Architecture (2-tier vs 3-tier, Spine-Leaf)",
       "Module 2: Cisco Software-Defined Access (Underlay vs overlay, LISP, VXLAN)",
@@ -228,7 +356,12 @@
       "Module 4: Network Virtualization (Hypervisors, VNFs, VRF-Lite)",
       "Module 5: Network Assurance & Telemetry (NetFlow, ERSPAN, IP SLA, DNA Center)",
       "Module 6: Enterprise Security Hardening (TrustSec, 802.1X ISE, MACsec, CoPP)"
-    ]
+    ],
+    "package": "₹7.5–11.0 LPA",
+    "packageRole": "Senior Network Engineer / Enterprise Architect",
+    "companies": "Cisco Systems, Akamai, Juniper, Kyndryl L3, Goldman Sachs",
+    "labPackage": "EVE-NG / Cisco CML (Cisco Modeling Labs), SD-WAN Sandbox",
+    "interviewDeliverable": "Explain Cisco SD-Access overlay (LISP/VXLAN) vs underlay, configure VRF-Lite segmentation"
   },
   {
     "id": "kw-course-13",
@@ -240,14 +373,25 @@
     "cert": "Cisco CCNP ENCOR Core",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENCOR+350-401+Cert+Prep+2&u=76281980",
     "desc": "Advanced enterprise switching (MSTP), multi-area OSPFv3, enterprise BGP path selection, high availability (VRRP/BFD), and Python automation.",
-    "skills": ["Multiple Spanning Tree (MSTP)", "OSPFv3 Multi-Area Tuning", "BGP Path Selection Attributes", "VRRPv3 & BFD Failover", "Python Netmiko & RESTCONF"],
+    "skills": [
+      "Multiple Spanning Tree (MSTP)",
+      "OSPFv3 Multi-Area Tuning",
+      "BGP Path Selection Attributes",
+      "VRRPv3 & BFD Failover",
+      "Python Netmiko & RESTCONF"
+    ],
     "modules": [
       "Module 1: Advanced Layer 2 Switching (MSTP, Root Guard, BPDU Filtering)",
       "Module 2: Advanced OSPFv2 and OSPFv3 (Multi-area, LSA types 1-7, summarization)",
       "Module 3: Enterprise BGP Routing (eBGP, Weight, Local Pref, AS-Path, MED)",
       "Module 4: Network Redundancy & IP Services (VRRPv3, GLBP, BFD sub-second)",
       "Module 5: Network Automation & Programmability (Python Netmiko, YANG, RESTCONF)"
-    ]
+    ],
+    "package": "₹8.0–12.5 LPA",
+    "packageRole": "Enterprise Infrastructure Engineer (ENCOR)",
+    "companies": "Cisco, Microsoft, Amazon AWS Networking, Morgan Stanley, NTT",
+    "labPackage": "EVE-NG Enterprise Multi-Area OSPF & BGP Lab, Python 3.11 with Netmiko",
+    "interviewDeliverable": "Tune BGP Path selection attributes (Local-Pref, AS-Path prepending, MED), script multi-switch backup"
   },
   {
     "id": "kw-course-14",
@@ -259,13 +403,24 @@
     "cert": "Cisco CCNP ENARSI Concentration",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENARSI+300-410+Cert+Prep+Layer+3&u=76281980",
     "desc": "Advanced enterprise routing, complex mutual route redistribution, route maps, prefix lists, policy-based routing, and deep BGP customer multi-homing.",
-    "skills": ["Complex Route Redistribution", "Route Maps & Prefix Lists", "Policy-Based Routing (PBR)", "BGP Communities & Multi-homing", "Advanced IPv6 Routing"],
+    "skills": [
+      "Complex Route Redistribution",
+      "Route Maps & Prefix Lists",
+      "Policy-Based Routing (PBR)",
+      "BGP Communities & Multi-homing",
+      "Advanced IPv6 Routing"
+    ],
     "modules": [
       "Module 1: Complex IPv4 and IPv6 Routing (EIGRP named, OSPF virtual links)",
       "Module 2: Advanced Route Redistribution (OSPF to BGP, route tagging loops)",
       "Module 3: Route Filtering & Policy-Based Routing (Prefix lists, route maps, PBR)",
       "Module 4: Deep-Dive BGP Operations (BGP communities, multi-homed customer failover)"
-    ]
+    ],
+    "package": "₹9.0–14.0 LPA",
+    "packageRole": "Senior Routing Specialist (CCNP ENARSI)",
+    "companies": "Cisco TAC Escalations, Juniper, AT&T, Orange, Barclays",
+    "labPackage": "EVE-NG Complex Topology (OSPF, EIGRP Named Mode, BGP, Route Redistribution)",
+    "interviewDeliverable": "Troubleshoot mutual route redistribution with route-maps and tags to prevent sub-optimal routing loops"
   },
   {
     "id": "kw-course-15",
@@ -277,12 +432,23 @@
     "cert": "Cisco CCNP ENARSI Concentration",
     "url": "https://www.linkedin.com/learning/search?keywords=Cisco+CCNP+Enterprise+ENARSI+300-410+Cert+Prep+VPN&u=76281980",
     "desc": "Enterprise WAN VPNs including DMVPN Phase 1/2/3, MPLS Layer 3 VPN fundamentals, Control Plane Policing (CoPP), and TACACS+/RADIUS AAA server integration.",
-    "skills": ["DMVPN Phase 1/2/3 & mGRE", "MPLS L3VPN (PE-CE, RD/RT)", "Control Plane Policing (CoPP)", "Enterprise AAA Hardening", "SNMPv3 authPriv Encryption"],
+    "skills": [
+      "DMVPN Phase 1/2/3 & mGRE",
+      "MPLS L3VPN (PE-CE, RD/RT)",
+      "Control Plane Policing (CoPP)",
+      "Enterprise AAA Hardening",
+      "SNMPv3 authPriv Encryption"
+    ],
     "modules": [
       "Module 1: Enterprise VPN Technologies (DMVPN, NHRP, IPsec tunnel protection)",
       "Module 2: MPLS Layer 3 VPN Fundamentals (P, PE, CE roles, Route Targets/Distinguishers)",
       "Module 3: Infrastructure Security & CoPP (Control Plane Policing CPU protection)",
       "Module 4: Enterprise Device Hardening (TACACS+/RADIUS AAA, SSH key security, SNMPv3)"
-    ]
+    ],
+    "package": "₹9.5–16.0+ LPA",
+    "packageRole": "Lead Network Security & WAN Architect",
+    "companies": "Cisco, Fortinet, Check Point, Palo Alto Networks, Kyndryl Architect",
+    "labPackage": "EVE-NG DMVPN Phase 3 with NHRP & IPsec, MPLS L3VPN Provider Cloud Lab",
+    "interviewDeliverable": "Configure Dual-Hub DMVPN Phase 3 with NHRP shortcut routing and CoPP policy to protect CPU"
   }
 ]
